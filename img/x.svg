@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="17px" viewBox="0 0 10 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="3.061617e-15%" y1="50%" x2="99.5695153%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#CE6538" offset="0%"></stop>
+            <stop stop-color="#F6B883" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage-Desktop" transform="translate(-1570.000000, -2598.000000)" fill="url(#linearGradient-1)">
+            <g id="2---Popover" transform="translate(-87.000000, 2306.000000)">
+                <g id="Open" transform="translate(363.000000, 275.000000)">
+                    <polygon id="X" points="1294.31855 34 1297.26875 25.3813477 1294.3 17.375 1296.675 17.375 1299.05 23.90625 1301.425 17.375 1303.8 17.375 1300.83125 25.3442383 1303.76289 34 1301.40645 34 1299.05 26.875 1296.69355 34"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
