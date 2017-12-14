@@ -1,4 +1,7 @@
 jQuery(document).ready(function($) {
+
+    var c = new TimelineMax()
+
     function e() {
         $("body").on("mousewheel", function(e) {
             e.preventDefault()
@@ -325,5 +328,8 @@ jQuery(document).ready(function($) {
         }
     };
     r.init()
+
+    
+  
 });
 //# sourceMappingURL=./home-min.js.map
