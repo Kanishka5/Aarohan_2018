@@ -183,7 +183,7 @@ jQuery(document).ready(function($) {
                     ease: Circ.easeInOut
                 }).from(n, 3, {
                     delay: -2,
-                    backgroundColor: "#AAAAAA",
+                    backgroundColor: "#346C75",
                     ease: Power2.easeOut
                 }).from(st,2,{
                     opacity:0,
