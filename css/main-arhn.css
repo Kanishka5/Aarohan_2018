@@ -76,8 +76,14 @@ body{
     font-weight: 800;  
 }
 
+/*.frame{
+   position: relative;
+    left:10vw;
+}*/
+
 #about-us-text{
     font-size: 15pt;
+
 }
 
 #container .box {
@@ -86,6 +92,15 @@ body{
   display:inline-block;
   position:relative;
 }
+
+#robot1{
+  position: absolute;
+  width: 15vw;
+  height: auto;
+  left: 5vw;
+}
+
+
 
 #major-space{
     height: 50vh;
@@ -141,10 +156,39 @@ body{
   height:100vw;
 }
 #container2 {
+  position: relative;
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
   white-space:nowrap;
   font-size:0;
+}
+
+#hz-container{
+  position: relative;
+}
+
+#robot-grad{
+  z-index: 10;
+  position: absolute;
+  width: 100vw;
+  height: 10vh;
+  bottom: -2px;
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0e0e0+1,757575+100 */
+background: rgb(224,224,224); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(224,224,224,1) 1%, rgba(117,117,117,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(224,224,224,1) 1%,rgba(117,117,117,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(224,224,224,1) 1%,rgba(117,117,117,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#757575',GradientType=0 ); /* IE6-9 */
+}
+
+#robot2{
+  position: absolute;
+  width: 18vw;
+  z-index: 12;
+  bottom: 5vh;
+  left:5vh;
+  height: auto;
 }
 
 .one {
@@ -235,6 +279,7 @@ body{
   margin-bottom: 5vh;
   font-size: 4rem;
   font-family: "Source Sans Pro", sans-serif;
+  text-shadow: 2px 2px #555555;
 }
 
 #sponsors-div{
@@ -248,6 +293,7 @@ body{
   width: 70vw;
   /*left:10vw;*/
   background-color: white;
+  box-shadow: 5px 5px #555555;
   
 }
 
