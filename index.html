@@ -2027,6 +2027,7 @@
     <link rel='stylesheet' id='map-css' href='css/map.css' type='text/css' media='all' />
     <link rel='stylesheet' id='interior-header-css' href='css/interior-header.css' type='text/css' media='all' />
     <link rel='stylesheet' href='css/main-arhn.css' type='text/css' media='all' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     
     <script type='text/javascript' src='js/jquery.js'></script>
     <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
@@ -2043,13 +2044,8 @@
 </head>
 
 <body class="home page-template page-template-page-templates page-template-homepage page-template-page-templateshomepage-php page page-id-2">
-    <!--[if lt IE 9]>
-		<link rel="stylesheet" type="text/css" href="http://www.verification.nu/wp-content/themes/push10custom/css/ie8.css" />
-		<div id="not-supported"><div><img src="img/pnu-logo-white.png" alt="no support"/><p>Hello, you are using a very old browser that's unsafe and no longer supported.<br/>Please, consider <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">updating</a> your browser to a newer version, or downloading a <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank">modern</a> browser.</p></div></div>
-	<![endif]-->
     <div id="site">
         <main id="main-content">
-            <!-- <div id="public-beta-tag">Public Beta</div> -->
             <section id="interior-header">
                 <!-- <div id="small-logo">
                     <a href="/"><img src="img/pnu-logo-white.svg" width="68" height="33" alt="NU logo"></a>
@@ -2085,43 +2081,6 @@
                 	<div id="main-text"> <span>AAROHAN 2018</span> </div>
                 	<div id="main-date"> <span>08 &nbsp;09 &nbsp;10 &nbsp;11</span></div>
                 	<div id="main-month"> <span>FEBRUARY 2018</span></div>
-
-                    <!-- <div class="banner-text scene">
-                        <svg id="pnu-logo" class="svg-pnu-logo-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 373 177.7" enable-background="new 0 0 373 177.7">
-                            <style type="text/css">
-                            .st0 {
-                                fill: url(#SVGID_1_);
-                            }
-
-                            .st1 {
-                                fill: url(#SVGID_2_);
-                            }
-
-                            .st2 {
-                                fill: #FFFFFF;
-                            }
-                            </style>
-                            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="83.679" y1="10.747" x2="83.679" y2="178.105">
-                                <stop offset="0" stop-color="#FCFCFC" />
-                                <stop offset=".995" stop-color="#D9D9D9" />
-                            </linearGradient>
-                            <path class="st0 gradient" d="M3.5 172.5c-2.1 0-3.5-1.4-3.5-3.5v-165.5c0-1.8 1.4-3.5 3.5-3.5h57.6c2.8 0 4.5 1.4 5.5 2.8l48 65.9v-65.2c0-1.7 1.7-3.5 3.5-3.5h45.9c2.1 0 3.5 1.7 3.5 3.5v165.6c0 2.1-1.4 3.5-3.5 3.5h-51.4c-1.7 0-3.8-.3-5.5-2.8l-54.6-81.1v80.4c0 2.1-1.7 3.5-3.5 3.5h-45.5z" />
-                            <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="285.634" x2="285.634" y2="174.757">
-                                <stop offset="0" stop-color="#FCFCFC" />
-                                <stop offset=".995" stop-color="#D9D9D9" />
-                            </linearGradient>
-                            <path class="st1 gradient" d="M201.9 0h53.5c2.1 0 3.5 1.7 3.5 3.5v91.4c0 13.8 2.1 34.5 28 34.5 25.5 0 25.9-20.4 25.9-34.2v-91.7c0-1.7 1.7-3.5 3.5-3.5h53.5c2.1 0 3.5 1.7 3.5 3.5v94.5c0 10.7-4.8 79.7-85.9 79.7-81.1 0-88.3-53.5-88.7-79.4-.3-26.2 0-94.9 0-94.9-.3-1.7 1.4-3.4 3.2-3.4z" />
-                            <path class="st2 white" d="M114.6 68.7v-65.2c0-1.7 1.7-3.5 3.5-3.5h45.9c2.1 0 3.5 1.7 3.5 3.5v165.6c0 2.1-1.4 3.5-3.5 3.5h-48.4l-1-103.9zM198.7 102.5c4.3 7.2 7.1 8.8 11.2 12.9 14.3 14.4 31.5 26.8 52.2 29.3 14.4 1.7 33.3-.5 42.8-12.7 5.9-7.6 7.2-18 7.4-27.3l.3-9.4v-91.8c0-1.7 1.7-3.5 3.5-3.5h53.5c2.1 0 3.5 1.7 3.5 3.5v94.5c0 10.7-4.8 79.7-85.9 79.7-67.8 0-84-37.4-87.7-64.8 0 0-.5-3.2-.7-6.1-.2-2.2-.1-4.3-.1-4.3zM52.5 88.7v80.4c0 2.1-1.7 3.5-3.5 3.5h-45.5c-2.1 0-3.5-1.4-3.5-3.5v-165.6c0-1.8 1.4-3.5 3.5-3.5h49v88.7z" />
-                        </svg>
-                        <h1 class="title">Mapping Nuclear Verification</h1>
-                        <div class="description">Laying the Basis for Nuclear Disarmament and Nonproliferation</div>
-                        <ul class="banner-nav">
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="#about"><span>The project</span></a></li>
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="#map"><span>NU Map</span></a></li>
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-102"><a href="#technologies"><span>Technologies</span></a></li>
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a href="#contact"><span>Get In Touch</span></a></li>
-                        </ul>
-                    </div> -->
                     <div class="scale">
                         <img src="img/city2.svg" alt="" class="scene l0" id="city" />
                         <img src="img/mountain-left2.svg" alt="" class="scene l1" id="mountain-left" data-speed-x="10" data-speed-y="10" />
@@ -2207,6 +2166,103 @@
                             <div class="box two"><div>2</div></div>
                             <div class="box three"><div>3</div></div>
                             <div class="box four"><div>Last</div></div>
+                            <!-- <div id="sp-trigger"></div> -->
+                            <div id="sponsors">
+                                <h1>SPONSORS</h1>
+                                <div id="sp-trigger"></div>
+                                <div id="sponsors-div" class="container">
+                                    <div class="row row-margin">
+                                        <div class="col-md-2 col-xs-12">
+                                            <img class="thumbnail img-holder img-responsive" id="1-sp" src="img/clients-logos/client-1.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12">
+                                            <img class="thumbnail img-holder img-responsive" id="2-sp" src="img/clients-logos/client-2.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12">
+                                            <img class="thumbnail img-holder img-responsive" id="3-sp" src="img/clients-logos/client-3.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12">
+                                            <img class="thumbnail img-holder img-responsive" id="4-sp" src="img/clients-logos/client-4.png" />
+                                        </div>
+                                         <div class="col-md-2 col-xs-12 ">
+                                            <img class="thumbnail img-holder img-responsive" id="5-sp" src="img/clients-logos/client-5.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12 ">
+                                            <img class="thumbnail img-holder img-responsive" id="6-sp" src="img/clients-logos/client-6.png" />
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        
+                                       
+                                        <div class="col-md-2 col-xs-12 ">
+                                            <img class="thumbnail img-holder img-responsive" id="7-sp" src="img/clients-logos/client-7.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12 ">
+                                            <img class="thumbnail img-holder img-responsive" id="8-sp" src="img/clients-logos/client-8.png" />
+                                        </div>
+                                         <div class="col-md-2 col-xs-12 ">
+                                            <img class="thumbnail img-holder img-responsive" id="9-sp" src="img/clients-logos/client-9.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12 ">
+                                            <img class="thumbnail img-holder img-responsive" id="10-sp" src="img/clients-logos/client-10.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12 ">
+                                            <img class="thumbnail img-holder img-responsive" id="11-sp" src="img/clients-logos/client-11.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12 ">
+                                            <img class="thumbnail img-holder img-responsive" id="12-sp" src="img/clients-logos/client-12.png" />
+                                        </div>
+
+                                    </div>
+                                    <div class="row">                       
+                                       
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2 col-xs-12">
+                                            <img class="img-holder img-responsive thumbnail" id="13-sp" src="img/clients-logos/client-13.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12">
+                                            <img class="img-holder img-responsive thumbnail" id="14-sp" src="img/clients-logos/client-14.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12">
+                                            <img class="img-holder img-responsive thumbnail" id="15-sp" src="img/clients-logos/client-15.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12">
+                                            <img class="img-holder img-responsive thumbnail" id="16-sp" src="img/clients-logos/client-16.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12">
+                                            <img class="img-holder img-responsive thumbnail" id="17-sp" src="img/clients-logos/client-17.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12">
+                                            <img class="img-holder img-responsive thumbnail" id="18-sp" src="img/clients-logos/client-18.png" />
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        
+                                        
+                                        <div class="col-md-2 col-xs-12">
+                                            <img class="img-holder img-responsive thumbnail" id="19-sp" src="img/clients-logos/client-20.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12">
+                                            <img class="img-holder img-responsive thumbnail" id="20-sp" src="img/clients-logos/client-21.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12">
+                                            <img class="img-holder img-responsive thumbnail" id="21-sp" src="img/clients-logos/client-22.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12">
+                                            <img class="img-holder img-responsive thumbnail" id="22-sp" src="img/clients-logos/client-24.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12">
+                                            <img class="img-holder img-responsive thumbnail" id="23-sp" src="img/clients-logos/client-19.png" />
+                                        </div>
+                                        <div class="col-md-2 col-xs-12">
+                                            <img class="img-holder img-responsive thumbnail" id="24-sp" src="img/clients-logos/client-23.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                           </div>
                         </div>
                     </div>
@@ -2214,135 +2270,10 @@
                 </div>
                 <div id="trigger2"></div>
             </section>
-            <!-- <section id="contact" class="section-home-newsletter">
-                <img src="img/cloud.svg" alt="bg" class="cloud-1" />
-                <img src="img/cloud.svg" alt="bg" class="cloud-2" />
-                <img src="img/cloud.svg" alt="bg" class="cloud-3" />
-                <img src="img/cloud.svg" alt="bg" class="cloud-4" />
-                <img src="img/cloud.svg" alt="bg" class="cloud-5" />
-                <div class="dt">
-                    <div class="dc">
-                        <div class="frame">
-                            <div class="cols">
-                                <div class="col col-left" data-anim="left">
-                                    <div class="section-icon" data-anim="in">
-                                        <svg id="icon-email" width="46" height="35" viewBox="0 0 46 35" xmlns="http://www.w3.org/2000/svg">
-                                            <g stroke-width="1.5" stroke="#fff" fill="none">
-                                                <path d="M1.346 5.696v28.224h43.814v-28.627l-21.603 21.47z" data-anim="in" />
-                                                <path d="M3.577 1.362l19.93 19.806 19.422-19.302-19.574-.076z" data-anim="in" />
-                                            </g>
-                                        </svg>
-                                    </div>
-                                    <h2 class="title section-title">Get in touch</h2>
-                                    <div class="description">
-                                        Share with us your own verification technologies, concepts, and ideas.
-                                    </div>
-                                </div>
-                                <div class="col col-right" data-anim="right">
-                                    <div class='gf_browser_chrome gform_wrapper' id='gform_wrapper_1'>
-                                        <form method='post' enctype='multipart/form-data' target='gform_ajax_frame_1' id='gform_1' action='/'>
-                                            <div class='gform_body'>
-                                                <ul id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below'>
-                                                    <li id='field_1_1' class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible'>
-                                                        <label class='gfield_label gfield_label_before_complex' for='input_1_1_3'>Full Name<span class='gfield_required'>*</span></label>
-                                                        <div class='ginput_complex ginput_container no_prefix has_first_name no_middle_name has_last_name no_suffix gf_name_has_2 ginput_container_name gfield_trigger_change' id='input_1_1'>
-                                                            <span id='input_1_1_3_container' class='name_first'>
-                                                    <input type='text' name='input_1.3' id='input_1_1_3' value='' aria-label='First name'   aria-required="true" aria-invalid="false" placeholder='First Name'/>
-                                                    <label for='input_1_1_3' >First</label>
-                                                </span>
-                                                            <span id='input_1_1_6_container' class='name_last'>
-                                                    <input type='text' name='input_1.6' id='input_1_1_6' value='' aria-label='Last name'   aria-required="true" aria-invalid="false" placeholder='Last Name'/>
-                                                    <label for='input_1_1_6' >Last</label>
-                                                </span>
-                                                        </div>
-                                                    </li>
-                                                    <li id='field_1_2' class='gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible'>
-                                                        <label class='gfield_label' for='input_1_2'>Email Address<span class='gfield_required'>*</span></label>
-                                                        <div class='ginput_container ginput_container_email'>
-                                                            <input name='input_2' id='input_1_2' type='text' value='' class='medium' aria-required="true" aria-invalid="false" />
-                                                        </div>
-                                                    </li>
-                                                    <li id='field_1_4' class='gfield field_sublabel_below field_description_below gfield_visibility_visible'>
-                                                        <label class='gfield_label' for='input_1_4'>Comments</label>
-                                                        <div class='ginput_container ginput_container_textarea'>
-                                                            <textarea name='input_4' id='input_1_4' class='textarea medium' aria-invalid="false" rows='10' cols='50'></textarea>
-                                                        </div>
-                                                    </li>
-                                                    <li id='field_1_3' class='gfield field_sublabel_below field_description_below gfield_visibility_visible'>
-                                                        <label class='gfield_label' for='input_1_3'></label>
-                                                        <div class="ginput_container">
-                                                            <div class="g-recaptcha" data-sitekey="6LdYWx8UAAAAAESrwsz7wSEorivqZccAYQKMYzq2" data-theme="light"></div>
-                                                        </div>
-                                                    </li>
-                                                    <li id='field_1_5' class='gfield gform_validation_container field_sublabel_below field_description_below gfield_visibility_'>
-                                                        <label class='gfield_label' for='input_1_5'>Comments</label>
-                                                        <div class='ginput_container'>
-                                                            <input name='input_5' id='input_1_5' type='text' value='' />
-                                                        </div>
-                                                        <div class='gfield_description'>This field is for validation purposes and should be left unchanged.</div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class='gform_footer top_label'>
-                                                <input type='submit' id='gform_submit_button_1' class='gform_button button' value='Sign up' onclick='if(window["gf_submitting_1"]){return false;}  window["gf_submitting_1"]=true;  ' onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_1"]){return false;} window["gf_submitting_1"]=true;  jQuery("#gform_1").trigger("submit",[true]); }' />
-                                                <input type='hidden' name='gform_ajax' value='form_id=1&amp;title=&amp;description=&amp;tabindex=0' />
-                                                <input type='hidden' class='gform_hidden' name='is_submit_1' value='1' />
-                                                <input type='hidden' class='gform_hidden' name='gform_submit' value='1' />
-                                                <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
-                                                <input type='hidden' class='gform_hidden' name='state_1' value='WyJbXSIsImQ4M2Y1YjMxYzU0MzExMjQ5ZDgzOGE4OTRmN2ZjNGE3Il0=' />
-                                                <input type='hidden' class='gform_hidden' name='gform_target_page_number_1' id='gform_target_page_number_1' value='0' />
-                                                <input type='hidden' class='gform_hidden' name='gform_source_page_number_1' id='gform_source_page_number_1' value='1' />
-                                                <input type='hidden' name='gform_field_values' value='' />
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_1' id='gform_ajax_frame_1'>This iframe contains the logic required to handle AJAX powered Gravity Forms.</iframe>
-                                    <script type='text/javascript'>
-                                    jQuery(document).ready(function($) { gformInitSpinner(1, 'http://www.verification.nu/wp-content/plugins/gravityforms/images/spinner.gif');
-                                        jQuery('#gform_ajax_frame_1').load(function() { var contents = jQuery(this).contents().find('*').html(); var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0; if (!is_postback) { return; } var form_content = jQuery(this).contents().find('#gform_wrapper_1'); var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_1').length > 0; var is_redirect = contents.indexOf('gformRedirect(){') >= 0; var is_form = form_content.length > 0 && !is_redirect && !is_confirmation; if (is_form) { jQuery('#gform_wrapper_1').html(form_content.html()); if (form_content.hasClass('gform_validation_error')) { jQuery('#gform_wrapper_1').addClass('gform_validation_error'); } else { jQuery('#gform_wrapper_1').removeClass('gform_validation_error'); } setTimeout(function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ }, 50); if (window['gformInitDatepicker']) { gformInitDatepicker(); } if (window['gformInitPriceFields']) { gformInitPriceFields(); } var current_page = jQuery('#gform_source_page_number_1').val();
-                                                gformInitSpinner(1, 'http://www.verification.nu/wp-content/plugins/gravityforms/images/spinner.gif');
-                                                jQuery(document).trigger('gform_page_loaded', [1, current_page]);
-                                                window['gf_submitting_1'] = false; } else if (!is_redirect) { var confirmation_content = jQuery(this).contents().find('#gforms_confirmation_message_1').html(); if (!confirmation_content) { confirmation_content = contents; } setTimeout(function() { jQuery('#gform_wrapper_1').replaceWith('<' + 'div id=\'gforms_confirmation_message_1\' class=\'gform_confirmation_message_1 gforms_confirmation_message\'' + '>' + confirmation_content + '<' + '/div' + '>');
-                                                    jQuery(document).trigger('gform_confirmation_loaded', [1]);
-                                                    window['gf_submitting_1'] = false; }, 50); } else { jQuery('#gform_1').append(contents); if (window['gformRedirect']) { gformRedirect(); } } jQuery(document).trigger('gform_post_render', [1, current_page]); }); });
-                                    </script>
-                                    <script type='text/javascript'>
-                                    if (typeof gf_global == 'undefined') var gf_global = { "gf_currency_config": { "name": "U.S. Dollar", "symbol_left": "$", "symbol_right": "", "symbol_padding": "", "thousand_separator": ",", "decimal_separator": ".", "decimals": 2 }, "base_url": "http:\/\/www.verification.nu\/wp-content\/plugins\/gravityforms", "number_formats": [], "spinnerUrl": "http:\/\/www.verification.nu\/wp-content\/plugins\/gravityforms\/images\/spinner.gif" };
-                                    jQuery(document).bind('gform_post_render', function(event, formId, currentPage) {
-                                        if (formId == 1) {
-                                            if (typeof Placeholders != 'undefined') {
-                                                Placeholders.enable();
-                                            }
-                                        }
-                                    });
-                                    jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit) {});
-                                    </script>
-                                    <script type='text/javascript'>
-                                    jQuery(document).ready(function() { jQuery(document).trigger('gform_post_render', [1, 1]) });
-                                    </script>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
         </main>
-        <!-- <footer id="main-footer">
-            <div class="frame">
-                <div class="logos">
-                    <a href="http://www.princeton.edu/main/" target="_blank"><img src="img/logo-princeton.svg" alt="Princeton University logo" width="161" height="44"/></a>
-                    <a href="http://nuclearfutures.princeton.edu/" target="_blank"><img src="img/logo-nuclear-futures-lab.svg" alt="Nuclear Futures Lab Logo"  width="104" height="37"/></a>
-                </div>
-                <div class="credits">
-                    Copyright Princeton Nuclear Futures Lab
-                    <br/>
-                    <a href="https://www.push10.com" target="_blank">Web Design by Push10 Branding Agency</a>
-                </div>
-            </div>
-        </footer> -->
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <link rel='stylesheet' id='gforms_reset_css-css' href='css/formreset.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='gforms_formsmain_css-css' href='css/formsmain.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='gforms_ready_class_css-css' href='css/readyclass.min.css' type='text/css' media='all' />

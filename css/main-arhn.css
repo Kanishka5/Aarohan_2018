@@ -177,6 +177,8 @@ body{
   line-height:.7;
   font-weight:bold;
 }
+
+
 #vertical-cont {
   overflow-y:hidden;
   overflow-x:hidden;
@@ -212,5 +214,76 @@ body{
 
 #space2{
   height: 100vh;
+}
+
+#sponsors{
+  width: 100vw;
+  height: 200vh;
+  background-color: white;
+  position: relative;
+  display: block;
+  background-image: linear-gradient(to right, #E4E4E4 0%, #FFFFFF 100%);
+}
+
+#sponsors{
+  text-align: center;
+}
+
+#sponsors h1{
+  opacity: 0;
+  padding-top:  10vh;
+  margin-bottom: 5vh;
+  font-size: 4rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#sponsors-div{
+  /*padding-top: 10vh;*/
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  display: inline-block;
+  width: 70vw;
+  /*left:10vw;*/
+  background-color: white;
+  
+}
+
+#sponsors-div .col-xs-12,
+#sponsors-div .col-xs-12,
+#sponsors-div .col-md-2,
+#sponsors-div .col-md-2 {
+  text-align: -webkit-center;
+  /*border: 0.1px solid rgba(0,0,0,0.2);*/
+  margin: 0px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-collapse: collapse;
+  /*padding:20px;*/
+  /*padding-top: 30px;*/
+  /*padding-bottom: 30px;*/
+}
+
+
+#sponsors-div .row{
+  border-collapse: collapse;
+  padding: 0;
+  margin: 0;
+}
+
+.img-holder{
+  width: auto;
+  height: 35px;
+  margin: 10px;
+  opacity: 0;
+}
+.img-holder img{
+  display: table-cell;
+  margin-left: auto;
+  vertical-align: middle;
+  margin-right: auto;
+  max-width: 100%;
 }
 
