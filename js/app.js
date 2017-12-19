@@ -23,7 +23,7 @@ particlesJS('particles-js',
         }
       },
       "color": {
-        "value": "#ffffff"
+        "value": "#000000"
       },
       "shape": {
         "type": "star",
@@ -68,8 +68,8 @@ particlesJS('particles-js',
         "width": 1
       },
       "move": {
-        "enable": true,
-        "speed": 2,
+        "enable": false,
+        "speed": 0.2,
         "direction": "bottom",
         "random": true,
         "straight": true,
