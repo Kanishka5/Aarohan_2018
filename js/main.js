@@ -7,6 +7,7 @@ html.setAttribute("class", html.getAttribute('class') + " " + ieVersion);
 
 var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 
+
 function scroll_to_el(el,offset) {
 
 	var offset = ((typeof offset !== "undefined") ? offset : 0);

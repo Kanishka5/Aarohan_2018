@@ -263,17 +263,12 @@ jQuery(document).ready(function($) {
                 o = new ScrollMagic.Scene({
                     triggerElement: $("#about")
                 }).offset(-300).on("enter leave", function(t) {
-                    media_size("min-width:769px") && ("FORWARD" == t.scrollDirection ? (n.vars.cloudsTimeline.pause(), animation === !1 && (e(), scroll_to_el("#about"), history.replaceState(void 0, void 0, "#about"))) : "REVERSE" == t.scrollDirection && (n.vars.cloudsTimeline.play(), animation === !1 && (e(), scroll_to_el("#top"), history.replaceState(void 0, void 0, "#top"))))
+                    media_size("min-width:769px") && ("FORWARD" == t.scrollDirection ? (n.vars.cloudsTimeline.pause(), animation === !1 && (e(), scroll_to_el("#about"))) : "REVERSE" == t.scrollDirection && (n.vars.cloudsTimeline.play(), animation === !1 && (e(), scroll_to_el("#top"), history.replaceState(void 0, void 0, "#top"))))
                 }).addTo(t),
                 o = new ScrollMagic.Scene({
                     triggerElement: $("#map")
                 }).offset(-100).on("enter leave", function(t) {
-                    media_size("min-width:769px") && ("FORWARD" == t.scrollDirection ? animation === !1 && (e(), scroll_to_el("#map"), $("#public-beta-tag").fadeOut(500), history.replaceState(void 0, void 0, "#map")) : "REVERSE" == t.scrollDirection && animation === !1 && (e(), scroll_to_el("#about"), $("#public-beta-tag").fadeIn(500), history.replaceState(void 0, void 0, "#about")))
-                }).addTo(t),
-                o = new ScrollMagic.Scene({
-                    triggerElement: $("#technologies")
-                }).offset(-200).on("enter leave", function(t) {
-                    media_size("min-width:769px") && ("FORWARD" == t.scrollDirection ? animation === !1 && (e(), scroll_to_el("#technologies", 200), $("#public-beta-tag").fadeOut(0), history.replaceState(void 0, void 0, "#technologies")) : "REVERSE" == t.scrollDirection && animation === !1 && (e(), scroll_to_el("#map"), history.replaceState(void 0, void 0, "#map")))
+                    media_size("min-width:769px") && ("FORWARD" == t.scrollDirection ? animation === !1 && (e(), scroll_to_el("#map"), $("#public-beta-tag").fadeOut(500)) : "REVERSE" == t.scrollDirection && animation === !1 && (e(), scroll_to_el("#about"), $("#public-beta-tag").fadeIn(500)))
                 }).addTo(t);
             if (!isFirefox) var i = $("#meter").find("#needle"),
                 a = new TimelineMax({
@@ -305,7 +300,7 @@ jQuery(document).ready(function($) {
             var o = new ScrollMagic.Scene({
                 triggerElement: $("#contact")
             }).on("enter leave", function(t) {
-                media_size("min-width:769px") && ("FORWARD" == t.scrollDirection ? (a.pause(), animation === !1 && (e(), scroll_to_el("#contact"), $("#public-beta-tag").fadeOut(0), history.replaceState(void 0, void 0, "#contact"))) : "REVERSE" == t.scrollDirection && (a.play(), animation === !1 && (e(), scroll_to_el("#technologies", 200), history.replaceState(void 0, void 0, "#technologies"))))
+                media_size("min-width:769px") && ("FORWARD" == t.scrollDirection ? (a.pause(), animation === !1 && (e(), scroll_to_el("#contact"), $("#public-beta-tag").fadeOut(0), history.replaceState(void 0, void 0, "#contact"))) : "REVERSE" == t.scrollDirection && (a.play(), animation === !1 && (e(), scroll_to_el("#technologies", 200))))
             }).addTo(t);
             if (!media_size("min-width:769px")) var o = new ScrollMagic.Scene({
                     triggerElement: $("#about")

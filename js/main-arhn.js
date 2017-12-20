@@ -29,20 +29,20 @@ $('#container').scroll(function() {
   $('#city-front3').css('left', scrollWidth3 + 'px');
   var scrollWidth4 = $(window).width()*3 - scrollPercent*window.innerWidth*0.5;
   $('#city-front4').css('left', scrollWidth4 + 'px');
-  var scrollWidth5 = $(window).width()-scrollPercent*window.innerWidth*3;
+  var scrollWidth5 = $(window).width()*2-scrollPercent*window.innerWidth*3;
   $('.major-img').css('left', scrollWidth5 + 'px');
-  var scrollWidth6 = $(window).width()*2-scrollPercent*window.innerWidth*3;
+  var scrollWidth6 = $(window).width()*3-scrollPercent*window.innerWidth*3;
   $('.major-img1').css('left', scrollWidth6 + 'px');
-  var scrollWidth7 = $(window).width()*3-scrollPercent*window.innerWidth*3;
+  var scrollWidth7 = $(window).width()*4-scrollPercent*window.innerWidth*3;
   $('.major-img2').css('left', scrollWidth7 + 'px');
 
-  var scrollWork1 = $(window).width()*5-scrollPercent*window.innerWidth*3;
+  var scrollWork1 = $(window).width()*7-scrollPercent*window.innerWidth*3;
   $('.work-img1').css('left', scrollWork1 + 'px');
-  var scrollWork2 = $(window).width()*6-scrollPercent*window.innerWidth*3;
+  var scrollWork2 = $(window).width()*8-scrollPercent*window.innerWidth*3;
   $('.work-img2').css('left', scrollWork2 + 'px');
-  var scrollWork3 = $(window).width()*7-scrollPercent*window.innerWidth*3;
+  var scrollWork3 = $(window).width()*9-scrollPercent*window.innerWidth*3;
   $('.work-img3').css('left', scrollWork3 + 'px');
-  var scrollWork4 = $(window).width()*8-scrollPercent*window.innerWidth*3;
+  var scrollWork4 = $(window).width()*10-scrollPercent*window.innerWidth*3;
   $('.work-img4').css('left', scrollWork4 + 'px');
   // var scrollWidth8 = $(window).width()*0.25-scrollPercent*window.innerWidth*3;
   // $('#major-logo').css('left', scrollWidth8 + 'px');
@@ -68,54 +68,72 @@ var scene2 = new ScrollMagic.Scene({triggerElement: "#major-attractions #trigger
                 } 
             });
 
+var scene3 = new ScrollMagic.Scene({triggerElement: "#hz-trigger",triggerHook: 1,offset:100})
+                .addTo(controller)
+                .addIndicators() // add indicators (requires plugin)
+                .on("enter leave", function (e) {
+                    if("FORWARD" == e.scrollDirection){
 
-// var scene3 = new ScrollMagic.Scene({triggerElement: "#hz-trigger", duration: 200,triggerHook: 1})
-//                 .addTo(controller)
-//                 .addIndicators() // add indicators (requires plugin)
-//                 .on("start", function (e) {
-//                     if(e.state == 'DURING'){
-//                         $('html, body').animate({
-//                             scrollTop: $('#hz-container').offset().top
-//                           }, 800);
+                          jQuery('html, body').animate({
 
-//                          var majotTimeline = new TimelineMax()
-//                                   .to("#major-logo",1,{opacity:1,y:'-25'},0.5)
-//                                   .to('#robot-grad',1,{opacity:1},1)
-//                                   .to('#robot2',1,{opacity:1},1.5);
-//                     } 
+                            scrollTop: jQuery($('#hz-container')).offset().top
 
-//                     if(e.state == 'BEFORE'){
-//                       $('html, body').animate({
-//                             scrollTop: $('#map').offset().top
-//                           }, 800);
-//                       $('#major-logo').css('opacity','0');
-//                       $('#robot-grad').css('opacity','0');
-//                       $('#robot2').css('opacity','0');
-//                       var majotTimelineReverse = new TimelineMax()
-//                                   .to("#major-logo",0.1,{y:'25'},0.5)
-//                     }
+                          }, 1000, 'swing', function () {
 
-                   
-//                 });
-var sponsor_scroll = false;
+                            jQuery("#container").unmousewheel();
 
-var majotTimeline = new TimelineMax()
+                          });
+
+                         var majotTimeline = new TimelineMax()
+                                  .to("#city-front",0.5,{opacity:1},1)
+                                  .to("#city-front2",0.5,{opacity:1},1)
+                                  .to("#city-back",0.5,{opacity:1},1)
+                                  .to("#city-back2",0.5,{opacity:1},1)
+                                  .to('#city-back-color',2,{backgroundColor:'purple'})
                                   .to("#major-logo",1,{opacity:1,y:'-25'},0.5)
-                                  .to('#robot-grad',1,{opacity:1},1)
-                                  .to('#robot2',1,{opacity:1},1.5);
+                                  .to('#robot-grad',1,{opacity:1},0)
+                                  .to('#robot2',1,{opacity:1},0.5);
+                                  
+                          // history.replaceState(void 0, void 0, "#major-attractions")
+                    } 
 
+                    if("REVERSE" == e.scrollDirection){
+                          $('html, body').animate({
+                              scrollTop: $('#map').offset().top
+                            }, 800);
+                        $('#major-logo').css('opacity','0');
+                        $('#robot-grad').css('opacity','0');
+                        $('#robot2').css('opacity','0');
+                        $('#city-front').css('opacity','0');
+                        $('#city-front2').css('opacity','0');
+                        $('#city-back').css('opacity','0');
+                        $('#city-back2').css('opacity','0');
+                        $('#city-back-color').css('backgroundColor','white');
+                        
+                        var majotTimelineReverse = new TimelineMax()
+                                    .to("#major-logo",0.1,{y:'25'},0.5)
+
+                        // history.replaceState(void 0, void 0, "#map")
+                    }
+
+});
+
+
+
+
+var sponsor_scroll = false;
 
     function check() {
         var k = $('#container').scrollTop();
         var t = $('#vertical-cont').scrollTop();
         // console.log(t);
 
-        if(k>$(window).width()*0.25){
+        if(k>$(window).width()*1.25){
           var mj_timeline = new TimelineMax()
                     .to('#major-logo',0.5,{opacity:0});
         }
 
-        if(k<$(window).width()*0.25){
+        if(k<$(window).width()*1.00){
           var mj_timeline = new TimelineMax()
                     .to('#major-logo',0.5,{opacity:1});
         }
@@ -148,51 +166,51 @@ var majotTimeline = new TimelineMax()
             .to("#23-sp",0.2,{opacity:1,y:'-5'},2.1)
             .to("#24-sp",0.2,{opacity:1,y:'-5'},2.3);
         }
-        console.log(k);
-        if(k < $(window).width()*10  && k > $(window).width()*8){
+        
+        if(k < $(window).width()*12  && k > $(window).width()*10){
           $('#vertical-cont').css('overflow-y','hidden');
+           sponsor_scroll = false;
           var robot_timeline = new TimelineMax()
                         .to("#robot3",0.5,{opacity:1})
                         .to("#robot-grad",0.5,{opacity:1},0);
+
         }
 
-        if(k == $(window).width()*10){
+        if(k == $(window).width()*12){
           // $('#space2').css('height','100vh');
           $('#vertical-cont').css('overflow-y','scroll');
           var robot_timeline = new TimelineMax()
                         .to("#robot3",0.5,{opacity:0})
                         .to("#robot-grad",0.5,{opacity:0},0);
-                        if(sponsor_scroll == false){
-                           $('#vertical-cont').animate({
-                            scrollTop: $(window).height()
-                          }, 800);
+          //               if(sponsor_scroll == false){
+          //                  $('#vertical-cont').animate({
+          //                   scrollTop: $(window).height()
+          //                 }, 800);
 
-                           sponsor_scroll = true;
+          //                  sponsor_scroll = true;
 
-                        }
+          //               }
                        
         }
 
-        if(k >= $(window).width()*4 && k < $(window).width()*4.25){
-          var robot_timeline = new TimelineMax()
-                        .to("#robot2",0.2,{opacity:0})
-                        .to("#robot3",0.2,{opacity:1});
-
-                        sponsor_scroll = false;
-
+        if(k >= $(window).width()*5 && k <= $(window).width()*8 ){
+                   
+                    var robot_timeline = new TimelineMax()
+                                  .to("#robot2",0.2,{opacity:0})
+                                  .to("#robot3",0.2,{opacity:1});
         }
 
-        if(k >= $(window).width()*4 && k < $(window).width()*4.25){
+        if(k >= $(window).width()*5 && k < $(window).width()*6.10){
           var robot_timeline = new TimelineMax()
                         .to("#workshop-logo",0.5,{opacity:1});
         }
 
-        if(k >= $(window).width()*4.27){
+        if(k >= $(window).width()*6.27){
           var robot_timeline = new TimelineMax()
                         .to("#workshop-logo",0.5,{opacity:0});
         }
 
-        if(k < $(window).width()*3.8){
+        if(k < $(window).width()*4.8 && k > $(window).width()*4){
           var robot_timeline = new TimelineMax()
                         .to("#robot3",0.2,{opacity:0})
                         .to("#robot2",0.2,{opacity:1})
