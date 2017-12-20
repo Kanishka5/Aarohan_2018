@@ -1,4 +1,5 @@
-jQuery(document).ready(function($) {
+window.addEventListener("load", function(){
+    // ....
 
     var c = new TimelineMax()
 
@@ -324,7 +325,4 @@ jQuery(document).ready(function($) {
     };
     r.init()
 
-    
-  
 });
-//# sourceMappingURL=./home-min.js.map

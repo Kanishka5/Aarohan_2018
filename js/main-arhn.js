@@ -109,6 +109,7 @@ var scene3 = new ScrollMagic.Scene({triggerElement: "#hz-trigger",triggerHook: 1
                         $('#city-back').css('opacity','0');
                         $('#city-back2').css('opacity','0');
                         $('#city-back-color').css('backgroundColor','white');
+                        $('#city-back-color').css('background-color','white');
                         
                         var majotTimelineReverse = new TimelineMax()
                                     .to("#major-logo",0.1,{y:'25'},0.5)
