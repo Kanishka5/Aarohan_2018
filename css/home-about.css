@@ -35,7 +35,7 @@
   background-image: linear-gradient(to bottom, #6FAAB4 0%, #ACCED3 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6FAAB4', endColorstr='#FFACCED3', GradientType=0);
-  height: 100vh; }
+  height: 120vh; }
   .section-home-about .frame {
     text-align: center; }
   .section-home-about .section-arrow {
