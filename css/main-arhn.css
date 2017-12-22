@@ -233,13 +233,13 @@ body{
 
   #major-space{
       height: 40vh;
-      background-color: #F6FAFA;
+      background-color: purple;
       /*background-image: linear-gradient(to right, #E4E4E4 0%, #FFFFFF 100%);*/
   }
 
 
   #major-attractions{
-      height: 100vh !important;
+      height: 500vh !important;
       width: 100vw;
       overflow:hidden;
       /*margin-top:70vh;*/
@@ -263,18 +263,7 @@ body{
     position:relative;
   }
 
-  #container .box > div {
-    width:100vw;
-    text-align: center;
-    font-size:4rem;
-    color:#000000;
-    position:absolute;
-    z-index: 10;
-    top:20%;
-    line-height:.7;
-    /*font-weight:bold;*/
-    font-family: "Source Sans Pro", sans-serif;
-  }
+  
 
   #major-logo{
     top:55vw;
@@ -306,28 +295,75 @@ body{
     z-index: 5;
   }
 
+  #container .box > div {
+    width:100vw;
+    text-align: center;
+    font-size:4rem;
+    color:#000000;
+    position:absolute;
+    z-index: 10;
+    top:20%;
+    line-height:.7;
+    /*font-weight:bold;*/
+    font-family: "Source Sans Pro", sans-serif;
+  }
+
   #container {
     overflow-y:hidden;
     overflow-x:hidden;
-    transform: rotate(270deg) translateX(-100%);
+    /*transform: rotate(270deg) translateX(-100%);*/
     transform-origin: top left;
     /*background-color:#999;*/
     position:absolute;
-    width:100vh;
-    height:100vw;
+    width:100vw;
+    height:100vh;
     z-index: 6;
   }
   #container2 {
     position: relative;
-    transform: rotate(90deg) translateY(-100vh);
+    /*transform: rotate(90deg) translateY(-100vh);*/
     transform-origin: top left;
     white-space:nowrap;
     font-size:0;
     z-index: 5;
   }
 
+  #vertical-cont .box {
+    width:100vw;
+    height:100vh;
+    display:block;
+    position:relative;
+  }
+
+  #vertical-cont .box > div {
+    width:100px;
+    height:100px;
+    font-size:96px;
+    /*color:#FFF;*/
+    position:absolute;
+    margin:-50px 0 0 -50px;
+    line-height:.7;
+    font-weight:bold;
+  }
+
+
+  #vertical-cont {
+    overflow-y:hidden;
+    overflow-x:hidden;
+    background-color: rgba(0,0,0,0);
+    /*background-color:#999;*/
+    position:absolute; 
+    width:100vw;
+    height:100vh;
+  }
+
+
+
+
   #hz-container{
     position: relative;
+    visibility: hidden;
+    height: 0;
   }
 
   #robot-grad{
@@ -472,73 +508,7 @@ body{
     
   }
 
-  .cover{
-    top:5vh;
-    position: relative;
-    overflow: hidden;
-    left:10vw;
-    width:80vw;
-    height:80vh; 
-    /*border: 7px solid grey;*/
-  }
-
-  .cover img{
-    position: relative;
-    height: 80vh;
-    width: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    
-    /*border: 10px solid white;
-    border-radius: 5px;*/
-    /*height: auto*/
-  }
-
-  .heading{
-    text-align: center;
-    width: 40vw;
-    left: 30vw;
-    top:15vh;
-    font-size: 2rem;
-    color: white;
-    position: absolute;
-    padding: 10px;
-    opacity: 0;
-    background-color: rgba(0,0,0,0.8);
-    border-radius: 10px;
-    font-family: "Source Sans Pro", sans-serif;
-  }
-
-  .heading2{
-    text-align: center;
-    width: 50vw;
-    left: 25vw;
-    font-size: 1.7rem;
-    color: white;
-    position: absolute;
-    top:15vw;
-    padding: 10px;
-    background-color: rgba(0,0,0,0.8);
-    border-radius: 10px;
-    opacity: 0;
-    font-family: "Source Sans Pro", sans-serif;
-  }
-
-  .caption{
-    text-align: center;
-    padding: 10px;
-    width: 50vw;
-    left:25vw;
-    font-size: 1rem;
-    color: white;
-    position: absolute;
-    background-color: rgba(0,0,0,0.8);
-    border-radius: 10px;
-    opacity: 0;
-    top:30vh;
-    font-family: "Source Sans Pro", sans-serif;
-  }
+  
 
 
 
@@ -715,10 +685,149 @@ body{
     height: 100vh;
   }
 
+  html{
+    overflow-x: hidden;
+  }
+
+  /*Mobile*/
+
+  /*#mobile-major{
+    overflow-x: hidden;
+  }
+*/
+  .mob-major-img{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .mob-major-img .cover img{
+    width: auto;
+    height: 100vh;
+  }
+
+  .mob-major-img1{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .mob-major-img1 .cover img{
+    width: auto;
+    height: 100vh;
+  }
+
+  .mob-major-img2{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .mob-major-img2 .cover img{
+    width: auto;
+    height: 100vh;
+  }
+
+  .mob-work-img1{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .mob-work-img1 .cover img{
+    width: auto;
+    height: 100vh;
+  }
+
+  .mob-work-img2{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .mob-work-img2 .cover img{
+    width: auto;
+    height: 100vh;
+  }
+
+  .mob-work-img3{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .mob-work-img3 .cover img{
+    width: auto;
+    height: 100vh;
+  }
+
+  .mob-work-img4{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .mob-work-img4 .cover img{
+    width: auto;
+    height: 100vh;
+  }
+
+
+  .heading{
+    text-align: center;
+    width: 40vw;
+    left: 30vw;
+    top:15vh;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    padding: 10px;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    font-family: "Source Sans Pro", sans-serif;
+  }
+
+  .heading2{
+    text-align: center;
+    width: 50vw;
+    left: 25vw;
+    font-size: 1.7rem;
+    color: white;
+    position: absolute;
+    top:15vw;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    opacity: 1;
+    font-family: "Source Sans Pro", sans-serif;
+  }
+
+  .caption{
+    text-align: center;
+    padding: 10px;
+    width: 50vw;
+    left:25vw;
+    font-size: 1rem;
+    color: white;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    opacity: 1;
+    top:30vh;
+    font-family: "Source Sans Pro", sans-serif;
+  }
+
+  #vertical-section{
+    height: 700vh;
+    /*overflow-x: hidden;*/
+  }
+
+
   #sponsors{
     width: 100vw;
     font-size: 6rem;
-    height: 100vh;
+    /*height: 100vh;*/
     /*background-color: white;*/
     position: relative;
     display: block;
@@ -731,7 +840,7 @@ body{
 
   #sponsors h1{
     font-weight: 100;
-    opacity: 0;
+    opacity: 1;
     padding-top:  10vh;
     margin-bottom: 5vh;
     font-size: 6rem;
@@ -748,7 +857,7 @@ body{
     padding-right: 10px;
     position: relative;
     display: inline-block;
-    width: 70vw;
+    width: 90vw;
     /*left:10vw;*/
     background-color: white;
     box-shadow: 5px 5px #555555;
@@ -781,7 +890,7 @@ body{
     width: auto;
     height: 35px !important;
     margin: 10px;
-    opacity: 0;
+    opacity: 1;
   }
   .img-holder img{
     display: table-cell;
@@ -794,7 +903,7 @@ body{
   #team_full{
     padding-top: 40vh;
     width: 100vw;
-    height: 250vh;
+    /*height: 250vh;*/
     background-color: purple;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#532c74+0,352675+100 */
   }
@@ -1035,22 +1144,25 @@ body{
 
   #hospitality{
     position: relative;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
     text-align: center;
     background-color: purple;
+    padding-bottom: 200px;
+    margin-bottom: -2px;
   }
 
   #hospitality #title{
-    color:white;
+    color: white;
     font-family: "Source Sans Pro", sans-serif;
-    font-weight: 100;
-    font-size: 6rem;
-    margin-top: -10px;
+    font-weight: 300;
+    font-size: 3rem;
+    margin-top: -32px;
+    padding-top: 30vh;
   }
 
-  #space_ship{
-    width: 30vw;
+  #space_ship_mob{
+    width: 70vw;
     height: auto;
     position: relative;
     margin-top: 20px;
@@ -1077,23 +1189,25 @@ body{
   }
 
   .accom{
-    position: absolute;
-    width: 20vw;
-    top: 25vh;
+        position: relative;
+    width: 90vw;
+    /* top: 25vh; */
     left: 5vw;
+    margin-bottom: 100px;
   }
 
   .travel{
-        position: absolute;
-      width: 20vw;
-      left: 40vw;
+       position: relative;
+    width: 90vw;
+    left: 5vw;
+    margin-bottom: 100px;
   }
 
   .hospitality{
-    position: absolute;
-    width: 20vw;
-    top: 25vh;
-    right: 5vw;
+    position: relative;
+    width: 90vw;
+    /* top: 25vh; */
+    left: 5vw;
   }
 
   #contact-us{
@@ -1113,7 +1227,9 @@ body{
     height: auto;
   }
 
-
+  body{
+    overflow-x: hidden;
+  }
 }
 
 
@@ -1126,6 +1242,21 @@ body{
       left: 35vw;
       top:10vh;
       opacity: 1;
+  }
+
+  #mobile-major,
+  .mob-major-img,
+  .mob-major-img1,
+  .mob-major-img2,
+  .mob-work-img1,
+  .mob-work-img2,
+  .mob-work-img3,
+  .mob-work-img4,
+  #vertical-section
+  {
+    display: none;
+    visibility: hidden;
+    height: 0;
   }
 
 
@@ -2192,6 +2323,12 @@ body{
     height: 40vh;
     background-color: #6FAAB4;
   }
+
+  body{
+    overflow-x: hidden;
+  }
+
+
 
 }
 
