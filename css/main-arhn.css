@@ -2187,7 +2187,11 @@ body{
   }
 
 
-
+  #major-about{
+    width: 100vw;
+    height: 40vh;
+    background-color: #6FAAB4;
+  }
 
 }
 

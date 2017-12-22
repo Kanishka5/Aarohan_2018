@@ -552,18 +552,19 @@ if(windowWidth > 500){
 
       var scene3 = new ScrollMagic.Scene({triggerElement: "#hz-trigger",triggerHook: 1,offset:100})
                 .addTo(controller)
+                .addIndicators()
                 .on("enter leave", function (e) {
                     if("FORWARD" == e.scrollDirection && $(window).width() > 500){
-                          disable_scroll();
-                          jQuery('html, body').animate({
+                          // disable_scroll();
+                          // jQuery('html, body').animate({
 
-                            scrollTop: jQuery($('#hz-container')).offset().top
+                          //   scrollTop: jQuery($('#hz-container')).offset().top
 
-                          }, 1000, 'swing', function () {
+                          // }, 1000, 'swing', function () {
 
-                              enable_scroll();
+                          //     enable_scroll();
 
-                          });
+                          // });
 
                          var majotTimeline = new TimelineMax()
                                   .to("#city-front",0.5,{opacity:1},1)
@@ -578,12 +579,12 @@ if(windowWidth > 500){
                     } 
 
                     if("REVERSE" == e.scrollDirection && $(window).width() > 500){
-                          disable_scroll();
-                          $('html, body').animate({
-                              scrollTop: $('#map').offset().top
-                            }, 800, function(){
-                                enable_scroll();
-                            });
+                          // disable_scroll();
+                          // $('html, body').animate({
+                          //     scrollTop: $('#map').offset().top
+                          //   }, 800, function(){
+                          //       enable_scroll();
+                          //   });
                         $('#major-logo').css('opacity','0');
                         $('#robot-grad').css('opacity','0');
                         $('#robot2').css('opacity','0');
