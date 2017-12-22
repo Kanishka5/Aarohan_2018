@@ -298,11 +298,6 @@ window.addEventListener("load", function(){
                 l = new ScrollMagic.Scene({
                     triggerElement: $("#technologies")
                 }).setTween(a).addTo(t);
-            var o = new ScrollMagic.Scene({
-                triggerElement: $("#contact")
-            }).on("enter leave", function(t) {
-                media_size("min-width:769px") && ("FORWARD" == t.scrollDirection ? (a.pause(), animation === !1 && (e(), scroll_to_el("#contact"), $("#public-beta-tag").fadeOut(0), history.replaceState(void 0, void 0, "#contact"))) : "REVERSE" == t.scrollDirection && (a.play(), animation === !1 && (e(), scroll_to_el("#technologies", 200))))
-            }).addTo(t);
             if (!media_size("min-width:769px")) var o = new ScrollMagic.Scene({
                     triggerElement: $("#about")
                 }).on("enter leave", function(e) {
