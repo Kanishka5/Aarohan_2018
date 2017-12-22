@@ -30,17 +30,16 @@ body{
   #main-text{
       z-index: 10;
       color: white;
-      font-size: 30pt;
+      font-size: 2.4rem;
       width: 100vw;
       text-align: center;
       position: relative;
       top:15vh;
-
   }
 
   #main-text span{
       color: white;
-      font-size: 3rem;
+      font-size: 2.4rem;
       font-family: 'Montserrat', sans-serif;
       letter-spacing: 9px;
       font-weight: 800;
@@ -87,9 +86,9 @@ body{
 
   #main-date span{
       color: white;
-      font-size: 15pt;
+      font-size: 1.5rem;
       font-family: 'Montserrat', sans-serif;
-      letter-spacing: 8px;
+      letter-spacing: 8px;  
       font-weight: 800;   
   }
 
@@ -103,7 +102,7 @@ body{
 
   #main-month span{
       color: white;
-      font-size: 10pt;
+      font-size: 1.2rem;
       font-family: 'Montserrat', sans-serif;
       letter-spacing: 8px;
       font-weight: 800;  
@@ -279,7 +278,7 @@ body{
   }
 
   .section-title{
-    font-size: 6rem !important;
+    font-size: 5rem !important;
   }
 
   #workshop-logo{
@@ -891,6 +890,7 @@ body{
     height: 35px !important;
     margin: 10px;
     opacity: 1;
+    border: 0px !important;
   }
   .img-holder img{
     display: table-cell;
@@ -945,8 +945,8 @@ body{
       /*'Open Sans', Helvetica, Helvetica Neue, Arial*/
       margin: auto;
     
-      margin-left: 40px;
-      margin-right: 40px;
+      margin-left: 5px;
+      margin-right: 5px;
       /*margin-top: 30px;*/
       min-width: 500px;
       display: block;
@@ -1348,7 +1348,7 @@ body{
   }*/
 
   #about-us-text{
-      font-size: 15pt;
+      font-size: 1.5pt;
   }
 
   #events-join{
