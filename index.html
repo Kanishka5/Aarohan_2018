@@ -36,7 +36,7 @@
 
 
     .navi{
-        z-index: 40;
+        z-index: 10;
         right:10px;
         top: 5px;
 }
@@ -55,7 +55,7 @@
 
 .navlay-content {
     position: relative;
-    top: 25%;
+    top: 10%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
@@ -2105,7 +2105,12 @@
     <a href="#home">Home</a>
     <a href="#about-us">About Us</a>
     <a href="#eventsmap">Events</a>
-    <a href="#contactus">Contact Us</a>
+    <a href="#contactus">Major Attractions</a>
+    <a href="#contactus">Workshops</a>
+    <a href="#contactus">Sponsors</a>
+    <a href="#contactus">Team</a>
+    <a href="#contactus">Hospitality</a>
+    <a href="#contact-us">Contact Us</a>
   </div>
 </div>
 
@@ -2163,7 +2168,7 @@ function closeNav() {
                                 </svg>
                             </div><p id="about-us"></p>
                             <h2 class="title section-title dash" data-anim="in">ABOUT US</h2>
-                            <img id="robot1" src="img/robot1.png" />
+                            <img id="robot1" data-anim="in" src="img/robot1.png" />
                             <div id="about-us-text" class="description" data-anim="in">
                                 <p>National Institute of Technology, Durgapur has been a pioneering educational institute for above 50 years. It boasts of students who have achieved par excellence in the field of academics and organization.
 
@@ -2866,6 +2871,9 @@ function closeNav() {
                     </div>
 
             <div id="mobile-major">
+                <h2 class="major-mob-title" data-anim="in">MAJOR ATTRACTIONS</h2>
+                <img id="major-mob-robot" data-anim="in" src="img/robot2.png" />
+
                 <div class="mob-major-img">
                     <div class="cover">
                         <img src="img/major_attractions/01.jpg" />
@@ -2889,6 +2897,10 @@ function closeNav() {
                     <div class="heading">AAROHAN NITES</div>
                     <div class="caption">When the brain gets saturated & the mind starts wandering; when the heat of the day finally dims and the lights get low, the time to rejuvenate and fuel some fresh energy follows. So you thought that we were just a bunch of nerds knowing nothing beyond Newton? Well think again! After the non-stop tech-vaganza, Aarohan Nites turn up the volume and pump up the jam, and turn the entire arena in to a giant dance floor. In the moonlight, by midnight start, enjoy the uproar under the cool February breeze and keep the spirits going.</div>
                 </div>
+
+                 <h2 class="work-mob-title" data-anim="in">WORKSHOPS</h2>
+
+                 <img id="work-mob-robot" data-anim="in" src="img/robot3.png" />
 
                 <div class="mob-work-img1">
                     <div class="cover">
@@ -2924,7 +2936,7 @@ function closeNav() {
 
                 <div id="vertical-section">
                     <div id="sponsors">
-                                            <h1>SPONSORS</h1>
+                                            <h1 data-anim="in" >SPONSORS</h1>
                                             <div id="sp-trigger"></div>
                                             <div id="sponsors-div" class="container">
                                                 <div class="row row-margin">
@@ -3024,7 +3036,7 @@ function closeNav() {
                                           <div id="trigger">
                                           <div id="team">
                                                 <br />
-                                                <h1 id="team_title"> TEAM</h1>
+                                                <h1 data-anim="in" id="team_title"> TEAM</h1>
                                                 <br />
                                                 <br />
                                                 <br />
@@ -3102,7 +3114,9 @@ function closeNav() {
                                                       <div class="hovereffect">
                                                         <img class="img-responsive" src="img/members/AyushAg.jpg" >
                                                           <div class="overlay">
-                                                              <p style="">  <br/> ayush@ccanitd.in </p>
+                                                              <p style="">  
+
+                                                        <br/> ayush@ccanitd.in </p>
 
                                                           </div>
 
@@ -3123,6 +3137,7 @@ function closeNav() {
                                                         </div>
 
                                                       </div>
+                                                        <br />
                                                         <h3>SURYA TEJA</h3>
                                                         <h4>HEAD, Corporate Affairs</h4>
                                                   </div>
@@ -3146,6 +3161,7 @@ function closeNav() {
                                                           </div>
 
                                                         </div>
+                                                          <br />
                                                           <h3>AJAY SINGH</h3>
                                                           <h4>HEAD, Corporate Affairs</h4>
                                                   </div>
@@ -3161,6 +3177,7 @@ function closeNav() {
                                                           </div>
 
                                                         </div>
+                                                        <br />
                                                           <h3>SACHIN AGARWAL</h3>
                                                           <h4>HEAD, Publicity</h4>
                                                   </div>
@@ -3176,6 +3193,7 @@ function closeNav() {
                                                           </div>
 
                                                         </div>
+                                                        <br />
                                                           <h3>SINDHU CHAVA</h3>
                                                           <h4>HEAD, E-Cell</h4>
                                                   </div>
@@ -3192,6 +3210,7 @@ function closeNav() {
                                                           </div>
 
                                                         </div>
+                                                        <br />
                                                           <h3>PAVITRA SINGH</h3>
                                                           <h4>HEAD, ATH</h4>
                                                   </div>
@@ -3207,6 +3226,7 @@ function closeNav() {
                                                           </div>
 
                                                         </div>
+                                                        <br />
                                                           <h3>RITWICK KISHORE</h3>
                                                           <h4>HEAD, ATH</h4>
                                                   </div>
@@ -3222,6 +3242,7 @@ function closeNav() {
                                                           </div>
 
                                                         </div>
+                                                        <br />
                                                           <h3>SIDDHARTH GARG</h3>
                                                           <h4>HEAD, Public Relations</h4>
                                                   </div>
@@ -3247,6 +3268,7 @@ function closeNav() {
                                                             </div>
 
                                                           </div>
+                                                          <br />
                                                             <h3>ROUNAK GHOSH</h3>
                                                             <h4>HEAD, WDCT</h4>
                                                     </div>
@@ -3261,7 +3283,7 @@ function closeNav() {
 
                                                           </div>
 
-                                                        </div>
+                                                        </div><br />
                                                           <h3>KASTURI MOHIT</h3>
                                                           <h4>HEAD, WDCT</h4>
                                                   </div>
@@ -3277,6 +3299,7 @@ function closeNav() {
                                                           </div>
 
                                                         </div>
+                                                        <br />
                                                           <h3>KANTAMANI SATYASRI</h3>
                                                           <h4>HEAD, Robo Cell</h4>
                                                   </div>
@@ -3292,6 +3315,7 @@ function closeNav() {
                                                       </div>
 
                                                     </div>
+                                                    <br />
                                                       <h3>DEEPAK KUMAR SINGH</h3>
                                                       <h4>HEAD, Robo Cell</h4>
                                               </div>
@@ -3306,6 +3330,7 @@ function closeNav() {
                                                       </div>
 
                                                     </div>
+                                                    <br />
                                                       <h3>ARUNN THEVAPALAN</h3>
                                                       <h4>HEAD, E-Cell</h4>
                                               </div>
@@ -3321,6 +3346,7 @@ function closeNav() {
                                                       </div>
 
                                                     </div>
+                                                    <br />
                                                       <h3>ARCHIT SHAH</h3>
                                                       <h4>HEAD, E-Cell</h4>
                                               </div>
@@ -3352,6 +3378,7 @@ function closeNav() {
                                                       </div>
 
                                                     </div>
+                                                    <br />
                                                       <h3>RAVI KANT TIGGA</h3>
                                                       <h4>HEAD, RD&I Cell</h4>
                                               </div>
@@ -3367,6 +3394,7 @@ function closeNav() {
                                                       </div>
 
                                                     </div>
+                                                    <br />
                                                       <h3>SANKET ROUT</h3>
                                                       <h4>HEAD, RD&I Cell</h4>
                                               </div>
@@ -3385,8 +3413,8 @@ function closeNav() {
                                         </div>
 
                                         <div id="hospitality">
-                                            <div id="title">Accomodation, Travel & Hospitality</div>
-                                            <img id="space_ship_mob" src="img/robot_space.png" />
+                                            <div id="title" data-anim="in" >Accomodation, Travel & Hospitality</div>
+                                            <img id="space_ship_mob" src="img/robot_space.png"  data-anim="in" />
                                             <div class="accom">
                                                 <img src="img/icon1.png" alt="" style="width: 40px">
                                                 <h2>ACCOMODATION</h2>
@@ -3406,8 +3434,35 @@ function closeNav() {
                                             </div>
                                         </div>
 
+
                                         <div id="contact-us">
-                                            <img src="img/footer.png">
+                                            <h1 style="
+                                                    color: white;
+                                                    font-size: 2rem;
+                                                    text-align:  center;
+                                                    margin-bottom: 30px;
+                                                ">GET IN TOUCH WITH US</h1>
+                                            <h2 style="
+                                                    text-align:  center;
+                                                    font-size: 2rem;
+                                                    color: white;
+                                                    margin-bottom: 30vh;
+                                                ">contact@ccanitd.in</h2>
+
+
+                                           <h3 style="
+                                                /* color:  wheat; */
+                                                font-size: 1.2rem;
+                                                color:  white;
+                                                margin-top:  30px;
+                                                /* margin-bottom: 30px; */
+                                            ">A CCA web-design &amp; creative team presentation</h3>
+                                            <h4 style="
+                                                color: white;
+                                                font-size: 1.2rem;
+                                                margin-bottom: 0;
+                                            ">All Rights Reserved CCA 17-18</h4>
+                                            <!-- <img src="img/footer.png"> -->
                                         </div>
                                         <p id="contactus"></p>
                 </div>

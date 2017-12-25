@@ -8,7 +8,13 @@
     clear: both; }
 
 .clearfix, .section-map #map-popup .buttons {
-  *zoom: 1; }
+    zoom: 1; 
+  position: absolute;
+    z-index: 9999999;
+    right: 0;
+
+
+}
 
 /*-------------------------------------------------------------------------
   Rem fallback
@@ -29,6 +35,27 @@
 /*-------------------------------------------------------------------------
   Scale Elements by %
  *-------------------------------------------------------------------------*/
+
+ .popup-list ol { 
+    font-style:italic; 
+    font-family: "Source Sans Pro", sans-serif;
+    font-size:2rem; 
+    color:white  
+  }
+  .popup-list ol li { 
+    margin-bottom: 0;
+  }
+  .popup-list ol li p { 
+    padding:8px;
+   font-style:normal; 
+   font-family: "Source Sans Pro", sans-serif; 
+   font-size:2rem;
+    color:white;
+     border-left: 1px solid #999; }
+  .popup-list ol li p em { display:block; }
+
+
+
 .section-map {
   padding: 145px 0 130px; }
   .section-map #map-popup {
@@ -37,7 +64,7 @@
     position: absolute;
     right: -335px;
     top: 60vh;
-    width: 335px;
+    width: 30vw;
     margin-top: -290px;
     z-index: 20;
     transition: all 0.3s ease-in; }
@@ -88,7 +115,9 @@
         font-size: 3rem;
         font-weight: 500;
         text-align: center;
-        margin-bottom: 30px; }
+        margin-bottom: 30px; 
+        text-transform: uppercase;
+      }
       .section-map #map-popup .content .popup-description p {
         line-height: 1.4; }
       .section-map #map-popup .content .popup-link {
@@ -106,13 +135,14 @@
 
       @media screen and (max-width: 768px) {
         .section-map #map-popup .content {
-          height: 260px; } }
+          height: 100vh; } }
     @media screen and (max-width: 768px) {
       .section-map #map-popup {
+        position: fixed;
+        top:0;
         bottom: -300px;
         width: 100%;
         right: auto;
-        top: auto;
         margin-top: 0; }
         .section-map #map-popup.active {
           bottom: 0; } }

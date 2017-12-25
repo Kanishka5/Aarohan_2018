@@ -58,60 +58,101 @@ jQuery(document).ready(function(){
   // }
   
 
-  $(".mapping").on("click", function(e){
+  $(".mapping").on("click touch", function(e){
       e.preventDefault();
-      $('#map-popup').css('right','0');
+      if(windowWidth < 500){
+        $('#map-popup').css('right','0vw');  
+      }
+      else{
+        $('#map-popup').css('right','35vw');  
+      } 
       $('#map-popup').css('visibility','visible');
-      $(".section-map #map-popup .content").html( "<div class=\"popup-title\"> EUREKA </div> <ul><li>Behind The Dots</li><li>B-plan</li> <li>Bidweiser</li><li>Selldom</li><li>Colossus</li><li>Nit Case Study Challenge</li></ul>");
+      $(".section-map #map-popup .content").html( "<div class=\"popup-title\"> EUREKA </div> <div class=\"popup-list\" ><ol><li><p>Behind The Dots</p></li><li><p>B-plan</p></li> <li><p>Bidweiser</p></li><li><p>Selldom</p></li><li><p>Colossus</p></li><li><p>Nit Case Study Challeng</p></li></ol></div>");
   });
 
-  $(".mapping2").on("click", function(e){
+  $(".mapping2").on("click touch", function(e){
       e.preventDefault();
-      $('#map-popup').css('right','0');
+       if(windowWidth < 500){
+        $('#map-popup').css('right','0vw');  
+      }
+      else{
+        $('#map-popup').css('right','35vw');  
+      } 
       $('#map-popup').css('visibility','visible');
-      $(".section-map #map-popup .content").html( "<div class=\"popup-title\"> QUIZ </div> <ul><li>Exquizzit</li></ul>");
+      $(".section-map #map-popup .content").html( "<div class=\"popup-title\"> QUIZ </div> <div class=\"popup-list\" ><ol><li><p>Exquizzit</p></li></ol></div>");
   });
 
-  $(".mapping3").on("click", function(e){
+  $(".mapping3").on("click touch", function(e){
       e.preventDefault();
-      $('#map-popup').css('right','0');
+       if(windowWidth < 500){
+        $('#map-popup').css('right','0vw');  
+      }
+      else{
+        $('#map-popup').css('right','35vw');  
+      }  
       $('#map-popup').css('visibility','visible');
-      $(".section-map #map-popup .content").html( "<div class=\"popup-title\"> BATTLE OF BYTES</div> <ul><li>Khula Maidan</li><li>Inquest</li><li>Decathlon</li><li>Fifa</li><li>Couter Strike</li></ul>");
+      $(".section-map #map-popup .content").html( "<div class=\"popup-title\"> BATTLE OF BYTES</div> <div class=\"popup-list\"><ol><li><p>Khula Maidan</p></li><li><p>Inquest</p></li><li><p>Decathlon</p></li><li><p>Fifa</p></li><li><p>Couter Strike</p></li></ol></div>");
   });
 
-  $(".mapping4").on("click", function(e){
+  $(".mapping4").on("click touch", function(e){
       e.preventDefault();
-      $('#map-popup').css('right','0');
+       if(windowWidth < 500){
+        $('#map-popup').css('right','0vw');  
+      }
+      else{
+        $('#map-popup').css('right','35vw');  
+      }  
       $('#map-popup').css('visibility','visible');
-      $(".section-map #map-popup .content").html( "<div class=\"popup-title\"> Armageddon </div> <ul><li>Robowar</li><li>Inside Out</li><li>Detour</li><li>Shuttle</li><li>Jigsaw</li></ul>");
+      $(".section-map #map-popup .content").html( "<div class=\"popup-title\"> Armageddon </div> <div class=\"popup-list\" ><ol><li><p>Robowar</p></li><li><p>Inside Out</p></li><li><p>Detour</p></li><li><p>Shuttle</p></li><li><p>Jigsaw</p></li></ol></div>");
       
   });
 
-  $(".mapping5").on("click", function(e){
+  $(".mapping5").on("click touch", function(e){
       e.preventDefault();
-      $('#map-popup').css('right','0');
+       if(windowWidth < 500){
+        $('#map-popup').css('right','0vw');  
+      }
+      else{
+        $('#map-popup').css('right','35vw');  
+      } 
       $('#map-popup').css('visibility','visible');
-      $(".section-map #map-popup .content").html( "<div class=\"popup-title\">Strategist </div> <ul><li>Journo Detective</li><li>Game of Recruitment</li><li>Stockhastic</li><li>Be a Billionare</li><li>TCDC</li></ul>");
+      $(".section-map #map-popup .content").html( "<div class=\"popup-title\">Strategist </div> <div class=\"popup-list\" > <ol><li><p>Journo Detective</p></li><li><p>Game of Recruitment</p></li><li><p>Stockhastic</p></li><li><p>Be a Billionare</p></li><li><p>TCDC</p></li></ol></div>");
   });
 
-  $(".mapping6").on("click", function(e){
+  $(".mapping6").on("click touch", function(e){
       e.preventDefault();
-      $('#map-popup').css('right','0');
+       if(windowWidth < 500){
+        $('#map-popup').css('right','0vw');  
+      }
+      else{
+        $('#map-popup').css('right','35vw');  
+      } 
       $('#map-popup').css('visibility','visible');
-      $(".section-map #map-popup .content").html( "<div class=\"popup-title\">Techlon </div> <ul><li>Invictus</li><li>Assembler</li><li>Contraptions</li></ul>");
+      $(".section-map #map-popup .content").html( "<div class=\"popup-title\">Techlon </div> <div class=\"popup-list\" > <ol><li><p>Invictus</p></li><li><p>Assembler</p></li><li><p>Contraptions</p></li></ol> </div>");
   });
 
-  $(".mapping7").on("click", function(e){
+  $(".mapping7").on("click touch", function(e){
       e.preventDefault();
-      $('#map-popup').css('right','0');
+       if(windowWidth < 500){
+        $('#map-popup').css('right','0vw');  
+      }
+      else{
+        $('#map-popup').css('right','35vw');  
+      } 
       $('#map-popup').css('visibility','visible');
-      $(".section-map #map-popup .content").html( "<div class=\"popup-title\">Apostrophe </div> <ul><li>Abhivyakti</li><li>Conjecture</li></ul>");
+      $(".section-map #map-popup .content").html( "<div class=\"popup-title\">Apostrophe </div> <div class=\"popup-list\" > <ol><li><p>Abhivyakti</p></li><li><p>Conjecture</p></li></ol> </div>");
       
   });
 
-  $(".section-map #map-popup .buttons .close").on("click", function(e){
+  $(".section-map #map-popup .buttons .close").on("click touch", function(e){
       e.preventDefault();
-      $('#map-popup').css('right','-335px');
+      if(windowWidth < 500){
+        $('#map-popup').css('right','-100vw');  
+      }
+      else{
+        $('#map-popup').css('right','-30vw');   
+      }
+      
       // $('#map-popup').css('visibility','hidden');
   }); 
 
