@@ -67,18 +67,6 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFACCED3', endColorstr='#FFF6FAFA', GradientType=0); }
   .section-map .section-title {
     padding: 0 190px; }
-  .section-map:before {
-    content: "";
-    width: 100%;
-    height: 487px;
-    background-size: 100% auto;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    /*background-image: url("../imgs/angle-top.svg");*/
-    z-index: 3; }
   @media screen and (max-width: 1000px) {
     .section-map .section-title {
       padding: 0 100px; } }

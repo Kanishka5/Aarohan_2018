@@ -50,15 +50,86 @@ jQuery(document).ready(function(){
   var windowWidth = $(window).width();
   var windowHeight = $(window).height();
 
-
   var scale_factor =windowWidth/975;
+
+  // if(scale_factor<1){
+  //   scale_factor = 1;
+  // }
 
   // if($(window).width() < 500){
   //   scale_factor = 0.3;
   // }
   
 
-  $(".mapping").on("click touch", function(e){
+   
+
+
+  function resize(id,scale,id_string){
+    $('.events-map ' + id_string).css('width',id.width/windowWidth*100*scale + "vw");
+    $('.events-map ' + id_string).css('height',id.height/windowHeight*100*scale + "vh");
+    $('.events-map ' + id_string).css('left',id.left/windowWidth*100*scale + "vw");
+    $('.events-map ' + id_string).css('top',id.top/windowHeight*100*scale + "vh");
+  }
+
+  resize(base,scale_factor,"#base");
+  resize(base,scale_factor,"#base2");
+  resize(one,scale_factor,"#top");
+  resize(two,scale_factor,"#two");
+  resize(three,scale_factor,'#three');
+  resize(four,scale_factor,"#four");
+  resize(five,scale_factor,"#five");
+  resize(six,scale_factor,"#six");
+  resize(seven,scale_factor,"#seven");
+
+  $('img[usemap]').rwdImageMaps();
+
+  
+  
+  $('.mapping').mouseover(function() {
+      $('.events-map #top').css('opacity','1');
+  }).mouseout(function(){
+      $('.events-map #top').css('opacity','0'); 
+  });
+
+  $('.mapping2').mouseover(function() {
+      $('.events-map #two').css('opacity','1');
+  }).mouseout(function(){
+      $('.events-map #two').css('opacity','0');   
+  });
+
+  $('.mapping3').mouseover(function() {
+      $('.events-map #three').css('opacity','1');
+  }).mouseout(function(){
+      $('.events-map #three').css('opacity','0');   
+  });
+
+  $('.mapping4').mouseover(function() {
+      $('.events-map #five').css('opacity','1');
+  }).mouseout(function(){
+      $('.events-map #five').css('opacity','0');   
+  });
+
+  $('.mapping5').mouseover(function() {
+      $('.events-map #four').css('opacity','1');
+  }).mouseout(function(){
+      $('.events-map #four').css('opacity','0');   
+  });
+
+  $('.mapping6').mouseover(function() {
+      $('.events-map #six').css('opacity','1');
+  }).mouseout(function(){
+      $('.events-map #six').css('opacity','0');   
+  });
+
+  $('.mapping7').mouseover(function() {
+      $('.events-map #seven').css('opacity','1');
+  }).mouseout(function(){
+      $('.events-map #seven').css('opacity','0');   
+  });
+
+
+
+  $(".mapping").on("click touchstart", function(e){
       e.preventDefault();
       if(windowWidth < 500){
         $('#map-popup').css('right','0vw');  
@@ -70,7 +141,7 @@ jQuery(document).ready(function(){
       $(".section-map #map-popup .content").html( "<div class=\"popup-title\"> EUREKA </div> <div class=\"popup-list\" ><ol><li><p>Behind The Dots</p></li><li><p>B-plan</p></li> <li><p>Bidweiser</p></li><li><p>Selldom</p></li><li><p>Colossus</p></li><li><p>Nit Case Study Challeng</p></li></ol></div>");
   });
 
-  $(".mapping2").on("click touch", function(e){
+  $(".mapping2").on("click touchstart", function(e){
       e.preventDefault();
        if(windowWidth < 500){
         $('#map-popup').css('right','0vw');  
@@ -103,7 +174,8 @@ jQuery(document).ready(function(){
         $('#map-popup').css('right','35vw');  
       }  
       $('#map-popup').css('visibility','visible');
-      $(".section-map #map-popup .content").html( "<div class=\"popup-title\"> Armageddon </div> <div class=\"popup-list\" ><ol><li><p>Robowar</p></li><li><p>Inside Out</p></li><li><p>Detour</p></li><li><p>Shuttle</p></li><li><p>Jigsaw</p></li></ol></div>");
+      $(".section-map #map-popup .content").html( "<div class=\"popup-title\">Strategist </div> <div class=\"popup-list\" > <ol><li><p>Journo Detective</p></li><li><p>Game of Recruitment</p></li><li><p>Stockhastic</p></li><li><p>Be a Billionare</p></li><li><p>TCDC</p></li></ol></div>");
+     
       
   });
 
@@ -116,7 +188,8 @@ jQuery(document).ready(function(){
         $('#map-popup').css('right','35vw');  
       } 
       $('#map-popup').css('visibility','visible');
-      $(".section-map #map-popup .content").html( "<div class=\"popup-title\">Strategist </div> <div class=\"popup-list\" > <ol><li><p>Journo Detective</p></li><li><p>Game of Recruitment</p></li><li><p>Stockhastic</p></li><li><p>Be a Billionare</p></li><li><p>TCDC</p></li></ol></div>");
+      $(".section-map #map-popup .content").html( "<div class=\"popup-title\"> Armageddon </div> <div class=\"popup-list\" ><ol><li><p>Robowar</p></li><li><p>Inside Out</p></li><li><p>Detour</p></li><li><p>Shuttle</p></li><li><p>Jigsaw</p></li></ol></div>");
+      
   });
 
   $(".mapping6").on("click touch", function(e){
@@ -154,77 +227,8 @@ jQuery(document).ready(function(){
       }
       
       // $('#map-popup').css('visibility','hidden');
-  }); 
-
-
-  function resize(id,scale,id_string){
-    $('.events-map ' + id_string).css('width',id.width/windowWidth*100*scale + "vw");
-    $('.events-map ' + id_string).css('height',id.height/windowHeight*100*scale + "vh");
-    $('.events-map ' + id_string).css('left',id.left/windowWidth*100*scale + "vw");
-    $('.events-map ' + id_string).css('top',id.top/windowHeight*100*scale + "vh");
-  }
-
-  resize(base,scale_factor,"#base");
-  resize(one,scale_factor,"#top");
-  resize(two,scale_factor,"#two");
-  resize(three,scale_factor,'#three');
-  resize(four,scale_factor,"#four");
-  resize(five,scale_factor,"#five");
-  resize(six,scale_factor,"#six");
-  resize(seven,scale_factor,"#seven");
-
-
-  $('#Map').imageMapResize();
-  $('#Map2').imageMapResize();
-  $('#Map3').imageMapResize();
-  $('#Map4').imageMapResize();
-  $('#Map5').imageMapResize();
-  $('#Map6').imageMapResize();
-  $('#Map7').imageMapResize();
-
-  
-  
-  $('.mapping').mouseover(function() {
-      $('.events-map #top').css('opacity','1');
-  }).mouseout(function(){
-      $('.events-map #top').css('opacity','0');   
   });
 
-  $('.mapping2').mouseover(function() {
-      $('.events-map #two').css('opacity','1');
-  }).mouseout(function(){
-      $('.events-map #two').css('opacity','0');   
-  });
-
-  $('.mapping3').mouseover(function() {
-      $('.events-map #three').css('opacity','1');
-  }).mouseout(function(){
-      $('.events-map #three').css('opacity','0');   
-  });
-
-  $('.mapping4').mouseover(function() {
-      $('.events-map #four').css('opacity','1');
-  }).mouseout(function(){
-      $('.events-map #four').css('opacity','0');   
-  });
-
-  $('.mapping5').mouseover(function() {
-      $('.events-map #five').css('opacity','1');
-  }).mouseout(function(){
-      $('.events-map #five').css('opacity','0');   
-  });
-
-  $('.mapping6').mouseover(function() {
-      $('.events-map #six').css('opacity','1');
-  }).mouseout(function(){
-      $('.events-map #six').css('opacity','0');   
-  });
-
-  $('.mapping7').mouseover(function() {
-      $('.events-map #seven').css('opacity','1');
-  }).mouseout(function(){
-      $('.events-map #seven').css('opacity','0');   
-  });
 
   var controller = new ScrollMagic.Controller();
   var windowHeight = window.innerHeight;

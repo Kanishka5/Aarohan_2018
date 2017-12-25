@@ -136,6 +136,16 @@ body{
     /*transform: scale(1.5);*/
   }
 
+  .events-map #base2{
+    width: 975px;
+    height: 523px;
+    position: absolute;
+    z-index: 4;
+    top:0;
+    opacity: 0;
+    /*transform: scale(1.5);*/
+  }
+
   .events-map #top{
     width: 444px;
     height: 262px;
@@ -1438,6 +1448,16 @@ body{
     /*transform: scale(1.5);*/
   }
 
+  .events-map #base2{
+    width: 975px;
+    height: 523px;
+    position: absolute;
+    z-index: 4;
+    top:0;
+    opacity: 0;
+    /*transform: scale(1.5);*/
+  }
+
   .events-map #top{
     width: 444px;
     height: 262px;
@@ -2395,7 +2415,7 @@ body{
   body{
     overflow-x: hidden;
   }
-  
+
   
 
 
