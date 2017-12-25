@@ -2,6 +2,7 @@
 <html class="no-js" lang="en">
 
 <head>
+    <link rel="icon" href="\img\land_cropGIMP.png">         <!--favicon-->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta charset="UTF-8" />
      <title>Aarohan 2018 | The Annual Techno-Management Fest</title>
@@ -32,6 +33,70 @@
         background: none !important;
         padding: 0 !important;
     }
+
+
+    .navi{
+        z-index: 40;
+        right:10px;
+        top: 5px;
+}
+.navlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.navlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.navlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.navlay a:hover, .navlay a:focus {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.navlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    text-decoration:none;
+}
+
+@media screen and (max-height: 450px) {
+  .navlay {overflow-y: auto;}
+  .navlay a {font-size: 20px}
+  .navlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
+
+
     </style>
     <link rel='stylesheet' id='theme_style-css' href='css/style.css' type='text/css' media='all' />
     <style id='theme_style-inline-css' type='text/css'>
@@ -2029,48 +2094,43 @@
     <link rel='shortlink' href='https://www.verification.nu/' />
     <link rel="alternate" type="application/json+oembed" href="https://www.verification.nu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.verification.nu%2F" />
     <link rel="alternate" type="text/xml+oembed" href="https://www.verification.nu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.verification.nu%2F&#038;format=xml" />
-    <link rel="icon" href="http://www.verification.nu/wp-content/uploads/2017/05/cropped-favicon-1-32x32.png" sizes="32x32" />
-    <link rel="icon" href="http://www.verification.nu/wp-content/uploads/2017/05/cropped-favicon-1-192x192.png" sizes="192x192" />
+    
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="apple-touch-icon-precomposed" href="http://www.verification.nu/wp-content/uploads/2017/05/cropped-favicon-1-180x180.png" />
-    <meta name="msapplication-TileImage" content="http://www.verification.nu/wp-content/uploads/2017/05/cropped-favicon-1-270x270.png" />
 </head>
 
 <body class="home page-template page-template-page-templates page-template-homepage page-template-page-templateshomepage-php page page-id-2">
+    <div id="myNav" class="navlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="navlay-content">
+    <a href="#home">Home</a>
+    <a href="#about-us">About Us</a>
+    <a href="#eventsmap">Events</a>
+    <a href="#contactus">Contact Us</a>
+  </div>
+</div>
+
+<span class="navi" style="font-size:30px;cursor:pointer;position:fixed;color:white;" onclick="openNav()">&#9776; </span>
+
+<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+</script>
+     
+
     <div id="site">
         <main id="main-content">
-            <section id="interior-header">
-                <!-- <div id="small-logo">
-                    <a href="/"><img src="img/pnu-logo-white.svg" width="68" height="33" alt="NU logo"></a>
-                </div> -->
-                <div id="main-nav-icon">
-                    <div id="nav-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div id="main-nav">
-                    <div id="main-nav-menu">
-                        <a href="/"><img src="img/pnu-logo-white.svg" width="121" height="58" alt="NU Logo"></a>
-                        <ul>
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-104"><a href="/#about">About The Project</a></li>
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-105"><a href="/#map">NU Map</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103"><a href="http://www.verification.nu/verification-tools-technologies/">Tools &#038; Technologies</a></li>
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-106"><a href="/#contact">Get In Touch</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+            
             <section class="section-home-banner" id="top">
                 <div id="banner-bottom" style="opacity:0">
-                	<!-- <div id="particles-js"></div> -->
+                	<!-- <div id="particles-js"></div> --><p id="home"></p>
                     <img src="img/robot_space.png" alt="" class="scene" id="satellite" />
                     <div class="clouds"></div>
-                    <img id="main-logo" src="img/logo.png" />
+                    <img id="main-logo" src="img/logo.png" /><p id="home"></p>
                 	<div id="main-text"> <span>AAROHAN 2018</span> </div>
                 	<div id="main-date"> <span>08 &nbsp;09 &nbsp;10 &nbsp;11</span></div>
                 	<div id="main-month"> <span>FEBRUARY 2018</span></div>
@@ -2101,7 +2161,7 @@
                                         <path d="M26.624 33.181v-13.277000000000001h-7.719v2.963h1.973v10.314h-1.973v3.134h9.692v-3.134z" data-anim="in" />
                                     </g>
                                 </svg>
-                            </div>
+                            </div><p id="about-us"></p>
                             <h2 class="title section-title dash" data-anim="in">ABOUT US</h2>
                             <img id="robot1" src="img/robot1.png" />
                             <div id="about-us-text" class="description" data-anim="in">
@@ -2126,7 +2186,7 @@
                                 <svg id="icon-map" width="41" height="55" viewBox="0 0 41 55" xmlns="https://www.w3.org/2000/svg">
                                     <path d="M29.122 20.727c0-5.054-3.994-9.151-8.92-9.151-4.927 0-8.92 4.098-8.92 9.151 0 5.054 3.994 9.152 8.92 9.152 4.927 0 8.92-4.098 8.92-9.152zm10.31 0c0 15.051-12.214 17.874-17.959 32.338-.467 1.175-2.08 1.169-2.547-.006-5.182-13.042-15.623-16.617-17.621-28.235-1.967-11.437 5.752-22.641 17.022-23.734 11.463-1.112 21.104 8.108 21.104 19.636z" stroke="#fff" stroke-width="1.5" fill="none" data-anim="in" />
                                 </svg>
-                            </div>
+                            </div><p id="eventsmap"></p>
                             <h2 class="title section-title" data-anim="in" style="font-size: 6rem">EVENTS</h2>
                         </div>
                         <div class="events-map" data-anim="in">
@@ -3349,6 +3409,7 @@
                                         <div id="contact-us">
                                             <img src="img/footer.png">
                                         </div>
+                                        <p id="contactus"></p>
                 </div>
             </div>
 
