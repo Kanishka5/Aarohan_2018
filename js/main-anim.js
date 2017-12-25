@@ -185,7 +185,7 @@ window.addEventListener("load", function(){
                     ease: Circ.easeInOut
                 }).from(n, 3, {
                     delay: -2,
-                    backgroundColor: "#000000",
+                    backgroundColor: "#00438a",
                     ease: Power2.easeOut
                 }).from(st,2,{
                     opacity:0,
