@@ -1,5 +1,11 @@
 window.addEventListener("load", function(){ 
 
+    var stars = new TimelineMax({repeat:-1}).to("#stars",50,{y:-10000})
+                                    .to("#stars2",100,{y:-10000},0)
+                                    .to("#stars3",150,{y:-10000},0);
+
+
+
     // ....
 
     var c = new TimelineMax()
@@ -31,6 +37,11 @@ window.addEventListener("load", function(){
                 i = "undefined" != typeof o ? parseInt(o) : 0;
             animation = !0, t.preventDefault(), e(), scroll_to_el($(this), i)
         })
+    }
+
+
+    function stopStars(){
+        stars.timeScale(0.1);
     }
     var n = {
         init: function() {
@@ -165,11 +176,12 @@ window.addEventListener("load", function(){
                 b = new TimelineMax({
                     paused: !0,
                     delay: 1
+                }).set($("#stars-back"),{
+                    opacity:1
                 }).to(r, 1, {
                     opacity: 1
                 }).from(f, 3, {
                     scale: .9,
-                    x: "-=50",
                     ease: "linear"
                 }).to(f, .5, {
                     y: p,
@@ -179,19 +191,23 @@ window.addEventListener("load", function(){
                     opacity: 0,
                     delay: -1.5,
                     ease: Power2.easeOut
-                }).to(v, 3, {
+                }).call(stopStars)
+                .to(v, 3, {
                     delay: -3.3,
                     y: g,
                     ease: Circ.easeInOut
-                }).from(n, 3, {
+                })
+                .from(n, 3, {
                     delay: -2,
                     backgroundColor: "#00438a",
                     ease: Power2.easeOut
-                }).from(st,2,{
+                })
+                .from(st,2,{
                     opacity:0,
                     ease: Power2.easeOut,
                     delay:-1.5
-                }).from(s, 2, {
+                })
+                .from(s, 2, {
                     y: "+=25",
                     delay: -1,
                     opacity: 0,
