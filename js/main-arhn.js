@@ -383,6 +383,19 @@ jQuery(document).ready(function(){
        }
   });
 
+      $(window).stellar();
+
+  $(window).scroll(function(){
+       var t = $(window).scrollTop();
+       console.log(t);
+
+       if(t > windowHeight*0.5){
+          
+       }
+  });
+
+
+
 
 
 

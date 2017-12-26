@@ -8,6 +8,10 @@ window.addEventListener("load", function(){
 
     // ....
 
+    
+
+    
+
     var c = new TimelineMax()
 
     function e() {
@@ -41,7 +45,7 @@ window.addEventListener("load", function(){
 
 
     function stopStars(){
-        stars.timeScale(0.1);
+        stars.timeScale(0.05);
     }
     var n = {
         init: function() {

@@ -2539,39 +2539,49 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#193830', end
     width: 100vw;
     height: auto;
     position: absolute;
-    bottom: 0;
+    /*bottom: 0;*/
   }
 
   .main-back-mob{
     display: none;
+    
   }
 
   #back1{
     z-index: 10;
+    bottom: 0;
   }
   #back2{
     z-index: 9;
+    bottom: 10vh;
   }
   #back3{
     z-index: 8;
+    bottom: 20vh;
   }
   #back4{
     z-index: 7;
+    bottom: 30vh;
   }
   #back5{
     z-index: 6;
+    bottom: 40vh;
   }
   #back6{
     z-index: 5;
+    bottom: 50vh;
   }
   #back7{
     z-index: 4;
+    bottom: 60vh;
   }
   #back8{
     z-index: 3;
+    bottom:70vh;
   }
   #back9{
     z-index: 2;
+    bottom: 80vh;
   }
 
   #stars-back{
