@@ -2,6 +2,167 @@ jQuery(document).ready(function(){
   //Events map size - 
   // left: 37, up: 38, right: 39, down: 40,
   // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+  var imgmeteor=$('#meteor');
+
+  var windowWidth = $(window).width();
+  var windowHeight = $(window).height();
+  
+
+ (function() {
+    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || 
+                  window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function( callback ){
+                window.setTimeout(callback, 1000 / 60);
+              };
+    window.requestAnimationFrame = requestAnimationFrame;
+  })();
+
+  // Terrain stuff.
+  var terrain = document.getElementById("terCanvas"),
+    background = document.getElementById("bgCanvas"),
+    terCtx = terrain.getContext("2d"),
+    bgCtx = background.getContext("2d"),
+    width = window.innerWidth,
+    height = document.body.offsetHeight;
+    (height < 400)?height = 400:height;
+
+  terrain.width = background.width = width;
+  terrain.height = background.height = height;
+
+  // Some random points
+  var points = [],
+    displacement = 140,
+    power = Math.pow(2,Math.ceil(Math.log(width)/(Math.log(2))));
+  
+  // set the start height and end height for the terrain
+  points[0] = (height - (Math.random()*height/2))-displacement;
+  points[power] = (height - (Math.random()*height/2))-displacement;
+
+  // create the rest of the points
+  for(var i = 1; i<power; i*=2){
+    for(var j = (power/i)/2; j <power; j+=power/i){
+      points[j] = ((points[j - (power/i)/2] + points[j + (power/i)/2]) / 2) + Math.floor(Math.random()*-displacement+displacement );
+    }
+    displacement *= 0.6;
+  }
+
+  // draw the terrain
+  terCtx.beginPath();
+          
+  for(var i = 0; i<=width; i++){
+    if(i === 0){
+      terCtx.moveTo(0, points[0]);
+    }else if(points[i] !== undefined){
+      terCtx.lineTo(i, points[i]);
+    }
+  }
+
+  terCtx.lineTo(width,terrain.height);
+  terCtx.lineTo(0,terrain.height);
+  terCtx.lineTo(0,points[0]);
+  // terCtx.fill();
+
+
+  // Second canvas used for the stars
+  bgCtx.fillStyle = 'rgba(13,32,28,1)';
+  bgCtx.fillRect(0,0,width,height);
+
+  // stars
+  function Star(options){
+    this.size = Math.random()*2;
+    this.speed = Math.random()*0.5 + 0.1;
+    this.x = options.x;
+    this.y = options.y;
+  }
+
+  Star.prototype.reset = function(){
+    this.size = Math.random()*2;
+    this.speed = Math.random()*0.5 + 0.1;
+    this.x = width;
+    this.y = Math.random()*height;
+  }
+  
+  Star.prototype.update = function(){
+    this.x-=this.speed;
+    if(this.x<0){
+      this.reset();
+    }else{
+      bgCtx.fillRect(this.x,this.y,this.size,this.size); 
+    }
+  }
+  
+  function ShootingStar(){
+    this.reset();
+  }
+  
+  ShootingStar.prototype.reset = function(){
+    this.x = Math.random()*width;
+    this.y = 0;
+    this.len = (Math.random()*80)+30;
+    this.speed = (Math.random()*10)+6;
+    this.size = (Math.random()*1)+0.8;
+    // this is used so the shooting stars arent constant
+    this.waitTime =  new Date().getTime() + (Math.random()*1000);
+    this.active = false;
+  }
+  
+  ShootingStar.prototype.update = function(){
+    if(this.active){
+      this.x-=this.speed;
+      this.y+=this.speed;
+      if(this.x<0 || this.y >= height){
+        this.reset();
+      }else{
+      bgCtx.lineWidth = this.size;
+        bgCtx.beginPath();
+        bgCtx.moveTo(this.x,this.y);
+        bgCtx.lineTo(this.x+this.len, this.y-this.len);
+        bgCtx.stroke();
+      }
+    }else{
+      if(this.waitTime < new Date().getTime()){
+        this.active = true;
+      }     
+    }
+  }
+
+  var entities = [];
+  
+  // init the stars
+  for(var i=0; i < height; i++){
+    entities.push(new Star({x:Math.random()*width, y:Math.random()*height}));
+  }
+  
+  // Add 2 shooting stars that just cycle.
+  entities.push(new ShootingStar());
+  entities.push(new ShootingStar());
+  
+  //animate background
+  function animate(){
+
+    var my_gradient = bgCtx.createLinearGradient(0,0,0,height);
+    my_gradient.addColorStop(0,"#212f5f");
+    my_gradient.addColorStop(1,"#3dc8e9");
+    bgCtx.fillStyle = my_gradient
+    bgCtx.fillRect(0,0,width,height);
+    bgCtx.fillStyle = '#ffffff';
+    bgCtx.strokeStyle = '#ffffff';
+
+    var entLen = entities.length;
+    
+    while(entLen--){
+      entities[entLen].update();
+    }
+    
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+
+
+
+
+
+
   var keys = [37, 38, 39, 40];
 
   function preventDefault(e) {
@@ -267,9 +428,9 @@ jQuery(document).ready(function(){
           $('#vertical-cont').animate({
                   scrollTop: 0
          },1200, function(){
-           $('#robot-grad').css("opacity",1);
-           $('#robot2').css("opacity",1);
-           $('#robot3').css("opacity",0);
+           // $('#robot-grad').css("opacity",1);
+           // $('#robot2').css("opacity",1);
+           // $('#robot3').css("opacity",0);
            $('#major-logo').css("opacity",1);
            $('#workshop-logo').css("opacity",0);
          });
@@ -302,9 +463,9 @@ jQuery(document).ready(function(){
         $('#vertical-cont').animate({
                 scrollTop: windowHeight
        },1200,function(){
-          $('#robot-grad').css("opacity",1);
-         $('#robot2').css("opacity",0);
-         $('#robot3').css("opacity",1);
+          // $('#robot-grad').css("opacity",1);
+         // $('#robot2').css("opacity",0);
+         // $('#robot3').css("opacity",1);
          $('#major-logo').css("opacity",0);
          $('#workshop-logo').css("opacity",1);
         });
@@ -334,9 +495,9 @@ jQuery(document).ready(function(){
          $('#vertical-cont').animate({
                   scrollTop: windowHeight
          },1200,function(){
-            $('#robot-grad').css("opacity",0);
-           $('#robot2').css("opacity",0);
-           $('#robot3').css("opacity",0);
+            // $('#robot-grad').css("opacity",0);
+           // $('#robot2').css("opacity",0);
+           // $('#robot3').css("opacity",0);
            $('#major-logo').css("opacity",0);
            $('#workshop-logo').css("opacity",0);
          });
@@ -366,9 +527,9 @@ jQuery(document).ready(function(){
              $('#vertical-cont').animate({
                       scrollTop: windowHeight*2
              },1200,function(){
-                $('#robot-grad').css("opacity",0);
-               $('#robot2').css("opacity",0);
-               $('#robot3').css("opacity",0);
+                // $('#robot-grad').css("opacity",0);
+               // $('#robot2').css("opacity",0);
+               // $('#robot3').css("opacity",0);
                $('#major-logo').css("opacity",0);
                $('#workshop-logo').css("opacity",0);
                teamTimeline.play();
@@ -398,9 +559,9 @@ jQuery(document).ready(function(){
                $('#vertical-cont').animate({
                         scrollTop: windowHeight*4.2
                },1200,function(){
-                  $('#robot-grad').css("opacity",0);
-                 $('#robot2').css("opacity",0);
-                 $('#robot3').css("opacity",0);
+                  // $('#robot-grad').css("opacity",0);
+                 // $('#robot2').css("opacity",0);
+                 // $('#robot3').css("opacity",0);
                  $('#major-logo').css("opacity",0);
                  $('#workshop-logo').css("opacity",0);
                  hospTimeline.play();
@@ -431,9 +592,9 @@ jQuery(document).ready(function(){
              $('#vertical-cont').animate({
                       scrollTop: windowHeight*5.2
              },1200,function(){
-                $('#robot-grad').css("opacity",0);
-               $('#robot2').css("opacity",0);
-               $('#robot3').css("opacity",0);
+                // $('#robot-grad').css("opacity",0);
+               // $('#robot2').css("opacity",0);
+               // $('#robot3').css("opacity",0);
                $('#major-logo').css("opacity",0);
                $('#workshop-logo').css("opacity",0);
              });
@@ -449,8 +610,8 @@ jQuery(document).ready(function(){
 
 
 
-  console.log($("#major-logo").offset().top);
-console.log($("#workshop-logo").offset().top);
+  // console.log($("#major-logo").offset().top);
+// console.log($("#workshop-logo").offset().top);
 
 
 
@@ -584,29 +745,40 @@ console.log($("#workshop-logo").offset().top);
 
        var diff = t - $('#sponsors').scrollTop();
 
-       if(t > windowHeight*4.2){
+       if(t > windowHeight*3.2){
           hospTimeline.play();
        }
 
-       if(t < windowHeight){
+       if(t < windowHeight/2){
           hospTimeline.pause(0);
        }
 
-       if(t > windowHeight*2){
+       if(t > windowHeight){
           teamTimeline.play();
        }
 
-       if(t < windowHeight){
+       if(t < windowHeight/2){
           teamTimeline.pause(0);
        }
 
-       if(diff > windowHeight/2){
+       if(t >= 0){
           sponsorTimeline.play();
        }
 
-       if(diff == 0){
-          sponsorTimeline.pause(0);
-       }
+       // if(t==0){
+       //     $('#sponsors-start').animate({
+       //                // scrollTop: $(window).height(),
+       //                height:windowHeight
+       //          }, 800,function(){
+       //              enable_scroll();
+       //          });
+       // }
+
+       console.log(t);
+
+       // if(t == 0){
+       //    sponsorTimeline.pause(0);
+       // }
   });
 
       // $(window).stellar();
@@ -620,6 +792,51 @@ console.log($("#workshop-logo").offset().top);
   //      }
   // });
 
+  var windowWidth = $(window).width();
+
+  $('#major-ballon').css('left',2*windowWidth);
+  $('#major-ballon2').css('left',2.8*windowWidth);
+  $('#major-ballon3').css('left',3.6*windowWidth);
+
+  var ballonTimiline = new TimelineMax({repeat:-1, yoyo:true})
+            .to("#major-ballon",25,{x:-windowWidth*0.7})
+            .set("#major-ballon",{transform:"rotateX(0deg) rotateY(180deg)"});
+
+  var ballonTimiline2 = new TimelineMax({repeat:-1, yoyo:true})
+            .to("#major-ballon2",25,{x:-windowWidth*0.7})
+            .set("#major-ballon2",{transform:"rotateX(0deg) rotateY(180deg)"})
+
+  var ballonTimiline3 = new TimelineMax({repeat:-1, yoyo:true})
+            .to("#major-ballon3",25,{x:-windowWidth*0.7})
+            .set("#major-ballon3",{transform:"rotateX(0deg) rotateY(180deg)"})
+
+
+  $('#work-ballon1').css('left',6*windowWidth);
+  $('#work-ballon2').css('left',6.8*windowWidth);
+  $('#work-ballon3').css('left',7.6*windowWidth);
+  $('#work-ballon4').css('left',8.4*windowWidth);
+
+  var ballonTimiline = new TimelineMax({repeat:-1, yoyo:true})
+            .to("#work-ballon1",25,{x:-windowWidth*0.7})
+            .set("#work-ballon1",{transform:"rotateX(0deg) rotateY(180deg)"});
+
+  var ballonTimiline2 = new TimelineMax({repeat:-1, yoyo:true})
+            .to("#work-ballon2",25,{x:-windowWidth*0.7})
+            .set("#work-ballon2",{transform:"rotateX(0deg) rotateY(180deg)"})
+
+  var ballonTimiline3 = new TimelineMax({repeat:-1, yoyo:true})
+            .to("#work-ballon3",25,{x:-windowWidth*0.7})
+            .set("#work-ballon3",{transform:"rotateX(0deg) rotateY(180deg)"})
+
+  var ballonTimiline4 = new TimelineMax({repeat:-1, yoyo:true})
+            .to("#work-ballon4",25,{x:-windowWidth*0.7})
+            .set("#work-ballon4",{transform:"rotateX(0deg) rotateY(180deg)"})
+
+  // var ballonTimiline2 = new TimelineMax()
+  //           .from("#major-ballon2",5,{x:-windowWidth});
+
+  // var ballonTimiline3 = new TimelineMax()
+  //           .from("#major-ballon3",5,{x:-windowWidth});
 
 
 
@@ -630,11 +847,40 @@ console.log($("#workshop-logo").offset().top);
 
 
   var scrollTop = $('#container').scrollTop();
+  // console.log(scrollTop);
   var scrollPercent = scrollTop/scrollArea ;
   var scrollWidth = -scrollPercent*window.innerWidth*3;
   $('#city-front').css('left', scrollWidth + 'px');
   var scrollWidth2 = $(window).width() - scrollPercent*window.innerWidth*3;
   $('#city-front2').css('left', scrollWidth2 + 'px');
+
+
+
+  var scrollWidthBaloon1 = $(window).width()*2- scrollPercent*window.innerWidth*3.5;
+  $('#major-ballon').css('left', scrollWidthBaloon1 + 'px');
+
+
+  var scrollWidthBaloon2 = $(window).width()*2.8 - scrollPercent*window.innerWidth*3.5;
+  $('#major-ballon2').css('left', scrollWidthBaloon2 + 'px');
+
+
+  var scrollWidthBaloon3 = $(window).width()*3.6 - scrollPercent*window.innerWidth*3.5;
+  $('#major-ballon3').css('left', scrollWidthBaloon3 + 'px');
+
+
+  var scrollWidthBaloon4 = $(window).width()*6- scrollPercent*window.innerWidth*3.5;
+  $('#work-ballon1').css('left', scrollWidthBaloon4 + 'px');
+
+
+  var scrollWidthBaloon5 = $(window).width()*6.8 - scrollPercent*window.innerWidth*3.5;
+  $('#work-ballon2').css('left', scrollWidthBaloon5 + 'px');
+
+
+  var scrollWidthBaloon6 = $(window).width()*7.6 - scrollPercent*window.innerWidth*3.5;
+  $('#work-ballon3').css('left', scrollWidthBaloon6 + 'px');
+
+  var scrollWidthBaloon7 = $(window).width()*8.4 - scrollPercent*window.innerWidth*3.5;
+  $('#work-ballon4').css('left', scrollWidthBaloon7 + 'px');
 
   var scrollWidthBack = -scrollPercent*window.innerWidth*1;
   $('#city-back').css('left', scrollWidthBack + 'px');
@@ -646,9 +892,17 @@ console.log($("#workshop-logo").offset().top);
   var scrollWidth4 = $(window).width()*3 - scrollPercent*window.innerWidth*3;
   $('#city-front4').css('left', scrollWidth4 + 'px');
   var scrollWidth8 = $(window).width()*4 - scrollPercent*window.innerWidth*3;
-  $('#city-front5').css('left', scrollWidth4 + 'px');
+  $('#city-front5').css('left', scrollWidth8 + 'px');
   var scrollWidth9 = $(window).width()*5 - scrollPercent*window.innerWidth*3;
-  $('#city-front5').css('left', scrollWidth4 + 'px');
+  $('#city-front6').css('left', scrollWidth9 + 'px');
+   var scrollWidth10 = $(window).width()*6 - scrollPercent*window.innerWidth*3;
+  $('#city-front7').css('left', scrollWidth10 + 'px');
+  var scrollWidth11 = $(window).width()*7 - scrollPercent*window.innerWidth*3;
+  $('#city-front8').css('left', scrollWidth11 + 'px');
+   var scrollWidth12 = $(window).width()*8 - scrollPercent*window.innerWidth*3;
+  $('#city-front9').css('left', scrollWidth12 + 'px');
+  var scrollWidth13 = $(window).width()*9 - scrollPercent*window.innerWidth*3;
+  $('#city-front10').css('left', scrollWidth13 + 'px');
 
 
   var scrollWidth5 = $(window).width()*2-scrollPercent*window.innerWidth*12;
@@ -676,25 +930,48 @@ console.log($("#workshop-logo").offset().top);
 
 
 
-  if(k < $(window).width()*12  && k > $(window).width()*10){
+  if(k < $(window).width()*26 && k > $(window).width()*24){
     $('#vertical-cont').css('overflow-y','hidden');
      sponsor_scroll = false;
-    var robot_timeline = new TimelineMax()
-                  .to("#robot3",0.5,{opacity:1})
-                  .to("#robot-grad",0.5,{opacity:1},0);
+      
+    // var robot_timeline = new TimelineMax()
+                  // .to("#robot3",0.5,{opacity:1})
+                  // .to("#robot-grad",0.5,{opacity:1},0);
 
   }
 
-  if(k == $(window).width()*12){
+  // if(k< $(window).width()*25){
+  //   $('#sponsors-start').animate({
+  //                     // scrollTop: $(window).height(),
+  //                     height:windowHeight
+  //               }, 800,function(){
+  //                   enable_scroll();
+  //               });
+  // }
+
+  if(k == $(window).width()*26){
     // $('#space2').css('height','100vh');
     $('#vertical-cont').css('overflow-y','scroll');
-    var robot_timeline = new TimelineMax()
-                  .to("#robot3",0.5,{opacity:0})
-                  .to("#robot-grad",0.5,{opacity:0},0);
-    //               if(sponsor_scroll == false){
-    //                  $('#vertical-cont').animate({
-    //                   scrollTop: $(window).height()
-    //                 }, 800);
+    // var robot_timeline = new TimelineMax()
+                  // .to("#robot3",0.5,{opacity:0})
+                  // .to("#robot-grad",0.5,{opacity:0},0);
+                  disable_scroll();
+                  // $("#sponsors-start").css('height','0');
+               $('#vertical-cont').animate({
+                      // scrollTop: $(window).height(),
+                      opacity: 1
+                }, 800,function(){
+                    enable_scroll();
+                });
+
+
+// var tween_spon = new TimelineMax().to("$sponsors-start",8,{height:0})
+                $('#sponsors-start').animate({
+                      // scrollTop: $(window).height(),
+                      height:0
+                }, 800,function(){
+                    enable_scroll();
+                });
 
     //                  sponsor_scroll = true;
 
@@ -702,27 +979,29 @@ console.log($("#workshop-logo").offset().top);
                  
   }
 
+  // console.log(k);
+
   if(k >= $(window).width()*5 && k <= $(window).width()*8 ){
              
-              var robot_timeline = new TimelineMax()
-                            .to("#robot2",0.2,{opacity:0})
-                            .to("#robot3",0.2,{opacity:1});
+              // var robot_timeline = new TimelineMax()
+                            // .to("#robot2",0.2,{opacity:0})
+                            // .to("#robot3",0.2,{opacity:1});
   }
 
-  if(k >= $(window).width()*5 && k < $(window).width()*6.10){
+  if(k >= $(window).width()*12.5 && k < $(window).width()*13.5){
     var robot_timeline = new TimelineMax()
                   .to("#workshop-logo",0.5,{opacity:1});
   }
 
-  if(k >= $(window).width()*6.27){
+  if(k >= $(window).width()*13.5){
     var robot_timeline = new TimelineMax()
                   .to("#workshop-logo",0.5,{opacity:0});
   }
 
-  if(k < $(window).width()*4.8 && k > $(window).width()*4){
+  if(k < $(window).width()*12 && k > $(window).width()*11){
     var robot_timeline = new TimelineMax()
-                  .to("#robot3",0.2,{opacity:0})
-                  .to("#robot2",0.2,{opacity:1})
+                  // .to("#robot3",0.2,{opacity:0})
+                  // .to("#robot2",0.2,{opacity:1})
                   .to("#workshop-logo",0.5,{opacity:0},0);
   }
 
@@ -820,7 +1099,7 @@ console.log($("#workshop-logo").offset().top);
   // build scenes
  var parr_scene =  new ScrollMagic.Scene({triggerElement: "#back1",duration:500,triggerHook:0,offset:-150})
           .setTween(parallax_land)
-          .addIndicators()
+          // .addIndicators()
           .addTo(controller);
 
 
@@ -846,7 +1125,7 @@ if(windowWidth > 500){
 
       var scene3 = new ScrollMagic.Scene({triggerElement: "#hz-trigger",triggerHook: 1,offset:100})
                 .addTo(controller)
-                .addIndicators()
+                // .addIndicators()
                 .on("enter leave", function (e) {
                     if("FORWARD" == e.scrollDirection && $(window).width() > 500){
                           disable_scroll();
@@ -865,9 +1144,9 @@ if(windowWidth > 500){
                                   .to("#city-front2",0.5,{opacity:1},1)
                                   .to("#city-back",0.5,{opacity:1},1.5)
                                   .to("#city-back2",0.5,{opacity:1},1.5)
-                                  .to("#major-logo",1,{opacity:1,y:'-25'},0.5)
-                                  .to('#robot-grad',1,{opacity:1},0)
-                                  .to('#robot2',1,{opacity:1},0.5);
+                                  .to("#major-logo",1,{opacity:1,y:'-25'},0.5);
+                                  // .to('#robot-grad',1,{opacity:1},0);
+                                  // .to('#robot2',1,{opacity:1},0.5);
                                   
                           // history.replaceState(void 0, void 0, "#major-attractions")
                     } 
@@ -880,8 +1159,8 @@ if(windowWidth > 500){
                           //       enable_scroll();
                           //   });
                         $('#major-logo').css('opacity','0');
-                        $('#robot-grad').css('opacity','0');
-                        $('#robot2').css('opacity','0');
+                        // $('#robot-grad').css('opacity','0');
+                        // $('#robot2').css('opacity','0');
                         $('#city-front').css('opacity','0');
                         $('#city-front2').css('opacity','0');
                         $('#city-back').css('opacity','0');

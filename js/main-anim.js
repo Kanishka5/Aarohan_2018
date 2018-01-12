@@ -1,8 +1,8 @@
 window.addEventListener("load", function(){ 
 
     var stars = new TimelineMax({repeat:-1}).to("#stars",50,{y:-10000})
-                                    .to("#stars2",100,{y:-10000},0)
-                                    .to("#stars3",150,{y:-10000},0);
+                                    .to("#stars2",60,{y:-10000},0)
+                                    .to("#stars3",70,{y:-10000},0);
 
 
 
@@ -239,7 +239,7 @@ window.addEventListener("load", function(){
                 })
                 .from(n, 3, {
                     delay: -2,
-                    backgroundColor: "#00438a",
+                    backgroundColor: "#22305f",
                     ease: Power2.easeOut
                 })
                 .from(st,2,{

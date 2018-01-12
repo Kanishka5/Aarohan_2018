@@ -57,7 +57,9 @@
 
 
 .section-map {
-  padding: 145px 0 130px; }
+  padding: 145px 0 130px;
+  margin-top: 20vh;
+   }
   .section-map #map-popup {
     opacity: 1;
     visibility: hidden;

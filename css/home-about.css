@@ -31,9 +31,9 @@
  *-------------------------------------------------------------------------*/
 .section-home-about {
   padding-top: 20vh;
-  background-color: #040a0a;
+  background-color: #22305f;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6FAAB4', endColorstr='#FFACCED3', GradientType=0);
-  height: 140vh; }
+  height: 190vh; }
   .section-home-about .frame {
     text-align: center; }
   .section-home-about .section-arrow {
@@ -57,7 +57,7 @@
 
 .section-map {
   position: relative;
-  background-color: #040a0a;
+  background-color: #22305f;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFACCED3', endColorstr='#FFF6FAFA', GradientType=0); 
 }
   .section-map .section-title {

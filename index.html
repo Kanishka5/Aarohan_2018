@@ -155,7 +155,8 @@
     figcaption,
     figure,
     main {
-        display: block
+        display: block;
+        background-color: #22305e;
     }
 
     figure {
@@ -1035,13 +1036,15 @@
     }
 
     .section-home-banner {
-        background-color: #000000;
+        background-color: #22305f;
 
-      background: rgb(25,56,48);
-background: -moz-linear-gradient(top, rgba(25,56,48,1) 0%, rgba(112,157,134,1) 100%);
-background: -webkit-linear-gradient(top, rgba(25,56,48,1) 0%,rgba(112,157,134,1) 100%);
-background: linear-gradient(to bottom, rgba(25,56,48,1) 0%,rgba(112,157,134,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#193830', endColorstr='#709d86',GradientType=0 );
+        background: rgb(33,47,95);
+background: -moz-linear-gradient(top, rgba(33,47,95,1) 0%, rgba(61,200,233,1) 100%);
+background: -webkit-linear-gradient(top, rgba(33,47,95,1) 0%,rgba(61,200,233,1) 100%);
+background: linear-gradient(to bottom, rgba(33,47,95,1) 0%,rgba(61,200,233,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212f5f', endColorstr='#3dc8e9',GradientType=0 );
+
+
     }
 
     .section-home-banner #banner-top {
@@ -2149,7 +2152,7 @@ function closeNav() {
                 	<!-- <div id="particles-js"></div> --><p id="home"></p>
                     <img src="img/robot_space.png" alt="" class="scene" id="satellite" />
                     <div class="clouds"></div>
-                    <img id="main-logo" src="img/logo.png" /><p id="home"></p>
+                    <img id="main-logo" class="bounce-5" src="img/logo.gif" /><p id="home"></p>
                 	<div id="main-text"> <span>AAROHAN 2018</span> </div>
                 	<div id="main-date"> <span>08 &nbsp;09 &nbsp;10 &nbsp;11</span></div>
                 	<div id="main-month"> <span>FEBRUARY 2018</span></div>
@@ -2160,9 +2163,9 @@ function closeNav() {
                         <img src="img/parallax/4-back.png" data-stellar-ratio="0.7" alt="" class="scene l0 main-back" id="back4" />
                         <img src="img/parallax/5-back.png" data-stellar-ratio="0.6" alt="" class="scene l0 main-back" id="back5" />
                         <img src="img/parallax/6-back.png" data-stellar-ratio="0.5" alt="" class="scene l0 main-back" id="back6" />
-                        <img src="img/parallax/7-back.png" data-stellar-ratio="0.4" alt="" class="scene l0 main-back" id="back7" />
+                       <!--  <img src="img/parallax/7-back.png" data-stellar-ratio="0.4" alt="" class="scene l0 main-back" id="back7" />
                         <img src="img/parallax/8-back.png" data-stellar-ratio="0.3" alt="" class="scene l0 main-back" id="back8" />
-                        <img src="img/parallax/9-back.png" data-stellar-ratio="0.2" alt="" class="scene l0 main-back" id="back9" />
+                        <img src="img/parallax/9-back.png" data-stellar-ratio="0.2" alt="" class="scene l0 main-back" id="back9" /> -->
                         <img src="img/back-fire.png" class=" scene l0 main-back-mob" />
                        <!--  <img src="img/city-land.png" alt="" class="scene l0" id="city" /> -->
 
@@ -2194,7 +2197,7 @@ function closeNav() {
                                 </svg>
                             </div><p id="about-us"></p>
                             <h2 class="title section-title dash" data-anim="in">ABOUT US</h2>
-                            <img id="robot1" data-anim="in" src="img/robot1.png" />
+                            <img id="robot1" data-anim="in" src="img/robot.gif" />
                             <div id="about-us-text" class="description" data-anim="in">
                                 <p>National Institute of Technology, Durgapur has been a pioneering educational institute for above 50 years. It boasts of students who have achieved par excellence in the field of academics and organization.
 
@@ -2208,58 +2211,10 @@ function closeNav() {
                 </div>
             </section>
             <section id="map" class="section-map">
-                <div class="dt">
-                    <div class="dc">
-                        <div class="frame">
-                            <div class="section-icon">
-                                <svg id="icon-map" width="41" height="55" viewBox="0 0 41 55" xmlns="https://www.w3.org/2000/svg">
-                                    <path d="M29.122 20.727c0-5.054-3.994-9.151-8.92-9.151-4.927 0-8.92 4.098-8.92 9.151 0 5.054 3.994 9.152 8.92 9.152 4.927 0 8.92-4.098 8.92-9.152zm10.31 0c0 15.051-12.214 17.874-17.959 32.338-.467 1.175-2.08 1.169-2.547-.006-5.182-13.042-15.623-16.617-17.621-28.235-1.967-11.437 5.752-22.641 17.022-23.734 11.463-1.112 21.104 8.108 21.104 19.636z" stroke="#fff" stroke-width="1.5" fill="none" data-anim="in" />
-                                </svg>
-                            </div><p id="eventsmap"></p>
-                            <h2 class="title section-title" data-anim="in" style="font-size: 6rem">EVENTS</h2>
-                        </div>
-                        <div class="events-map" data-anim="in">
-                            <div id="events-join">
-                                <!-- Image Map Generated by http://www.image-map.net/ -->
-                                <img id="base" src="img/map.png">
-
-                                <img id="base2" src="img/map.png" usemap="#image-map">
-
-                                <map name="image-map">
-                                    <area target="" class="mapping" id="#Map" alt="one" title="one" href="" coords="40,153,29,192,34,216,68,262,82,285,427,283,462,243,420,190,401,93,345,101,273,82,238,61,178,75,100,95,121,119,116,140,81,155" shape="poly">
-                                    <area target="" class="mapping2" id="#Map2" alt="two" title="two" href="" coords="101,300,163,317,289,384,353,374,415,302" shape="poly">
-                                    <area target="" class="mapping3" id="#Map3" alt="three" title="three" href="" coords="576,36,539,40,511,54,482,77,464,85,441,80,418,77,439,176,477,233,566,254" shape="poly">
-                                    <area target="" class="mapping4" id="#Map4" alt="five" title="five" href="" coords="594,36,743,44,744,54,756,75,773,85,797,91,807,93,812,118,837,161,851,214,843,220,715,213,647,325,581,259" shape="poly">
-                                    <area target="" class="mapping5" id="#Map5" alt="four" title="four" href="" coords="480,255,371,387,384,394,390,408,411,417,470,431,517,434,560,413,596,411,635,346,568,276" shape="poly">
-                                    <area target="" class="mapping6" id="#Map6" alt="six" title="six" href="" coords="721,239,621,421,632,431,661,431,687,430,720,425,734,414,833,331,838,302,839,287,847,279,838,245" shape="poly">
-                                    <area target="" class="mapping7" id="#Map7" alt="" title="" href="" coords="836,356,755,428,810,449,877,471,923,472,938,450,908,418" shape="poly">
-                                </map>
-                                <img id="top" src="img/one.png" />
-                                <img id="two" src="img/two.png" />
-                                <img id="three" src="img/three.png" />
-                                <img id="four" src="img/four.png" />
-                                <img id="five" src="img/five.png" />
-                                <img id="six" src="img/six.png"  />
-                                <img id="seven" src="img/seven.png"  />
-                            </div>
-                           <!--  <div class="island-wrap">
-                                <div class="objects">
-                                </div>
-                            </div> -->
-                        </div>
-                        <div id="map-popup">
-                            <div class="buttons">
-                                <a href="jabascript:;" class="close"></a>
-                            </div>
-                            <div class="content" id="map-content">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <img src="img/events_new.png" id="events_map">
             </section>
             <div id="major-space">
-                <img src="img/backcitydark.png" id="citydarkback">
+                <!-- <img src="img/backcitydark.png" id="citydarkback"> -->
             </div>
             <div id="hz-trigger"></div>
             <div id="hz-container">
@@ -2267,17 +2222,45 @@ function closeNav() {
 
                 <img id="robot2" src="img/robot2.png" />
                 <img id="robot3" src="img/robot3.png" />
-                <div id="city-back-color"></div>
+                <div id="city-back-color">
+                    <canvas id="bgCanvas"></canvas>
+                    <canvas id="terCanvas"></canvas>
+                </div>
                 <!-- <img id="city-stars" src="img/city-stars.png" /> -->
                 <img id="city-front" src="img/city-front.png" />
                 <img id="city-front2" src="img/city-front.png" />
-                <img id="city-back" src="img/city-back.png" />
-                <img id="city-back2" src="img/city-back.png" />
+               <!--  <img id="city-back" src="img/city-back.png" />
+                <img id="city-back2" src="img/city-back.png" /> -->
                 <img id="city-front3" src="img/city-front.png" />
                 <img id="city-front4" src="img/city-front.png" />
                 <img id="city-front5" src="img/city-front.png" />
-                <img id="city-front6" src="img/city-front.png" />
-                <div class="major-img">
+                <img id="city-front6" class="city-new" src="img/city-front.png" />
+                <img id="city-front7" class="city-new" src="img/city-front.png" />
+                <img id="city-front8" class="city-new" src="img/city-front.png" />
+                <img id="city-front9" class="city-new" src="img/city-front.png" />
+                <img id="city-front10" class="city-new" src="img/city-front.png" />
+                <div id="major-ballon" class="ballon">
+                    <img src="img/major_baloon1.png">
+                </div>
+                <div id="major-ballon2" class="ballon">
+                    <img src="img/major_baloon2.png">
+                </div>
+                <div id="major-ballon3" class="ballon">
+                    <img src="img/major_baloon3.png">
+                </div>
+                 <div id="work-ballon1" class="ballon">
+                    <img src="img/major_baloon1.png">
+                </div>
+                 <div id="work-ballon2" class="ballon">
+                    <img src="img/major_baloon1.png">
+                </div>
+                 <div id="work-ballon3" class="ballon">
+                    <img src="img/major_baloon1.png">
+                </div>
+                <!-- <div id="work-ballon4" class="ballon">
+                    <img src="img/major_baloon1.png">
+                </div> -->
+                <!-- <div class="major-img">
                     <div class="cover">
                         <img src="img/major_attractions/01.jpg" />
                     </div>
@@ -2331,7 +2314,7 @@ function closeNav() {
                     </div>
                     <div class="heading2">INTERNET OF THINGS (IOT)</div>
                     <div class="caption">First ‘Steam Engine’ to the now ‘Cyber Physical Systems’ is all about advancement in Technologies for better Productivity by smart Solutions. Industry 4.O; the fourth Industrial revolution and the current one have got key space for ‘Internet of things’. Connectivity of Physical Systems through cloud resulting in smarter solutions is ‘Internet of Things’, ‘Industry 4.0’ or ‘Cyber Physical Systems’ all about’.In simpler words when CSE/IT and Core branches can all sit under one roof for a Workshop’ it clearly states the bigger scope of IoT now and in upcoming days/decades across Globe. In this workshop participants will learn designing programmable systems, interafacing various sensors, working with ESP8266, HC05, node-red, IBM Watson IoT, MQTT, AWS IoT and many more. </div>
-                </div>
+                </div> -->
                 <div id="major-logo">MAJOR &nbsp;ATTRACTIONS</div>
                 <div id="workshop-logo">WORKSHOPS</div>
                 <div id="robot-grad"></div>
@@ -2341,40 +2324,7 @@ function closeNav() {
                           <div id="container2">
                             <div class="box one">
                             </div>
-                            <div class="box two">
-                                <!-- <img class="major-img" src="img/major_attractions/01.jpg" /> -->
-                            </div>
-                             <div class="box three">
-                                <!-- <img class="major-img" src="img/major_attractions/02.jpg" /> -->
-                            </div>
-                             <div class="box three">
-                                <!-- <img class="major-img" src="img/major_attractions/02.jpg" /> -->
-                            </div>
-                             <div class="box three">
-                                <!-- <img class="major-img" src="img/major_attractions/02.jpg" /> -->
-                            </div>
-                             <div class="box three">
-                                <!-- <img class="major-img" src="img/major_attractions/02.jpg" /> -->
-                            </div>
-                             <div class="box three">
-                                <!-- <img class="major-img" src="img/major_attractions/02.jpg" /> -->
-                            </div>
-                             <div class="box three">
-                                <!-- <img class="major-img" src="img/major_attractions/02.jpg" /> -->
-                            </div>
-                             <div class="box three">
-                                <!-- <img class="major-img" src="img/major_attractions/02.jpg" /> -->
-                            </div>
-                             <div class="box three">
-                                <!-- <img class="major-img" src="img/major_attractions/02.jpg" /> -->
-                            </div>
-                             <div class="box three">
-                                <!-- <img class="major-img" src="img/major_attractions/02.jpg" /> -->
-                            </div>
-                            <div class="box five">
-                                <!-- <img class="major-img" src="img/major_attractions/04.jpg" /> -->
-                            </div>
-                            <div class="four">
+                            <div class="four" >
                                 <div id="vertical-cont">
                                   <div id="vertical-cont2">
                                         <div class="box two"></div>
@@ -3550,6 +3500,8 @@ function closeNav() {
     <link rel='stylesheet' id='gforms_formsmain_css-css' href='css/formsmain.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='gforms_ready_class_css-css' href='css/readyclass.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='gforms_browsers_css-css' href='css/browsers.min.css' type='text/css' media='all' />
+
+
     <script type='text/javascript' src='js/TweenMax.min.js'></script>
     <script type='text/javascript' src='js/jquery.stellar.min.js'></script>
     <script type='text/javascript' src='js/ScrollToPlugin.min.js'></script>
