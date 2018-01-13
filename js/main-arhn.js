@@ -187,9 +187,10 @@ jQuery(document).ready(function(){
     width = window.innerWidth,
     height2 = document.body.offsetHeight*6;
     if(windowWidth < 500){
-      height2 = document.body.offsetHeight*5;
+      height2 = document.body.offsetHeight*5.4;
     }
-    (height2 < 400)?height2 = 400:height2;
+    console.log(document.body.offsetHeight)
+    // (height2 < 400)?height2 = 400:height2;
 
   terrain2.width = background2.width = width;
   terrain2.height = background2.height = height2;
@@ -1347,13 +1348,18 @@ if(windowWidth > 0){
                               enable_scroll();
 
                           });
+                          if(windowWidth < 500){
+                             $("#container").css("overflow-y","scroll");
+                          }
+
+                         
 
                          var majotTimeline = new TimelineMax()
                                   .to("#city-front",0.5,{opacity:1},1)
                                   .to("#city-front2",0.5,{opacity:1},1)
                                   .to("#city-back",0.5,{opacity:1},1.5)
                                   .to("#city-back2",0.5,{opacity:1},1.5)
-                                  .to("#major-logo",1,{opacity:1,y:'-25'},0.5);
+                                  .to("#major-logo",1,{opacity:1,y:'-25'},0.5);                                  
                                   // .to('#robot-grad',1,{opacity:1},0);
                                   // .to('#robot2',1,{opacity:1},0.5);
                                   
