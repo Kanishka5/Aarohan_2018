@@ -31,244 +31,245 @@ jQuery(document).ready(function(){
 
 
 
-  // var terrain = document.getElementById("terCanvas"),
-  //   background = document.getElementById("bgCanvas"),
-  //   terCtx = terrain.getContext("2d"),
-  //   bgCtx = background.getContext("2d"),
-  //   width = window.innerWidth,
-  //   height = document.body.offsetHeight;
-  //   (height < 400)?height = 400:height;
+  var terrain = document.getElementById("terCanvas"),
+    background = document.getElementById("bgCanvas"),
+    terCtx = terrain.getContext("2d"),
+    bgCtx = background.getContext("2d"),
+    width = window.innerWidth,
+    height = document.body.offsetHeight;
+    (height < 400)?height = 400:height;
 
-  // terrain.width = background.width = width;
-  // terrain.height = background.height = height;
+  terrain.width = background.width = width;
+  terrain.height = background.height = height;
 
-  // // Some random points
-  // var points = [],
-  //   displacement = 140,
-  //   power = Math.pow(2,Math.ceil(Math.log(width)/(Math.log(2))));
+  // Some random points
+  var points = [],
+    displacement = 140,
+    power = Math.pow(2,Math.ceil(Math.log(width)/(Math.log(2))));
   
-  // // set the start height and end height for the terrain
-  // points[0] = (height - (Math.random()*height/2))-displacement;
-  // points[power] = (height - (Math.random()*height/2))-displacement;
+  // set the start height and end height for the terrain
+  points[0] = (height - (Math.random()*height/2))-displacement;
+  points[power] = (height - (Math.random()*height/2))-displacement;
 
-  // // create the rest of the points
-  // for(var i = 1; i<power; i*=2){
-  //   for(var j = (power/i)/2; j <power; j+=power/i){
-  //     points[j] = ((points[j - (power/i)/2] + points[j + (power/i)/2]) / 2) + Math.floor(Math.random()*-displacement+displacement );
-  //   }
-  //   displacement *= 0.6;
-  // }
+  // create the rest of the points
+  for(var i = 1; i<power; i*=2){
+    for(var j = (power/i)/2; j <power; j+=power/i){
+      points[j] = ((points[j - (power/i)/2] + points[j + (power/i)/2]) / 2) + Math.floor(Math.random()*-displacement+displacement );
+    }
+    displacement *= 0.6;
+  }
 
-  // // draw the terrain
-  // terCtx.beginPath();
+  // draw the terrain
+  terCtx.beginPath();
           
-  // for(var i = 0; i<=width; i++){
-  //   if(i === 0){
-  //     terCtx.moveTo(0, points[0]);
-  //   }else if(points[i] !== undefined){
-  //     terCtx.lineTo(i, points[i]);
-  //   }
-  // }
+  for(var i = 0; i<=width; i++){
+    if(i === 0){
+      terCtx.moveTo(0, points[0]);
+    }else if(points[i] !== undefined){
+      terCtx.lineTo(i, points[i]);
+    }
+  }
 
-  // terCtx.lineTo(width,terrain.height);
-  // terCtx.lineTo(0,terrain.height);
-  // terCtx.lineTo(0,points[0]);
-  // // terCtx.fill();
+  terCtx.lineTo(width,terrain.height);
+  terCtx.lineTo(0,terrain.height);
+  terCtx.lineTo(0,points[0]);
+  // terCtx.fill();
 
-  // // Second canvas used for the stars
-  // bgCtx.fillStyle = 'rgba(13,32,28,1)';
-  // bgCtx.fillRect(0,0,width,height);
+  // Second canvas used for the stars
+  bgCtx.fillStyle = 'rgba(13,32,28,1)';
+  bgCtx.fillRect(0,0,width,height);
 
-  // // stars
-  // function Star(options){
-  //   this.size = Math.random()*2;
-  //   this.speed = Math.random()*0.5 + 0.1;
-  //   this.x = options.x;
-  //   this.y = options.y;
-  // }
+  // stars
+  function Star(options){
+    this.size = Math.random()*2;
+    this.speed = Math.random()*0.5 + 0.1;
+    this.x = options.x;
+    this.y = options.y;
+  }
 
-  // Star.prototype.reset = function(){
-  //   this.size = Math.random()*2;
-  //   this.speed = Math.random()*0.5 + 0.1;
-  //   this.x = width;
-  //   this.y = Math.random()*height;
-  // }
+  Star.prototype.reset = function(){
+    this.size = Math.random()*2;
+    this.speed = Math.random()*0.5 + 0.1;
+    this.x = width;
+    this.y = Math.random()*height;
+  }
   
-  // Star.prototype.update = function(){
-  //   this.x-=this.speed;
-  //   if(this.x<0){
-  //     this.reset();
-  //   }else{
-  //     bgCtx.fillRect(this.x,this.y,this.size,this.size); 
-  //   }
-  // }
+  Star.prototype.update = function(){
+    this.x-=this.speed;
+    if(this.x<0){
+      this.reset();
+    }else{
+      bgCtx.fillRect(this.x,this.y,this.size,this.size); 
+    }
+  }
   
-  // function ShootingStar(){
-  //   this.reset();
-  // }
+  function ShootingStar(){
+    this.reset();
+  }
   
-  // ShootingStar.prototype.reset = function(){
-  //   this.x = Math.random()*width;
-  //   this.y = 0;
-  //   this.len = (Math.random()*80)+30;
-  //   this.speed = (Math.random()*10)+6;
-  //   this.size = (Math.random()*1)+0.8;
-  //   // this is used so the shooting stars arent constant
-  //   this.waitTime =  new Date().getTime() + (Math.random()*1000);
-  //   this.active = false;
-  // }
+  ShootingStar.prototype.reset = function(){
+    this.x = Math.random()*width;
+    this.y = 0;
+    this.len = (Math.random()*80)+30;
+    this.speed = (Math.random()*10)+6;
+    this.size = (Math.random()*1)+0.8;
+    // this is used so the shooting stars arent constant
+    this.waitTime =  new Date().getTime() + (Math.random()*1000);
+    this.active = false;
+  }
   
-  // ShootingStar.prototype.update = function(){
-  //   if(this.active){
-  //     this.x-=this.speed;
-  //     this.y+=this.speed;
-  //     if(this.x<0 || this.y >= height){
-  //       this.reset();
-  //     }else{
-  //     bgCtx.lineWidth = this.size;
-  //       bgCtx.beginPath();
-  //       bgCtx.moveTo(this.x,this.y);
-  //       bgCtx.lineTo(this.x+this.len, this.y-this.len);
-  //       bgCtx.stroke();
-  //     }
-  //   }else{
-  //     if(this.waitTime < new Date().getTime()){
-  //       this.active = true;
-  //     }     
-  //   }
-  // }
+  ShootingStar.prototype.update = function(){
+    if(this.active){
+      this.x-=this.speed;
+      this.y+=this.speed;
+      if(this.x<0 || this.y >= height){
+        this.reset();
+      }else{
+      bgCtx.lineWidth = this.size;
+        bgCtx.beginPath();
+        bgCtx.moveTo(this.x,this.y);
+        bgCtx.lineTo(this.x+this.len, this.y-this.len);
+        bgCtx.stroke();
+      }
+    }else{
+      if(this.waitTime < new Date().getTime()){
+        this.active = true;
+      }     
+    }
+  }
 
-  // var entities = [];
+  var entities = [];
   
-  // // init the stars
-  // for(var i=0; i < height; i++){
-  //   entities.push(new Star({x:Math.random()*width, y:Math.random()*height}));
-  // }
+  // init the stars
+  for(var i=0; i < height; i++){
+    entities.push(new Star({x:Math.random()*width, y:Math.random()*height}));
+  }
   
-  // // Add 2 shooting stars that just cycle.
-  // entities.push(new ShootingStar());
-  // entities.push(new ShootingStar());
-  
-  // // //animate background
-  // function animation(){
-
-  //   var my_gradient = bgCtx.createLinearGradient(0,0,0,height);
-  //   my_gradient.addColorStop(0.35,"#17223f ");
-  //   my_gradient.addColorStop(1,"#3dc8e9");
-  //   bgCtx.fillStyle = my_gradient
-  //   bgCtx.fillRect(0,0,width,height);
-  //   bgCtx.fillStyle = '#ffffff';
-  //   bgCtx.strokeStyle = '#ffffff';
-
-  //   var entLen = entities.length;
-    
-  //   while(entLen--){
-  //     entities[entLen].update();
-  //   }
-    
-  //   requestAnimationFrame(animation);
-  // }
-
-
-  // animation();
-
-  // // (function() {
-  // //   var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || 
-  // //                 window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function( callback ){
-  // //               window.setTimeout(callback, 1000 / 60);
-  // //             };
-  // //   window.requestAnimationFrame = requestAnimationFrame;
-  // // })();
-
-
-
-  // // Terrain stuff.
-  // var terrain2 = document.getElementById("terCanvas2"),
-  //   background2 = document.getElementById("bgCanvas2"),
-  //   bgCtx2 = background2.getContext("2d"),
-  //   width = window.innerWidth,
-  //   height2 = document.body.offsetHeight*6;
-  //   (height2 < 400)?height2 = 400:height2;
-
-  // terrain2.width = background2.width = width;
-  // terrain2.height = background2.height = height2;
-
-  // // Some random points
-  // var points = [],
-  //   displacement = 140,
-  //   power = Math.pow(2,Math.ceil(Math.log(width)/(Math.log(2))));
-  
-  // // set the start height and end height for the terrain
-  // points[0] = (height2 - (Math.random()*height2/2))-displacement;
-  // points[power] = (height2 - (Math.random()*height2/2))-displacement;
-
-  // // create the rest of the points
-  // for(var i = 1; i<power; i*=2){
-  //   for(var j = (power/i)/2; j <power; j+=power/i){
-  //     points[j] = ((points[j - (power/i)/2] + points[j + (power/i)/2]) / 2) + Math.floor(Math.random()*-displacement+displacement );
-  //   }
-  //   displacement *= 0.6;
-  // }
-
-
-  // // Second canvas used for the stars
-  // bgCtx2.fillStyle = 'rgba(13,32,28,1)';
-  // bgCtx2.fillRect(0,0,width,height2);
-
-  // // stars
-  // function Star2(options){
-  //   this.size = Math.random()*2;
-  //   this.speed = Math.random()*0.5 + 0.1;
-  //   this.x = options.x;
-  //   this.y = options.y;
-  // }
-
-  // Star2.prototype.reset = function(){
-  //   this.size = Math.random()*2;
-  //   this.speed = Math.random()*0.5 + 0.1;
-  //   this.x = width;
-  //   this.y = Math.random()*height2;
-  // }
-  
-  // Star2.prototype.update = function(){
-  //   this.x-=this.speed;
-  //   if(this.x<0){
-  //     this.reset();
-  //   }else{
-  //     bgCtx2.fillRect(this.x,this.y,this.size,this.size); 
-  //   }
-  // }
-  
-
-  // var entities2 = [];
-  
-  // // init the stars
-  // for(var i=0; i < height2*0.3; i++){
-  //   entities2.push(new Star2({x:Math.random()*width, y:Math.random()*height2}));
-  // }
-  
-  // // Add 2 shooting stars that just cycle.
-  // // entities.push(new ShootingStar());
-  // // entities.push(new ShootingStar());
+  // Add 2 shooting stars that just cycle.
+  entities.push(new ShootingStar());
+  entities.push(new ShootingStar());
   
   // //animate background
-  // function animate2(){
-  //   bgCtx2.fillStyle = "#17223f "
-  //   bgCtx2.fillRect(0,0,width,height2);
-  //   bgCtx2.fillStyle = '#ffffff';
-  //   bgCtx2.strokeStyle = '#ffffff';
+  function animation(){
 
-  //   var entLen = entities2.length;
+    var my_gradient = bgCtx.createLinearGradient(0,0,0,height);
+    my_gradient.addColorStop(0.35,"#17223f ");
+    my_gradient.addColorStop(1,"#3dc8e9");
+    bgCtx.fillStyle = my_gradient
+    bgCtx.fillRect(0,0,width,height);
+    bgCtx.fillStyle = '#ffffff';
+    bgCtx.strokeStyle = '#ffffff';
+
+    var entLen = entities.length;
     
-  //   while(entLen--){
-  //     entities2[entLen].update();
-  //   }
+    while(entLen--){
+      entities[entLen].update();
+    }
     
-  //   requestAnimationFrame(animate2);
-  // }
+    requestAnimationFrame(animation);
+  }
 
 
-  // animate2();
+  animation();
+
+  // (function() {
+  //   var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || 
+  //                 window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function( callback ){
+  //               window.setTimeout(callback, 1000 / 60);
+  //             };
+  //   window.requestAnimationFrame = requestAnimationFrame;
+  // })();
+
+  // Terrain stuff.
+  var terrain2 = document.getElementById("terCanvas2"),
+    background2 = document.getElementById("bgCanvas2"),
+    bgCtx2 = background2.getContext("2d"),
+    width = window.innerWidth,
+    height2 = document.body.offsetHeight*6;
+    if(windowWidth < 500){
+      height2 = document.body.offsetHeight*5;
+    }
+    (height2 < 400)?height2 = 400:height2;
+
+  terrain2.width = background2.width = width;
+  terrain2.height = background2.height = height2;
+
+  // Some random points
+  var points = [],
+    displacement = 140,
+    power = Math.pow(2,Math.ceil(Math.log(width)/(Math.log(2))));
+  
+  // set the start height and end height for the terrain
+  points[0] = (height2 - (Math.random()*height2/2))-displacement;
+  points[power] = (height2 - (Math.random()*height2/2))-displacement;
+
+  // create the rest of the points
+  for(var i = 1; i<power; i*=2){
+    for(var j = (power/i)/2; j <power; j+=power/i){
+      points[j] = ((points[j - (power/i)/2] + points[j + (power/i)/2]) / 2) + Math.floor(Math.random()*-displacement+displacement );
+    }
+    displacement *= 0.6;
+  }
+
+
+  // Second canvas used for the stars
+  bgCtx2.fillStyle = 'rgba(13,32,28,1)';
+  bgCtx2.fillRect(0,0,width,height2);
+
+  // stars
+  function Star2(options){
+    this.size = Math.random()*2;
+    this.speed = Math.random()*0.5 + 0.1;
+    this.x = options.x;
+    this.y = options.y;
+  }
+
+  Star2.prototype.reset = function(){
+    this.size = Math.random()*2;
+    this.speed = Math.random()*0.5 + 0.1;
+    this.x = width;
+    this.y = Math.random()*height2;
+  }
+  
+  Star2.prototype.update = function(){
+    this.x-=this.speed;
+    if(this.x<0){
+      this.reset();
+    }else{
+      bgCtx2.fillRect(this.x,this.y,this.size,this.size); 
+    }
+  }
+  
+
+  var entities2 = [];
+  
+  // init the stars
+  for(var i=0; i < height2*0.3; i++){
+    entities2.push(new Star2({x:Math.random()*width, y:Math.random()*height2}));
+  }
+  
+  // Add 2 shooting stars that just cycle.
+  // entities.push(new ShootingStar());
+  // entities.push(new ShootingStar());
+  
+  //animate background
+  function animate2(){
+    bgCtx2.fillStyle = "#17223f "
+    bgCtx2.fillRect(0,0,width,height2);
+    bgCtx2.fillStyle = '#ffffff';
+    bgCtx2.strokeStyle = '#ffffff';
+
+    var entLen = entities2.length;
+    
+    while(entLen--){
+      entities2[entLen].update();
+    }
+    
+    requestAnimationFrame(animate2);
+  }
+
+
+  animate2();
 
 
 
@@ -305,6 +306,14 @@ jQuery(document).ready(function(){
     window.onmousewheel = document.onmousewheel = wheel;
     document.onkeydown = keydown;
   }
+
+  $( '.container' ).on( 'mousewheel', function ( e ) {
+    var event = e.originalEvent,
+        d = event.wheelDelta || -event.detail;
+    
+    this.scrollTop += ( d < 0 ? 1 : -1 ) * 30;
+    e.preventDefault();
+});
 
   function enable_scroll() {
       if (window.removeEventListener) {
@@ -905,45 +914,105 @@ jQuery(document).ready(function(){
   //      }
   // });
 
+  if(windowWidth < 500){
+    document.getElementById('city-front').src='img/city-front-mob.png'
+    document.getElementById('city-front2').src='img/city-front-mob.png'
+    document.getElementById('city-front3').src='img/city-front-mob.png'
+    document.getElementById('city-front4').src='img/city-front-mob.png'
+    document.getElementById('city-front5').src='img/city-front-mob.png'
+    document.getElementById('city-front6').src='img/city-front-mob.png'
+    document.getElementById('city-front7').src='img/city-front-mob.png'
+    document.getElementById('city-front8').src='img/city-front-mob.png'
+    document.getElementById('city-front9').src='img/city-front-mob.png'
+    document.getElementById('city-front10').src='img/city-front-mob.png'
+    console.log("hello");
+  }
+
+
   var windowWidth = $(window).width();
 
-  $('#major-ballon').css('left',2*windowWidth);
-  $('#major-ballon2').css('left',2.8*windowWidth);
-  $('#major-ballon3').css('left',3.6*windowWidth);
+  if(windowWidth < 500){
+    $('#major-ballon').css('left',2*windowWidth);
+    $('#major-ballon2').css('left',3.5*windowWidth);
+    $('#major-ballon3').css('left',5*windowWidth);
 
-  var ballonTimiline = new TimelineMax({repeat:-1, yoyo:true})
-            .to("#major-ballon",25,{x:-windowWidth*0.7})
-            .set("#major-ballon",{transform:"rotateX(0deg) rotateY(180deg)"});
+    var ballonTimiline = new TimelineMax({repeat:-1, yoyo:true})
+              .to("#major-ballon",25,{x:-windowWidth*0.7})
+              .set("#major-ballon",{transform:"rotateX(0deg) rotateY(180deg)"});
 
-  var ballonTimiline2 = new TimelineMax({repeat:-1, yoyo:true})
-            .to("#major-ballon2",25,{x:-windowWidth*0.7})
-            .set("#major-ballon2",{transform:"rotateX(0deg) rotateY(180deg)"})
+    var ballonTimiline2 = new TimelineMax({repeat:-1, yoyo:true})
+              .to("#major-ballon2",25,{x:-windowWidth*0.7})
+              .set("#major-ballon2",{transform:"rotateX(0deg) rotateY(180deg)"})
 
-  var ballonTimiline3 = new TimelineMax({repeat:-1, yoyo:true})
-            .to("#major-ballon3",25,{x:-windowWidth*0.7})
-            .set("#major-ballon3",{transform:"rotateX(0deg) rotateY(180deg)"})
+    var ballonTimiline3 = new TimelineMax({repeat:-1, yoyo:true})
+              .to("#major-ballon3",25,{x:-windowWidth*0.7})
+              .set("#major-ballon3",{transform:"rotateX(0deg) rotateY(180deg)"})
 
 
-  $('#work-ballon1').css('left',6*windowWidth);
-  $('#work-ballon2').css('left',6.8*windowWidth);
-  $('#work-ballon3').css('left',7.6*windowWidth);
-  $('#work-ballon4').css('left',8.4*windowWidth);
+   
 
-  var ballonTimiline = new TimelineMax({repeat:-1, yoyo:true})
-            .to("#work-ballon1",25,{x:-windowWidth*0.7})
-            .set("#work-ballon1",{transform:"rotateX(0deg) rotateY(180deg)"});
+     $('#work-ballon1').css('left',7.5*windowWidth);
+    $('#work-ballon2').css('left',9*windowWidth);
+    $('#work-ballon3').css('left',10.5*windowWidth);
+    $('#work-ballon4').css('left',12*windowWidth);
 
-  var ballonTimiline2 = new TimelineMax({repeat:-1, yoyo:true})
-            .to("#work-ballon2",25,{x:-windowWidth*0.7})
-            .set("#work-ballon2",{transform:"rotateX(0deg) rotateY(180deg)"})
+    var ballonTimiline = new TimelineMax({repeat:-1, yoyo:true})
+              .to("#work-ballon1",25,{x:-windowWidth*0.7})
+              .set("#work-ballon1",{transform:"rotateX(0deg) rotateY(180deg)"});
 
-  var ballonTimiline3 = new TimelineMax({repeat:-1, yoyo:true})
-            .to("#work-ballon3",25,{x:-windowWidth*0.7})
-            .set("#work-ballon3",{transform:"rotateX(0deg) rotateY(180deg)"})
+    var ballonTimiline2 = new TimelineMax({repeat:-1, yoyo:true})
+              .to("#work-ballon2",25,{x:-windowWidth*0.7})
+              .set("#work-ballon2",{transform:"rotateX(0deg) rotateY(180deg)"})
 
-  var ballonTimiline4 = new TimelineMax({repeat:-1, yoyo:true})
-            .to("#work-ballon4",25,{x:-windowWidth*0.7})
-            .set("#work-ballon4",{transform:"rotateX(0deg) rotateY(180deg)"})
+    var ballonTimiline3 = new TimelineMax({repeat:-1, yoyo:true})
+              .to("#work-ballon3",25,{x:-windowWidth*0.7})
+              .set("#work-ballon3",{transform:"rotateX(0deg) rotateY(180deg)"})
+
+    var ballonTimiline4 = new TimelineMax({repeat:-1, yoyo:true})
+              .to("#work-ballon4",25,{x:-windowWidth*0.7})
+              .set("#work-ballon4",{transform:"rotateX(0deg) rotateY(180deg)"})
+  }
+  else{
+    $('#major-ballon').css('left',2*windowWidth);
+    $('#major-ballon2').css('left',2.8*windowWidth);
+    $('#major-ballon3').css('left',3.6*windowWidth);
+
+    var ballonTimiline = new TimelineMax({repeat:-1, yoyo:true})
+              .to("#major-ballon",25,{x:-windowWidth*0.7})
+              .set("#major-ballon",{transform:"rotateX(0deg) rotateY(180deg)"});
+
+    var ballonTimiline2 = new TimelineMax({repeat:-1, yoyo:true})
+              .to("#major-ballon2",25,{x:-windowWidth*0.7})
+              .set("#major-ballon2",{transform:"rotateX(0deg) rotateY(180deg)"})
+
+    var ballonTimiline3 = new TimelineMax({repeat:-1, yoyo:true})
+              .to("#major-ballon3",25,{x:-windowWidth*0.7})
+              .set("#major-ballon3",{transform:"rotateX(0deg) rotateY(180deg)"})
+
+
+    $('#work-ballon1').css('left',6*windowWidth);
+    $('#work-ballon2').css('left',6.8*windowWidth);
+    $('#work-ballon3').css('left',7.6*windowWidth);
+    $('#work-ballon4').css('left',8.4*windowWidth);
+
+    var ballonTimiline = new TimelineMax({repeat:-1, yoyo:true})
+              .to("#work-ballon1",25,{x:-windowWidth*0.7})
+              .set("#work-ballon1",{transform:"rotateX(0deg) rotateY(180deg)"});
+
+    var ballonTimiline2 = new TimelineMax({repeat:-1, yoyo:true})
+              .to("#work-ballon2",25,{x:-windowWidth*0.7})
+              .set("#work-ballon2",{transform:"rotateX(0deg) rotateY(180deg)"})
+
+    var ballonTimiline3 = new TimelineMax({repeat:-1, yoyo:true})
+              .to("#work-ballon3",25,{x:-windowWidth*0.7})
+              .set("#work-ballon3",{transform:"rotateX(0deg) rotateY(180deg)"})
+
+    var ballonTimiline4 = new TimelineMax({repeat:-1, yoyo:true})
+              .to("#work-ballon4",25,{x:-windowWidth*0.7})
+              .set("#work-ballon4",{transform:"rotateX(0deg) rotateY(180deg)"})
+  }
+
+  
 
   // var ballonTimiline2 = new TimelineMax()
   //           .from("#major-ballon2",5,{x:-windowWidth});
@@ -967,33 +1036,64 @@ jQuery(document).ready(function(){
   var scrollWidth2 = $(window).width() - scrollPercent*window.innerWidth*3;
   $('#city-front2').css('left', scrollWidth2 + 'px');
 
+  if(windowWidth<500){
+     var scrollWidthBaloon1 = $(window).width()*2- scrollPercent*window.innerWidth*3.5;
+      $('#major-ballon').css('left', scrollWidthBaloon1 + 'px');
 
 
-  var scrollWidthBaloon1 = $(window).width()*2- scrollPercent*window.innerWidth*3.5;
-  $('#major-ballon').css('left', scrollWidthBaloon1 + 'px');
+      var scrollWidthBaloon2 = $(window).width()*3.5 - scrollPercent*window.innerWidth*3.5;
+      $('#major-ballon2').css('left', scrollWidthBaloon2 + 'px');
 
 
-  var scrollWidthBaloon2 = $(window).width()*2.8 - scrollPercent*window.innerWidth*3.5;
-  $('#major-ballon2').css('left', scrollWidthBaloon2 + 'px');
+      var scrollWidthBaloon3 = $(window).width()*5 - scrollPercent*window.innerWidth*3.5;
+      $('#major-ballon3').css('left', scrollWidthBaloon3 + 'px');
+
+       var scrollWidthBaloon4 = $(window).width()*7.5- scrollPercent*window.innerWidth*3.5;
+      $('#work-ballon1').css('left', scrollWidthBaloon4 + 'px');
 
 
-  var scrollWidthBaloon3 = $(window).width()*3.6 - scrollPercent*window.innerWidth*3.5;
-  $('#major-ballon3').css('left', scrollWidthBaloon3 + 'px');
+      var scrollWidthBaloon5 = $(window).width()*9 - scrollPercent*window.innerWidth*3.5;
+      $('#work-ballon2').css('left', scrollWidthBaloon5 + 'px');
 
 
-  var scrollWidthBaloon4 = $(window).width()*6- scrollPercent*window.innerWidth*3.5;
-  $('#work-ballon1').css('left', scrollWidthBaloon4 + 'px');
+      var scrollWidthBaloon6 = $(window).width()*10.5 - scrollPercent*window.innerWidth*3.5;
+      $('#work-ballon3').css('left', scrollWidthBaloon6 + 'px');
+
+      var scrollWidthBaloon7 = $(window).width()*12 - scrollPercent*window.innerWidth*3.5;
+      $('#work-ballon4').css('left', scrollWidthBaloon7 + 'px');
 
 
-  var scrollWidthBaloon5 = $(window).width()*6.8 - scrollPercent*window.innerWidth*3.5;
-  $('#work-ballon2').css('left', scrollWidthBaloon5 + 'px');
+  }else{
+     var scrollWidthBaloon1 = $(window).width()*2- scrollPercent*window.innerWidth*3.5;
+      $('#major-ballon').css('left', scrollWidthBaloon1 + 'px');
 
 
-  var scrollWidthBaloon6 = $(window).width()*7.6 - scrollPercent*window.innerWidth*3.5;
-  $('#work-ballon3').css('left', scrollWidthBaloon6 + 'px');
+      var scrollWidthBaloon2 = $(window).width()*2.8 - scrollPercent*window.innerWidth*3.5;
+      $('#major-ballon2').css('left', scrollWidthBaloon2 + 'px');
 
-  var scrollWidthBaloon7 = $(window).width()*8.4 - scrollPercent*window.innerWidth*3.5;
-  $('#work-ballon4').css('left', scrollWidthBaloon7 + 'px');
+
+      var scrollWidthBaloon3 = $(window).width()*3.6 - scrollPercent*window.innerWidth*3.5;
+      $('#major-ballon3').css('left', scrollWidthBaloon3 + 'px');
+
+       var scrollWidthBaloon4 = $(window).width()*6- scrollPercent*window.innerWidth*3.5;
+      $('#work-ballon1').css('left', scrollWidthBaloon4 + 'px');
+
+
+      var scrollWidthBaloon5 = $(window).width()*6.8 - scrollPercent*window.innerWidth*3.5;
+      $('#work-ballon2').css('left', scrollWidthBaloon5 + 'px');
+
+
+      var scrollWidthBaloon6 = $(window).width()*7.6 - scrollPercent*window.innerWidth*3.5;
+      $('#work-ballon3').css('left', scrollWidthBaloon6 + 'px');
+
+      var scrollWidthBaloon7 = $(window).width()*8.4 - scrollPercent*window.innerWidth*3.5;
+      $('#work-ballon4').css('left', scrollWidthBaloon7 + 'px');
+  }
+
+ 
+
+
+ 
 
   var scrollWidthBack = -scrollPercent*window.innerWidth*1;
   $('#city-back').css('left', scrollWidthBack + 'px');
@@ -1041,25 +1141,45 @@ jQuery(document).ready(function(){
 
   var k = $('#container').scrollTop();
 
+  if(windowWidth < 500){
+    if(k < $(window).width()*38 && k > $(window).width()*36){
+      $('#vertical-cont').css('overflow-y','hidden');
 
+    }
 
-  if(k < $(window).width()*26 && k > $(window).width()*24){
-    $('#vertical-cont').css('overflow-y','hidden');
+    // if(k< $(window).width()*25){
+    //   $('#sponsors-start').animate({
+    //                     // scrollTop: $(window).height(),
+    //                     height:windowHeight
+    //               }, 800,function(){
+    //                   enable_scroll();
+    //               });
+    // }
 
+    if(k == $(window).width()*38){
+      $('#vertical-cont').css('overflow-y','scroll');
+    }
+  }else{
+    if(k < $(window).width()*26 && k > $(window).width()*24){
+      $('#vertical-cont').css('overflow-y','hidden');
+
+    }
+
+    // if(k< $(window).width()*25){
+    //   $('#sponsors-start').animate({
+    //                     // scrollTop: $(window).height(),
+    //                     height:windowHeight
+    //               }, 800,function(){
+    //                   enable_scroll();
+    //               });
+    // }
+
+    if(k == $(window).width()*26){
+      $('#vertical-cont').css('overflow-y','scroll');
+    }
   }
 
-  // if(k< $(window).width()*25){
-  //   $('#sponsors-start').animate({
-  //                     // scrollTop: $(window).height(),
-  //                     height:windowHeight
-  //               }, 800,function(){
-  //                   enable_scroll();
-  //               });
-  // }
-
-  if(k == $(window).width()*26){
-    $('#vertical-cont').css('overflow-y','scroll');
-  }
+  
 
   if(k >= $(window).width()*5 && k <= $(window).width()*8 ){
              
