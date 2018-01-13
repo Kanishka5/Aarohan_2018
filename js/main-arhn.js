@@ -1038,29 +1038,29 @@ jQuery(document).ready(function(){
   $('#city-front2').css('left', scrollWidth2 + 'px');
 
   if(windowWidth<500){
-     var scrollWidthBaloon1 = $(window).width()*2- scrollPercent*window.innerWidth*3.5;
+     var scrollWidthBaloon1 = $(window).width()*2- scrollPercent*window.innerWidth*5;
       $('#major-ballon').css('left', scrollWidthBaloon1 + 'px');
 
 
-      var scrollWidthBaloon2 = $(window).width()*3.5 - scrollPercent*window.innerWidth*3.5;
+      var scrollWidthBaloon2 = $(window).width()*3.5 - scrollPercent*window.innerWidth*5;
       $('#major-ballon2').css('left', scrollWidthBaloon2 + 'px');
 
 
-      var scrollWidthBaloon3 = $(window).width()*5 - scrollPercent*window.innerWidth*3.5;
+      var scrollWidthBaloon3 = $(window).width()*5 - scrollPercent*window.innerWidth*5;
       $('#major-ballon3').css('left', scrollWidthBaloon3 + 'px');
 
-       var scrollWidthBaloon4 = $(window).width()*7.5- scrollPercent*window.innerWidth*3.5;
+       var scrollWidthBaloon4 = $(window).width()*7.5- scrollPercent*window.innerWidth*5;
       $('#work-ballon1').css('left', scrollWidthBaloon4 + 'px');
 
 
-      var scrollWidthBaloon5 = $(window).width()*9 - scrollPercent*window.innerWidth*3.5;
+      var scrollWidthBaloon5 = $(window).width()*9 - scrollPercent*window.innerWidth*5;
       $('#work-ballon2').css('left', scrollWidthBaloon5 + 'px');
 
 
-      var scrollWidthBaloon6 = $(window).width()*10.5 - scrollPercent*window.innerWidth*3.5;
+      var scrollWidthBaloon6 = $(window).width()*10.5 - scrollPercent*window.innerWidth*5;
       $('#work-ballon3').css('left', scrollWidthBaloon6 + 'px');
 
-      var scrollWidthBaloon7 = $(window).width()*12 - scrollPercent*window.innerWidth*3.5;
+      var scrollWidthBaloon7 = $(window).width()*12 - scrollPercent*window.innerWidth*5;
       $('#work-ballon4').css('left', scrollWidthBaloon7 + 'px');
 
 
