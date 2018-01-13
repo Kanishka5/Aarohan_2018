@@ -1,3 +1,6 @@
+$('#about-stars canvas').css("top",$('.section-home-banner').height());
+
+
 jQuery(document).ready(function(){
   //Events map size - 
   // left: 37, up: 38, right: 39, down: 40,
@@ -8,154 +11,264 @@ jQuery(document).ready(function(){
   var windowHeight = $(window).height();
   
 
- (function() {
-    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || 
-                  window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function( callback ){
-                window.setTimeout(callback, 1000 / 60);
-              };
-    window.requestAnimationFrame = requestAnimationFrame;
-  })();
+ // (function() {
+ //    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || 
+ //                  window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function( callback ){
+ //                window.setTimeout(callback, 1000 / 60);
+ //              };
+ //    window.requestAnimationFrame = requestAnimationFrame;
+ //  })();
 
   // Terrain stuff.
-  var terrain = document.getElementById("terCanvas"),
-    background = document.getElementById("bgCanvas"),
-    terCtx = terrain.getContext("2d"),
-    bgCtx = background.getContext("2d"),
-    width = window.innerWidth,
-    height = document.body.offsetHeight;
-    (height < 400)?height = 400:height;
 
-  terrain.width = background.width = width;
-  terrain.height = background.height = height;
 
-  // Some random points
-  var points = [],
-    displacement = 140,
-    power = Math.pow(2,Math.ceil(Math.log(width)/(Math.log(2))));
+
+
+
+
+
+
+
+
+
+  // var terrain = document.getElementById("terCanvas"),
+  //   background = document.getElementById("bgCanvas"),
+  //   terCtx = terrain.getContext("2d"),
+  //   bgCtx = background.getContext("2d"),
+  //   width = window.innerWidth,
+  //   height = document.body.offsetHeight;
+  //   (height < 400)?height = 400:height;
+
+  // terrain.width = background.width = width;
+  // terrain.height = background.height = height;
+
+  // // Some random points
+  // var points = [],
+  //   displacement = 140,
+  //   power = Math.pow(2,Math.ceil(Math.log(width)/(Math.log(2))));
   
-  // set the start height and end height for the terrain
-  points[0] = (height - (Math.random()*height/2))-displacement;
-  points[power] = (height - (Math.random()*height/2))-displacement;
+  // // set the start height and end height for the terrain
+  // points[0] = (height - (Math.random()*height/2))-displacement;
+  // points[power] = (height - (Math.random()*height/2))-displacement;
 
-  // create the rest of the points
-  for(var i = 1; i<power; i*=2){
-    for(var j = (power/i)/2; j <power; j+=power/i){
-      points[j] = ((points[j - (power/i)/2] + points[j + (power/i)/2]) / 2) + Math.floor(Math.random()*-displacement+displacement );
-    }
-    displacement *= 0.6;
-  }
+  // // create the rest of the points
+  // for(var i = 1; i<power; i*=2){
+  //   for(var j = (power/i)/2; j <power; j+=power/i){
+  //     points[j] = ((points[j - (power/i)/2] + points[j + (power/i)/2]) / 2) + Math.floor(Math.random()*-displacement+displacement );
+  //   }
+  //   displacement *= 0.6;
+  // }
 
-  // draw the terrain
-  terCtx.beginPath();
+  // // draw the terrain
+  // terCtx.beginPath();
           
-  for(var i = 0; i<=width; i++){
-    if(i === 0){
-      terCtx.moveTo(0, points[0]);
-    }else if(points[i] !== undefined){
-      terCtx.lineTo(i, points[i]);
-    }
-  }
+  // for(var i = 0; i<=width; i++){
+  //   if(i === 0){
+  //     terCtx.moveTo(0, points[0]);
+  //   }else if(points[i] !== undefined){
+  //     terCtx.lineTo(i, points[i]);
+  //   }
+  // }
 
-  terCtx.lineTo(width,terrain.height);
-  terCtx.lineTo(0,terrain.height);
-  terCtx.lineTo(0,points[0]);
-  // terCtx.fill();
+  // terCtx.lineTo(width,terrain.height);
+  // terCtx.lineTo(0,terrain.height);
+  // terCtx.lineTo(0,points[0]);
+  // // terCtx.fill();
 
+  // // Second canvas used for the stars
+  // bgCtx.fillStyle = 'rgba(13,32,28,1)';
+  // bgCtx.fillRect(0,0,width,height);
 
-  // Second canvas used for the stars
-  bgCtx.fillStyle = 'rgba(13,32,28,1)';
-  bgCtx.fillRect(0,0,width,height);
+  // // stars
+  // function Star(options){
+  //   this.size = Math.random()*2;
+  //   this.speed = Math.random()*0.5 + 0.1;
+  //   this.x = options.x;
+  //   this.y = options.y;
+  // }
 
-  // stars
-  function Star(options){
-    this.size = Math.random()*2;
-    this.speed = Math.random()*0.5 + 0.1;
-    this.x = options.x;
-    this.y = options.y;
-  }
-
-  Star.prototype.reset = function(){
-    this.size = Math.random()*2;
-    this.speed = Math.random()*0.5 + 0.1;
-    this.x = width;
-    this.y = Math.random()*height;
-  }
+  // Star.prototype.reset = function(){
+  //   this.size = Math.random()*2;
+  //   this.speed = Math.random()*0.5 + 0.1;
+  //   this.x = width;
+  //   this.y = Math.random()*height;
+  // }
   
-  Star.prototype.update = function(){
-    this.x-=this.speed;
-    if(this.x<0){
-      this.reset();
-    }else{
-      bgCtx.fillRect(this.x,this.y,this.size,this.size); 
-    }
-  }
+  // Star.prototype.update = function(){
+  //   this.x-=this.speed;
+  //   if(this.x<0){
+  //     this.reset();
+  //   }else{
+  //     bgCtx.fillRect(this.x,this.y,this.size,this.size); 
+  //   }
+  // }
   
-  function ShootingStar(){
-    this.reset();
-  }
+  // function ShootingStar(){
+  //   this.reset();
+  // }
   
-  ShootingStar.prototype.reset = function(){
-    this.x = Math.random()*width;
-    this.y = 0;
-    this.len = (Math.random()*80)+30;
-    this.speed = (Math.random()*10)+6;
-    this.size = (Math.random()*1)+0.8;
-    // this is used so the shooting stars arent constant
-    this.waitTime =  new Date().getTime() + (Math.random()*1000);
-    this.active = false;
-  }
+  // ShootingStar.prototype.reset = function(){
+  //   this.x = Math.random()*width;
+  //   this.y = 0;
+  //   this.len = (Math.random()*80)+30;
+  //   this.speed = (Math.random()*10)+6;
+  //   this.size = (Math.random()*1)+0.8;
+  //   // this is used so the shooting stars arent constant
+  //   this.waitTime =  new Date().getTime() + (Math.random()*1000);
+  //   this.active = false;
+  // }
   
-  ShootingStar.prototype.update = function(){
-    if(this.active){
-      this.x-=this.speed;
-      this.y+=this.speed;
-      if(this.x<0 || this.y >= height){
-        this.reset();
-      }else{
-      bgCtx.lineWidth = this.size;
-        bgCtx.beginPath();
-        bgCtx.moveTo(this.x,this.y);
-        bgCtx.lineTo(this.x+this.len, this.y-this.len);
-        bgCtx.stroke();
-      }
-    }else{
-      if(this.waitTime < new Date().getTime()){
-        this.active = true;
-      }     
-    }
-  }
+  // ShootingStar.prototype.update = function(){
+  //   if(this.active){
+  //     this.x-=this.speed;
+  //     this.y+=this.speed;
+  //     if(this.x<0 || this.y >= height){
+  //       this.reset();
+  //     }else{
+  //     bgCtx.lineWidth = this.size;
+  //       bgCtx.beginPath();
+  //       bgCtx.moveTo(this.x,this.y);
+  //       bgCtx.lineTo(this.x+this.len, this.y-this.len);
+  //       bgCtx.stroke();
+  //     }
+  //   }else{
+  //     if(this.waitTime < new Date().getTime()){
+  //       this.active = true;
+  //     }     
+  //   }
+  // }
 
-  var entities = [];
+  // var entities = [];
   
-  // init the stars
-  for(var i=0; i < height; i++){
-    entities.push(new Star({x:Math.random()*width, y:Math.random()*height}));
-  }
+  // // init the stars
+  // for(var i=0; i < height; i++){
+  //   entities.push(new Star({x:Math.random()*width, y:Math.random()*height}));
+  // }
   
-  // Add 2 shooting stars that just cycle.
-  entities.push(new ShootingStar());
-  entities.push(new ShootingStar());
+  // // Add 2 shooting stars that just cycle.
+  // entities.push(new ShootingStar());
+  // entities.push(new ShootingStar());
   
-  //animate background
-  function animate(){
+  // // //animate background
+  // function animation(){
 
-    var my_gradient = bgCtx.createLinearGradient(0,0,0,height);
-    my_gradient.addColorStop(0,"#212f5f");
-    my_gradient.addColorStop(1,"#3dc8e9");
-    bgCtx.fillStyle = my_gradient
-    bgCtx.fillRect(0,0,width,height);
-    bgCtx.fillStyle = '#ffffff';
-    bgCtx.strokeStyle = '#ffffff';
+  //   var my_gradient = bgCtx.createLinearGradient(0,0,0,height);
+  //   my_gradient.addColorStop(0.35,"#17223f ");
+  //   my_gradient.addColorStop(1,"#3dc8e9");
+  //   bgCtx.fillStyle = my_gradient
+  //   bgCtx.fillRect(0,0,width,height);
+  //   bgCtx.fillStyle = '#ffffff';
+  //   bgCtx.strokeStyle = '#ffffff';
 
-    var entLen = entities.length;
+  //   var entLen = entities.length;
     
-    while(entLen--){
-      entities[entLen].update();
-    }
+  //   while(entLen--){
+  //     entities[entLen].update();
+  //   }
     
-    requestAnimationFrame(animate);
-  }
-  animate();
+  //   requestAnimationFrame(animation);
+  // }
+
+
+  // animation();
+
+  // // (function() {
+  // //   var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || 
+  // //                 window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function( callback ){
+  // //               window.setTimeout(callback, 1000 / 60);
+  // //             };
+  // //   window.requestAnimationFrame = requestAnimationFrame;
+  // // })();
+
+
+
+  // // Terrain stuff.
+  // var terrain2 = document.getElementById("terCanvas2"),
+  //   background2 = document.getElementById("bgCanvas2"),
+  //   bgCtx2 = background2.getContext("2d"),
+  //   width = window.innerWidth,
+  //   height2 = document.body.offsetHeight*6;
+  //   (height2 < 400)?height2 = 400:height2;
+
+  // terrain2.width = background2.width = width;
+  // terrain2.height = background2.height = height2;
+
+  // // Some random points
+  // var points = [],
+  //   displacement = 140,
+  //   power = Math.pow(2,Math.ceil(Math.log(width)/(Math.log(2))));
+  
+  // // set the start height and end height for the terrain
+  // points[0] = (height2 - (Math.random()*height2/2))-displacement;
+  // points[power] = (height2 - (Math.random()*height2/2))-displacement;
+
+  // // create the rest of the points
+  // for(var i = 1; i<power; i*=2){
+  //   for(var j = (power/i)/2; j <power; j+=power/i){
+  //     points[j] = ((points[j - (power/i)/2] + points[j + (power/i)/2]) / 2) + Math.floor(Math.random()*-displacement+displacement );
+  //   }
+  //   displacement *= 0.6;
+  // }
+
+
+  // // Second canvas used for the stars
+  // bgCtx2.fillStyle = 'rgba(13,32,28,1)';
+  // bgCtx2.fillRect(0,0,width,height2);
+
+  // // stars
+  // function Star2(options){
+  //   this.size = Math.random()*2;
+  //   this.speed = Math.random()*0.5 + 0.1;
+  //   this.x = options.x;
+  //   this.y = options.y;
+  // }
+
+  // Star2.prototype.reset = function(){
+  //   this.size = Math.random()*2;
+  //   this.speed = Math.random()*0.5 + 0.1;
+  //   this.x = width;
+  //   this.y = Math.random()*height2;
+  // }
+  
+  // Star2.prototype.update = function(){
+  //   this.x-=this.speed;
+  //   if(this.x<0){
+  //     this.reset();
+  //   }else{
+  //     bgCtx2.fillRect(this.x,this.y,this.size,this.size); 
+  //   }
+  // }
+  
+
+  // var entities2 = [];
+  
+  // // init the stars
+  // for(var i=0; i < height2*0.3; i++){
+  //   entities2.push(new Star2({x:Math.random()*width, y:Math.random()*height2}));
+  // }
+  
+  // // Add 2 shooting stars that just cycle.
+  // // entities.push(new ShootingStar());
+  // // entities.push(new ShootingStar());
+  
+  // //animate background
+  // function animate2(){
+  //   bgCtx2.fillStyle = "#17223f "
+  //   bgCtx2.fillRect(0,0,width,height2);
+  //   bgCtx2.fillStyle = '#ffffff';
+  //   bgCtx2.strokeStyle = '#ffffff';
+
+  //   var entLen = entities2.length;
+    
+  //   while(entLen--){
+  //     entities2[entLen].update();
+  //   }
+    
+  //   requestAnimationFrame(animate2);
+  // }
+
+
+  // animate2();
 
 
 
@@ -745,7 +858,7 @@ jQuery(document).ready(function(){
 
        var diff = t - $('#sponsors').scrollTop();
 
-       if(t > windowHeight*3.2){
+       if(t > windowHeight*4.2){
           hospTimeline.play();
        }
 
@@ -753,7 +866,7 @@ jQuery(document).ready(function(){
           hospTimeline.pause(0);
        }
 
-       if(t > windowHeight){
+       if(t > 2*windowHeight){
           teamTimeline.play();
        }
 
@@ -761,7 +874,7 @@ jQuery(document).ready(function(){
           teamTimeline.pause(0);
        }
 
-       if(t >= 0){
+       if(t >= windowHeight/2){
           sponsorTimeline.play();
        }
 
@@ -932,11 +1045,6 @@ jQuery(document).ready(function(){
 
   if(k < $(window).width()*26 && k > $(window).width()*24){
     $('#vertical-cont').css('overflow-y','hidden');
-     sponsor_scroll = false;
-      
-    // var robot_timeline = new TimelineMax()
-                  // .to("#robot3",0.5,{opacity:1})
-                  // .to("#robot-grad",0.5,{opacity:1},0);
 
   }
 
@@ -950,36 +1058,8 @@ jQuery(document).ready(function(){
   // }
 
   if(k == $(window).width()*26){
-    // $('#space2').css('height','100vh');
     $('#vertical-cont').css('overflow-y','scroll');
-    // var robot_timeline = new TimelineMax()
-                  // .to("#robot3",0.5,{opacity:0})
-                  // .to("#robot-grad",0.5,{opacity:0},0);
-                  disable_scroll();
-                  // $("#sponsors-start").css('height','0');
-               $('#vertical-cont').animate({
-                      // scrollTop: $(window).height(),
-                      opacity: 1
-                }, 800,function(){
-                    enable_scroll();
-                });
-
-
-// var tween_spon = new TimelineMax().to("$sponsors-start",8,{height:0})
-                $('#sponsors-start').animate({
-                      // scrollTop: $(window).height(),
-                      height:0
-                }, 800,function(){
-                    enable_scroll();
-                });
-
-    //                  sponsor_scroll = true;
-
-    //               }
-                 
   }
-
-  // console.log(k);
 
   if(k >= $(window).width()*5 && k <= $(window).width()*8 ){
              
@@ -1104,7 +1184,7 @@ jQuery(document).ready(function(){
 
 
 
-if(windowWidth > 500){
+if(windowWidth > 0){
 
 
       var k = $('html, body');
@@ -1127,7 +1207,7 @@ if(windowWidth > 500){
                 .addTo(controller)
                 // .addIndicators()
                 .on("enter leave", function (e) {
-                    if("FORWARD" == e.scrollDirection && $(window).width() > 500){
+                    if("FORWARD" == e.scrollDirection ){
                           disable_scroll();
                           jQuery('html, body').animate({
 
@@ -1151,7 +1231,7 @@ if(windowWidth > 500){
                           // history.replaceState(void 0, void 0, "#major-attractions")
                     } 
 
-                    if("REVERSE" == e.scrollDirection && $(window).width() > 500){
+                    if("REVERSE" == e.scrollDirection ){
                           // disable_scroll();
                           // $('html, body').animate({
                           //     scrollTop: $('#map').offset().top

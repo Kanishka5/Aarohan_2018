@@ -31,7 +31,9 @@
  *-------------------------------------------------------------------------*/
 .section-home-about {
   padding-top: 20vh;
-  background-color: #22305f;
+  position: relative;
+  z-index: 10;
+  /*background-color: #22305f;*/
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF6FAAB4', endColorstr='#FFACCED3', GradientType=0);
   height: 190vh; }
   .section-home-about .frame {
@@ -57,7 +59,7 @@
 
 .section-map {
   position: relative;
-  background-color: #22305f;
+  /*background-color: #22305f;*/
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFACCED3', endColorstr='#FFF6FAFA', GradientType=0); 
 }
   .section-map .section-title {
