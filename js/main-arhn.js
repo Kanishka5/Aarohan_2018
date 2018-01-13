@@ -1141,6 +1141,12 @@ jQuery(document).ready(function(){
 
   var k = $('#container').scrollTop();
 
+  if(k>40){
+    $('#container').css('touch-action','pan-x')
+  }else{
+    $('#container').css('touch-action','auto')
+  }
+
   if(windowWidth < 500){
     if(k < $(window).width()*38 && k > $(window).width()*36){
       $('#vertical-cont').css('overflow-y','hidden');
@@ -1208,6 +1214,7 @@ jQuery(document).ready(function(){
 
   if(scrollWork1 > 0 && scrollWork1 < windowWidth/4){
     work1_timeline.play();
+
   }
 
   if(scrollWork1 > windowWidth){
@@ -1325,10 +1332,12 @@ if(windowWidth > 0){
 
       var scene3 = new ScrollMagic.Scene({triggerElement: "#hz-trigger",triggerHook: 1,offset:100})
                 .addTo(controller)
-                // .addIndicators()
+                .addIndicators()
                 .on("enter leave", function (e) {
                     if("FORWARD" == e.scrollDirection ){
                           disable_scroll();
+                          
+                          console.log("done")
                           jQuery('html, body').animate({
 
                             scrollTop: jQuery($('#hz-container')).offset().top
