@@ -3,6 +3,20 @@ body{
     background-color: #17223f
 }
 
+html,
+  body {
+    height: 100%;
+  }
+
+  html {
+    overflow: hidden;
+  }
+
+  body {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
 
 
 #particles-js{
