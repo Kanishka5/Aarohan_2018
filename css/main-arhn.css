@@ -197,7 +197,6 @@ body{
     position: absolute;
     z-index: 1;
     top:0;
-    le
     /*transform: scale(1.5);*/
   }
 
@@ -1286,7 +1285,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     bottom: 5vh;
     height: auto;
 }
-  }
 
 
   #major-about{
@@ -2092,7 +2090,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
     position: absolute;
     z-index: 1;
     top:0;
-    le
     /*transform: scale(1.5);*/
   }
 
@@ -2814,7 +2811,253 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     margin-right: auto;
     max-width: 100%;
   }
+  #team_full{
+    padding-top: 40vh;
+    width: 100vw;
+    margin-top: -2px;
+    padding-bottom: 50vh;
+    /* margin-bottom: 20vh; */
+    /* height: 250vh; */
+    background-color: #FFFFFF;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#532c74+0,352675+100 */
+  }
 
+  .team-member p{
+    font-family: "Source Sans Pro", sans-serif;
+  }
+
+  .team-member h3{
+    margin-top: 30px;
+    font-size: 1.3rem;
+    color: #17233f;
+    font-weight: bold;
+    font-family: "Source Sans Pro", sans-serif;
+  }
+
+  .team-member h4{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #17233f;
+    font-family: "Source Sans Pro", sans-serif;
+  }
+
+  #team .row{
+    margin-bottom: 30px;
+
+  }
+
+
+
+    #team{
+      position: relative;
+      z-index:1;
+
+      background-color: #FFFFFF;
+
+      /*width: 85%;*/
+      /*background-color: #76c897;*/
+      font: 16px/26px;
+      /*'Open Sans', Helvetica, Helvetica Neue, Arial*/
+      margin: auto;
+
+      margin-left: 40px;
+      margin-right: 40px;
+      /*margin-top: 30px;*/
+      min-width: 500px;
+      display: block;
+      text-align: center;
+      word-wrap: break-word;
+
+
+
+      /*padding-top:30px;
+      padding-left: 150px;
+      padding-right: 150px;
+      padding-bottom: 30px;*/
+      /*padding: 60px;*/
+      /*background-image: url("img/bkg.jpg");*/
+      /*background-repeat: no-repeat;*/
+      /*background-size:  cover; 2400px, 1500px, */
+      min-width: 300px;
+
+
+    }
+
+    #mem1, #mem2, #mem3, #mem4, #mem5, #mem6, #mem7, #mem8, #mem9, #mem10, #mem11, #mem12, #mem13, #mem14, #mem15, #mem16, #mem17, #mem18, #mem19, #mem20, #mem21, #mem22, #mem23, #mem24,#mem25, #mem26, #mem27, #mem28, #mem29, #mem30 {
+      /*transform: scale(0, 0);*/
+      display: table;
+      font-family: glacial;
+      opacity: 0;
+    }
+
+
+    #team_title{
+      color: #17233f;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 400;
+      font-size: 6rem;
+      margin-bottom: 10vh;
+      opacity: 0;
+    }
+
+    /*.col-lg-2 h3, .col-lg-2 h4{
+      font-family: glacial;
+    }
+
+    .col-lg-2 h4{
+      font-weight: bold;
+    }*/
+
+    h3, h4 {
+      /*font-family: 'Play', sans-serif;*/
+      font-size: 12px; /*11px*/
+      text-align: center;
+      color: #000000;
+      color: white;
+
+    }
+
+    h3{
+      font-weight: bold;
+      color: white;
+    }
+
+    span.text-content span {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      font-weight: bold;
+      height: 6.95em;
+
+    }
+
+    span.text-content {
+      background: rgba(136,14,79,0.8);
+      color: white;
+      cursor: pointer;
+      display: table-cell;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 83%;
+      opacity: 0;
+      transition: opacity 0.7s;
+
+    }
+
+
+    span.text-content:hover {
+      z-index: 999;
+      opacity: 1;
+
+    }
+
+    /*Hver effect */
+
+  .hovereffect {
+    width: 100%;
+    height: 100%;
+    /*left:10%;*/
+    /*top:10%;*/
+    position: relative;
+    /*float: left;*/
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    border-radius: 50%;
+    display: block;
+    border: 4px solid #17233f;;
+     padding:10px;
+    background-clip:content-box;
+  }
+
+  /*#one{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: white;
+  }*/
+
+  .hovereffect .overlay {
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+    vertical-align: middle;
+    /*border-bottom: 1px solid #FFF;*/
+    /*border-top: 1px solid #FFF;*/
+    border: 2px solid white;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    -ms-transform: scale(0,1);
+    transform: scale(0,1);
+    padding: 20%;
+  }
+
+  .hovereffect:hover .overlay {
+    border-radius: 50%;
+    opacity: 1;
+    vertical-align: middle;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  .hovereffect img {
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+
+  .hovereffect:hover img {
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+    filter: brightness(0.6);
+    -webkit-filter: brightness(0.6);
+  }
+
+  .hovereffect p {
+    vertical-align: center;
+    text-align: center;
+    position: relative;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+    padding: 1em 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);
+  }
+
+  .hovereffect a, .hovereffect p {
+    color: white;
+    padding: 1em 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+  }
+
+  .hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2 {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
 
 
   #hospitality{
