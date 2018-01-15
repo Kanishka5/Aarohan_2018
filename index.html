@@ -2884,6 +2884,63 @@ function closeNav() {
           window.scrollTo(0, 0);
         }
     </script>
+    <script src="js/mobile-chrome-vh-fix.js"></script>
+      <script>
+        if($(window).width()< 500){
+            var vhFix = new VHChromeFix([
+          {
+            selector: '.section-home-banner',
+            vh: 180
+          },
+          {
+            selector: '#major-about',
+            vh: 40
+          },
+          {
+            selector: '#major-phone-1',
+            vh: 100
+          },
+          {
+            selector: '#major-phone-2',
+            vh: 100
+          },
+          {
+            selector: '#major-phone-3',
+            vh: 100
+          },
+          {
+            selector: '#major-phone-4',
+            vh: 100
+          },
+          {
+            selector: '#work-phone-1',
+            vh: 100
+          },
+          {
+            selector: '#work-phone-2',
+            vh: 100
+          },
+          {
+            selector: '#work-phone-3',
+            vh: 100
+          },
+          {
+            selector: '#major-attractions',
+            vh: 100
+          }
+            {
+            selector: '#container',
+            vh: 100
+          }
+
+          {
+            selector: '#container2 box',
+            vh: 100
+          }
+        ]);
+        }
+       
+      </script>
 
 
     <script src="js/jquery.easeScroll.js"></script>
