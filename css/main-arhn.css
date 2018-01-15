@@ -47,6 +47,7 @@ body{
 
   #main-logo{
       animation-duration: 3s;
+    
       animation-iteration-count: infinite;
       z-index: 10;
       width: 70vw;
@@ -1651,7 +1652,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
-    z-index: 3;
+    z-index: 20;
   }
 
   #major-phone-2{
@@ -1676,6 +1677,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
+    z-index: 20;
   }
 
   #major-phone-3{
@@ -1700,6 +1702,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
+    z-index: 20;
   }
 
   #major-phone-4{
@@ -1724,6 +1727,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
+    z-index: 20;
   }
 
   #aarohan_nights_close{
@@ -1776,6 +1780,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
+    z-index: 20;
   }
 
    #work-phone-2{
@@ -1800,6 +1805,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
+    z-index: 20;
   }
 
 
@@ -1825,6 +1831,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
+    z-index: 20;
   }
 
   #work-phone-1-close{
@@ -3506,7 +3513,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
-    z-index: 3;
+    z-index: 20;
   }
 
   #major-phone-2{
@@ -3531,6 +3538,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
+    z-index: 20;
   }
 
   #major-phone-3{
@@ -3555,6 +3563,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
+    z-index: 20;
   }
 
   #major-phone-4{
@@ -3579,6 +3588,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
+    z-index: 20;
   }
 
   #aarohan_nights_close{
@@ -3631,6 +3641,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
+    z-index: 20;
   }
 
    #work-phone-2{
@@ -3655,6 +3666,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
+    z-index: 20;
   }
 
 
@@ -3680,6 +3692,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
+    z-index: 20;
   }
 
   #work-phone-1-close{
@@ -3730,6 +3743,38 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
     bottom: -1vw;
     width: 102vw;
     height: auto;
+  }
+
+  #land-robot{
+    position: absolute;
+    width: 10vw;
+    top: 66vh;
+    right: -11vw;
+    transform: rotate(-363deg);
+    transform-origin: bottom left;
+  }
+
+  #register-robot{
+   position: absolute;
+    width: 10vw;
+    top: 58vh;
+    right: 4vw;
+    z-index: 20;
+    transform-origin: bottom left;
+  }
+
+  #register-robot:hover{
+    opacity: 0;
+  }
+
+  #register-robot-h{
+    position: absolute;
+    width: 10vw;
+    top: 58vh;
+    opacity: 0;
+    right: 4vw;
+    z-index: 19;
+    transform-origin: bottom left;
   }
 
 

@@ -1,6 +1,10 @@
 // $('#about-stars canvas').css("top",$('.section-home-banner').height()-3);
 
+window.addEventListener('resize', function () {
 
+
+
+})
 
 window.addEventListener("load", function(){ 
   //Events map size - 
@@ -383,150 +387,20 @@ window.addEventListener("load", function(){
 
   $('img[usemap]').rwdImageMaps();
 
-  
-  
-  $('.mapping').mouseover(function() {
-      $('.events-map #top').css('opacity','1');
-  }).mouseout(function(){
-      $('.events-map #top').css('opacity','0'); 
-  });
 
-  $('.mapping2').mouseover(function() {
-      $('.events-map #two').css('opacity','1');
-  }).mouseout(function(){
-      $('.events-map #two').css('opacity','0');   
-  });
-
-  $('.mapping3').mouseover(function() {
-      $('.events-map #three').css('opacity','1');
-  }).mouseout(function(){
-      $('.events-map #three').css('opacity','0');   
-  });
-
-  $('.mapping4').mouseover(function() {
-      $('.events-map #five').css('opacity','1');
-  }).mouseout(function(){
-      $('.events-map #five').css('opacity','0');   
-  });
-
-  $('.mapping5').mouseover(function() {
-      $('.events-map #four').css('opacity','1');
-  }).mouseout(function(){
-      $('.events-map #four').css('opacity','0');   
-  });
-
-  $('.mapping6').mouseover(function() {
-      $('.events-map #six').css('opacity','1');
-  }).mouseout(function(){
-      $('.events-map #six').css('opacity','0');   
-  });
-
-  $('.mapping7').mouseover(function() {
-      $('.events-map #seven').css('opacity','1');
-  }).mouseout(function(){
-      $('.events-map #seven').css('opacity','0');   
-  });
-
-
-
-  $(".mapping").on("click touch", function(e){
+  $("#register1").on("click touch", function(e){
       e.preventDefault();
-      if(windowWidth < 500){
-        $('#map-popup').css('right','0vw');  
-      }
-      else{
-        $('#map-popup').css('right','35vw');  
-      } 
-      $('#map-popup').css('visibility','visible');
-      $(".section-map #map-popup .content").html( "<div class=\"popup-title\"> EUREKA </div> <div class=\"popup-list\" ><ol><li><p>Behind The Dots</p></li><li><p>B-plan</p></li> <li><p>Bidweiser</p></li><li><p>Selldom</p></li><li><p>Colossus</p></li><li><p>Nit Case Study Challeng</p></li></ol></div>");
+      console.log("register1");
   });
 
-  $(".mapping2").on("click touch", function(e){
+  $("#register2").on("click touch", function(e){
       e.preventDefault();
-       if(windowWidth < 500){
-        $('#map-popup').css('right','0vw');  
-      }
-      else{
-        $('#map-popup').css('right','35vw');  
-      } 
-      $('#map-popup').css('visibility','visible');
-      $(".section-map #map-popup .content").html( "<div class=\"popup-title\"> QUIZ </div> <div class=\"popup-list\" ><ol><li><p>Exquizzit</p></li></ol></div>");
+      console.log("register2");
   });
 
-  $(".mapping3").on("click touch", function(e){
+  $("#register3").on("click touch", function(e){
       e.preventDefault();
-       if(windowWidth < 500){
-        $('#map-popup').css('right','0vw');  
-      }
-      else{
-        $('#map-popup').css('right','35vw');  
-      }  
-      $('#map-popup').css('visibility','visible');
-      $(".section-map #map-popup .content").html( "<div class=\"popup-title\"> BATTLE OF BYTES</div> <div class=\"popup-list\"><ol><li><p>Khula Maidan</p></li><li><p>Inquest</p></li><li><p>Decathlon</p></li><li><p>Fifa</p></li><li><p>Couter Strike</p></li></ol></div>");
-  });
-
-  $(".mapping4").on("click touch", function(e){
-      e.preventDefault();
-       if(windowWidth < 500){
-        $('#map-popup').css('right','0vw');  
-      }
-      else{
-        $('#map-popup').css('right','35vw');  
-      }  
-      $('#map-popup').css('visibility','visible');
-      $(".section-map #map-popup .content").html( "<div class=\"popup-title\">Strategist </div> <div class=\"popup-list\" > <ol><li><p>Journo Detective</p></li><li><p>Game of Recruitment</p></li><li><p>Stockhastic</p></li><li><p>Be a Billionare</p></li><li><p>TCDC</p></li></ol></div>");
-     
-      
-  });
-
-  $(".mapping5").on("click touch", function(e){
-      e.preventDefault();
-       if(windowWidth < 500){
-        $('#map-popup').css('right','0vw');  
-      }
-      else{
-        $('#map-popup').css('right','35vw');  
-      } 
-      $('#map-popup').css('visibility','visible');
-      $(".section-map #map-popup .content").html( "<div class=\"popup-title\"> Armageddon </div> <div class=\"popup-list\" ><ol><li><p>Robowar</p></li><li><p>Inside Out</p></li><li><p>Detour</p></li><li><p>Shuttle</p></li><li><p>Jigsaw</p></li></ol></div>");
-      
-  });
-
-  $(".mapping6").on("click touch", function(e){
-      e.preventDefault();
-       if(windowWidth < 500){
-        $('#map-popup').css('right','0vw');  
-      }
-      else{
-        $('#map-popup').css('right','35vw');  
-      } 
-      $('#map-popup').css('visibility','visible');
-      $(".section-map #map-popup .content").html( "<div class=\"popup-title\">Techlon </div> <div class=\"popup-list\" > <ol><li><p>Invictus</p></li><li><p>Assembler</p></li><li><p>Contraptions</p></li></ol> </div>");
-  });
-
-  $(".mapping7").on("click touch", function(e){
-      e.preventDefault();
-       if(windowWidth < 500){
-        $('#map-popup').css('right','0vw');  
-      }
-      else{
-        $('#map-popup').css('right','35vw');  
-      } 
-      $('#map-popup').css('visibility','visible');
-      $(".section-map #map-popup .content").html( "<div class=\"popup-title\">Apostrophe </div> <div class=\"popup-list\" > <ol><li><p>Abhivyakti</p></li><li><p>Conjecture</p></li></ol> </div>");
-      
-  });
-
-  $(".section-map #map-popup .buttons .close").on("click touch", function(e){
-      e.preventDefault();
-      if(windowWidth < 500){
-        $('#map-popup').css('right','-100vw');  
-      }
-      else{
-        $('#map-popup').css('right','-30vw');   
-      }
-      
-      // $('#map-popup').css('visibility','hidden');
+      console.log("register3");
   });
 
 
@@ -1130,6 +1004,15 @@ var work3_tl  =  new TimelineMax({paused:true})
       aarohan_nights_tl.reverse()
   });
 
+    $('#major-phone-1 #back1').on('click touch',function(){
+      // console.log("removed-phone")
+     enable_scroll();
+      aarohan_nights_tl.reverse()
+  });
+
+
+
+
   $('#major-ballon2').on('click touch',function(){
       // console.log("move-phone")
       disable_scroll();
@@ -1137,6 +1020,12 @@ var work3_tl  =  new TimelineMax({paused:true})
   });
 
   $('#major-phone-2 .back-touch').on('click touch',function(){
+      // console.log("removed-phone")
+     enable_scroll();
+     major1_nights_tl.reverse()
+  });
+
+    $('#major-phone-2 #back2').on('click touch',function(){
       // console.log("removed-phone")
      enable_scroll();
      major1_nights_tl.reverse()
@@ -1154,6 +1043,12 @@ var work3_tl  =  new TimelineMax({paused:true})
      major2_nights_tl.reverse()
   });
 
+   $('#major-phone-3 #back3').on('click touch',function(){
+      // console.log("removed-phone")
+     enable_scroll();
+     major2_nights_tl.reverse()
+  });
+
   $('#major-ballon4').on('click touch',function(){
       // console.log("move-phone")
       disable_scroll();
@@ -1161,6 +1056,12 @@ var work3_tl  =  new TimelineMax({paused:true})
   });
 
   $('#major-phone-4 .back-touch').on('click touch',function(){
+      // console.log("removed-phone")
+     enable_scroll();
+     major3_nights_tl.reverse()
+  });
+
+  $('#major-phone-4 #back4').on('click touch',function(){
       // console.log("removed-phone")
      enable_scroll();
      major3_nights_tl.reverse()
@@ -1183,6 +1084,12 @@ var work3_tl  =  new TimelineMax({paused:true})
      work1_tl.reverse()
   });
 
+   $('#work-phone-1 #back1').on('click touch',function(){
+      // console.log("removed-phone")
+     enable_scroll();
+     work1_tl.reverse()
+  });
+
   $('#work-ballon2').on('click touch',function(){
       // console.log("move-phone")
       disable_scroll();
@@ -1195,6 +1102,12 @@ var work3_tl  =  new TimelineMax({paused:true})
      work2_tl.reverse()
   });
 
+   $('#work-phone-2 #back2').on('click touch',function(){
+      // console.log("removed-phone")
+     enable_scroll();
+     work2_tl.reverse()
+  });
+
   $('#work-ballon3').on('click touch',function(){
       // console.log("move-phone")
       disable_scroll();
@@ -1202,6 +1115,12 @@ var work3_tl  =  new TimelineMax({paused:true})
   });
 
   $('#work-phone-3 .back-touch').on('click touch',function(){
+      // console.log("removed-phone")
+     enable_scroll();
+     work3_tl.reverse()
+  });
+
+  $('#work-phone-3 #back3').on('click touch',function(){
       // console.log("removed-phone")
      enable_scroll();
      work3_tl.reverse()
@@ -1554,7 +1473,7 @@ if(windowWidth > 0){
                               enable_scroll();
 
                           });
-                          if(windowWidth < 500){
+                          if(windowWidth > 0){
                              $("#container").css("overflow-y","scroll");
                           }
 

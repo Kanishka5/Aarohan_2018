@@ -242,22 +242,18 @@ window.addEventListener("load", function(){
                     backgroundColor: "#22305f",
                     ease: Power2.easeOut
                 })
-                .from(st,2,{
-                    opacity:0,
-                    ease: Power2.easeOut,
-                    delay:-1.5
-                })
                 .from(s, 2, {
                     y: "+=25",
                     delay: -1,
                     opacity: 0,
                     ease: Power2.easeOut
-                }).from(c, 2, {
-                    x: "-=5",
-                    opacity: 0,
-                    delay: -1,
-                    ease: Power2.easeOut
-                }).from(d, 1, {
+                }).to("#land-robot",1,{
+                    rotation:-40, 
+                    transformOrigin:"bottom left"
+                }).from("#register-robot",0.5,{
+                    scale:0
+                }).set("#register-robot-h",{opacity:1})
+                .from(d, 1, {
                     y: "+=25",
                     opacity: 0,
                     delay: -0.5,
