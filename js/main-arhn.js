@@ -2,7 +2,7 @@
 
 
 
-jQuery(document).ready(function(){
+window.addEventListener("load", function(){ 
   //Events map size - 
   // left: 37, up: 38, right: 39, down: 40,
   // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
@@ -1605,21 +1605,24 @@ if(windowWidth > 0){
   }
 
   // console.log($("#map").outerHeight());
-  console.log($("#events_map").outerHeight());
+  // console.log($("#events_map").outerHeight());
+  console.log($(window).innerHeight());
+  console.log($(window).outerHeight());
+  console.log($(window).height());
   
+
+var ratio = 1563/1745;
+
+var map_height = 0.8*$(window).width()*ratio + 0.83*$(window).height()
 
 
 $('#about-stars').css("height", 
 
               $('#major-about').outerHeight() + 
               $('#about').outerHeight() +
-              $("#map").outerHeight() + 
+              map_height  +
               $("#major-space").outerHeight() +
               0.5*$(window).height() );
-
-
-
-  
 
 });
 
