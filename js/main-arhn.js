@@ -26,11 +26,8 @@ jQuery(document).ready(function(){
 
   // Terrain stuff.
 
- // document.body.webkitRequestFullscreen();
-$(window).scroll(function(){
-    document.webkitExitFullscreen();
-    // document.exitFullscreen();
-});
+
+
 
 
 
@@ -1607,7 +1604,7 @@ if(windowWidth > 0){
 
   }
 
-  console.log($("#map").outerHeight());
+  // console.log($("#map").outerHeight());
   console.log($("#events_map").outerHeight());
   
 
