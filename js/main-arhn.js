@@ -26,8 +26,11 @@ jQuery(document).ready(function(){
 
   // Terrain stuff.
 
-
-
+ // document.body.webkitRequestFullscreen();
+$(window).scroll(function(){
+    document.webkitExitFullscreen();
+    // document.exitFullscreen();
+});
 
 
 
