@@ -30,7 +30,7 @@
   Scale Elements by %
  *-------------------------------------------------------------------------*/
 .section-home-about {
-  padding-top: 20vh;
+  /*padding-top: 20vh;*/
   position: relative;
   z-index: 10;
   /*background-color: #22305f;*/

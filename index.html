@@ -2033,7 +2033,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212f5f', end
     <link rel='stylesheet' id='home-about-css' href='css/home-about.css' type='text/css' media='all' />
     <link rel='stylesheet' id='map-css' href='css/map.css' type='text/css' media='all' />
     <link rel='stylesheet' id='interior-header-css' href='css/interior-header.css' type='text/css' media='all' />
-    <link rel='stylesheet' href='css/main-arhn.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/main-arhnv2.css' type='text/css' media='all' />
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
 
     <script type='text/javascript' src='js/jquery.js'></script>
@@ -2083,7 +2083,7 @@ function closeNav() {
     <div id="site">
         <img src="img/nav_a.png" usemap="#image-map-nav" id="nav-aarohan">
         <div id="loader-cover">
-            <img src="img/loader.gif" id="loader-arhn">
+            <img src="img/loaderv1.gif" id="loader-arhn">
            <!--  <img src="img/loader-over.png" id="loader-over"> -->
         </div>
         <map name="image-map-nav">
@@ -2108,7 +2108,7 @@ function closeNav() {
                     <li id="l-one"><a id="nav_home" class="nav-text">HOME</a></li>    
                     <li id="l-two"><a id="nav_about" class="nav-text">ABOUT US</a></li>
                     <li id="l-three"><a id="nav_events" class="nav-text">EVENTS</a></li>
-                    <li id="l-four"><a id="nav_major" class="nav-text">MAJOR ATTRACTION & WORK</a></li>
+                    <li id="l-four"><a id="nav_major" class="nav-text">MAJOR ATTRACTIONS & WORKSHOPS</a></li>
                     <li id="l-five"><a id="nav_sponsors" class="nav-text">SPONSORS</a></li>
                     <li id="l-six"><a id="nav_team" class="nav-text">TEAM</a><li>
                     <li id="l-seven"><a id="nav_contact" class="nav-text">CONTACT US</a><li>
@@ -2423,15 +2423,40 @@ function closeNav() {
                                         </div>
 
                                         <div id="sponsors_new1">
-                                            <img src="img/sponsor1.png" id="sponsors_img1" />
+                                            <img src="img/sponsor_logo.png" id="sponsors_img1" />
+                                        </div>
 
+                                       <!--  <div id="sponsors-list">
+                                            <div id="sponsor-container">
+                                                <div id="sponsors_new">
+                                                    <img src="img/sponsor2.png" id="sponsors_img2" />
+                                                </div>
+                                                <div id="sponsors_new">
+                                                    <img src="img/sponsor2.png" id="sponsors_img2" />
+                                                </div>
+                                            </div>
+                                        </div> -->
+
+                                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                          <!-- Indicators -->
+                                          <ol class="carousel-indicators">
+                                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                                          </ol>
+
+                                          <!-- Wrapper for slides -->
+                                          <div class="carousel-inner">
+                                            <div class="item active">
+                                              <img src="img/sponsor3v1.png" id="sponsors_img2" alt="Los Angeles">
+                                            </div>
+                                            <div class="item">
+                                              <img src="img/sponsor2v1.png" id="sponsors_img2" alt="New York">
+                                            </div>
+                                          </div>
+
+                                          <!-- Left and right controls -->
                                         </div>
-                                        <div id="sponsors_new">
-                                            <img src="img/sponsor2.png" id="sponsors_img2" />
-                                        </div>
-                                        <div id="sponsors_new">
-                                            <img src="img/sponsor3.png" id="sponsors_img3" />
-                                        </div>
+                                       
 
                                        <div id="team_full">
                                           <div id="trigger">
@@ -2443,7 +2468,7 @@ function closeNav() {
                                                 <br />
                                                 <div class="row">
 
-                                                  <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                  <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                       <div id="mem1">
                                                         <div id="one">
                                                           <div class="hovereffect">
@@ -2464,7 +2489,7 @@ function closeNav() {
                                                       </div>
                                                   </div>
 
-                                                  <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                  <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                     <div id="mem2">
                                                       <div class="hovereffect">
                                                         <img class="img-responsive" src="img/members/Soham2.jpg" >
@@ -2483,7 +2508,7 @@ function closeNav() {
                                                     </div>
                                                   </div>
 
-                                                  <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                  <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                     <div id="mem3">
                                                       <div class="hovereffect">
                                                         <img class="img-responsive" src="img/members/Dheeraj.jpg" >
@@ -2502,7 +2527,7 @@ function closeNav() {
                                                     </div>
                                                   </div>
 
-                                                  <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                  <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                     <div id="mem4">
                                                       <div class="hovereffect">
                                                         <img class="img-responsive" src="img/members/Jayesh.jpg" >
@@ -2521,7 +2546,18 @@ function closeNav() {
                                                     </div>
                                                   </div>
 
-                                                  <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                 
+
+                                                </div>
+
+
+
+                                                <!-- row 2 -->
+
+                                                <div class="row"> <!--row2-->
+
+
+                                                  <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                     <div id="mem5">
                                                       <div class="hovereffect">
                                                         <img class="img-responsive" src="img/members/AyushAg.jpg" >
@@ -2540,7 +2576,7 @@ function closeNav() {
                                                   </div>
                                                 </div>
 
-                                                <div class="col-md-2  col-sm-4 col-xs-6 team-member">
+                                                <div class="col-md-3  col-sm-4 col-xs-6 team-member">
                                                   <div id="mem6">
                                                     <div class="hovereffect">
                                                       <img class="img-responsive" src="img/members/Surya.jpg" >
@@ -2558,15 +2594,7 @@ function closeNav() {
                                                   </div>
                                                 </div>
 
-                                                </div>
-
-
-
-                                                <!-- row 2 -->
-
-                                                <div class="row"> <!--row2-->
-
-                                                  <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                  <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                     <div id="mem7">
                                                       <div class="hovereffect">
                                                         <img class="img-responsive" src="img/members/Ajay.jpg" >
@@ -2584,7 +2612,7 @@ function closeNav() {
                                                   </div>
                                                 </div>
 
-                                                <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                     <div id="mem8">
                                                       <div class="hovereffect">
                                                         <img class="img-responsive" src="img/members/Sachin.jpg" >
@@ -2602,7 +2630,14 @@ function closeNav() {
                                                   </div>
                                                 </div>
 
-                                                  <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                 
+
+                                                </div>
+
+
+                                                <div class="row">
+
+                                                     <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                     <div id="mem9">
                                                       <div class="hovereffect">
                                                         <img class="img-responsive" src="img/members/Sindhu.jpg" >
@@ -2621,7 +2656,7 @@ function closeNav() {
                                                 </div>
 
 
-                                                <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                     <div id="mem10">
                                                       <div class="hovereffect">
                                                         <img class="img-responsive" src="img/members/Pavitra.jpg" >
@@ -2639,7 +2674,7 @@ function closeNav() {
                                                   </div>
                                                 </div>
 
-                                                <div class="col-md-2  col-sm-4 col-xs-6 team-member">
+                                                <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                   <div id="mem11">
                                                       <div class="hovereffect">
                                                         <img class="img-responsive" src="img/members/Ritwick.jpg" >
@@ -2657,7 +2692,7 @@ function closeNav() {
                                                   </div>
                                                 </div>
 
-                                                  <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                  <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                     <div id="mem12">
                                                       <div class="hovereffect">
                                                         <img class="img-responsive" src="img/members/Siddharth.jpg" >
@@ -2675,7 +2710,6 @@ function closeNav() {
                                                   </div>
                                                 </div>
 
-
                                                 </div>
 
 
@@ -2685,7 +2719,7 @@ function closeNav() {
 
 
 
-                                                <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                       <div id="mem13">
                                                         <div class="hovereffect">
                                                           <img class="img-responsive" src="img/members/Rounak.jpg" >
@@ -2703,7 +2737,7 @@ function closeNav() {
                                                     </div>
                                                   </div>
 
-                                                  <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                  <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                     <div id="mem14">
                                                       <div class="hovereffect">
                                                         <img class="img-responsive" src="img/members/Kasturi2.jpg" >
@@ -2721,7 +2755,7 @@ function closeNav() {
                                                   </div>
                                                 </div>
 
-                                                  <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                  <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                     <div id="mem15">
                                                       <div class="hovereffect">
                                                         <img class="img-responsive" src="img/members/Satyasri2.jpg" >
@@ -2739,7 +2773,7 @@ function closeNav() {
                                                   </div>
                                                 </div>
 
-                                                <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                 <div id="mem16">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Deepak.jpg" >
@@ -2756,7 +2790,23 @@ function closeNav() {
                                                       <h4>HEAD, Robo Cell</h4>
                                               </div>
                                             </div>
-                                              <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                              
+
+
+
+                                            </div>
+
+
+
+
+
+
+
+                                            <div class="row">
+
+
+
+                                            <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                 <div id="mem17">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Arunn2.jpg" >
@@ -2774,7 +2824,7 @@ function closeNav() {
                                               </div>
                                             </div>
 
-                                              <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                              <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                 <div id="mem18">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Archit.jpg" >
@@ -2795,20 +2845,8 @@ function closeNav() {
 
 
 
-                                            </div>
 
-
-
-
-
-
-
-                                            <div class="row">
-
-
-
-
-                                            <div class="col-md-2 col-sm-4 col-xs-6  team-member">
+                                            <div class="col-md-3 col-sm-4 col-xs-6  team-member">
                                                 <div id="mem19">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Ravikant.jpg" >
@@ -2826,7 +2864,7 @@ function closeNav() {
                                               </div>
                                             </div>
 
-                                              <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                              <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                 <div id="mem20">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Sanket2.jpg" >
@@ -2845,7 +2883,13 @@ function closeNav() {
                                             </div>
 
 
-                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+
+                                            </div>
+
+                                            <div class="row">
+
+
+                                            <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                 <div id="mem21">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Prerna.jpg" >
@@ -2864,7 +2908,7 @@ function closeNav() {
                                             </div>
 
 
-                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                            <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                 <div id="mem22">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Vinay.jpg" >
@@ -2883,7 +2927,7 @@ function closeNav() {
                                             </div>
 
 
-                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                            <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                 <div id="mem23">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Akshay.jpg" >
@@ -2902,7 +2946,7 @@ function closeNav() {
                                             </div>
 
 
-                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                            <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                 <div id="mem24">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Sagar.jpg" >
@@ -2921,14 +2965,12 @@ function closeNav() {
                                             </div>
 
 
-
-
                                             </div>
 
 
                                             <div class="row">
 
-                                                <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                 <div id="mem25">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Ashish.jpg" >
@@ -2946,7 +2988,7 @@ function closeNav() {
                                               </div>
                                             </div>
 
-                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                            <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                 <div id="mem26">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Poushali.jpg" >
@@ -2964,7 +3006,7 @@ function closeNav() {
                                               </div>
                                             </div>
 
-                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                            <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                 <div id="mem27">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Shashwato.jpg" >
@@ -2982,7 +3024,7 @@ function closeNav() {
                                               </div>
                                             </div>
 
-                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                            <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                 <div id="mem28">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Deepika.jpg" >
@@ -3000,7 +3042,14 @@ function closeNav() {
                                               </div>
                                             </div>
 
-                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                            
+
+                                            </div>
+
+
+                                            <div class="row">
+
+                                                <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                 <div id="mem29">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Lavanya.jpg" >
@@ -3018,7 +3067,7 @@ function closeNav() {
                                               </div>
                                             </div>
 
-                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                            <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                 <div id="mem30">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Anuj.jpg" >
@@ -3036,13 +3085,8 @@ function closeNav() {
                                               </div>
                                             </div>
 
-                                            </div>
 
-
-                                            <div class="row">
-
-
-                                                <div class="col-md-2 col-lg-offset-5 col-sm-4 col-xs-6 team-member">
+                                                <div class="col-md-3 col-sm-4 col-xs-6 team-member">
                                                 <div id="mem31">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Paramita.jpg" >
@@ -3205,7 +3249,7 @@ function closeNav() {
     <script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=explicit&#038;ver=4.7.5'></script>
     <script type='text/javascript' src='js/gf-no-captcha-recaptcha-public.js'></script>
     <script src="js/jquery.paroller.min.js"></script>
-    <script type='text/javascript' src='js/main-arhn.js'></script>
+    <script type='text/javascript' src='js/main-arhnv2.js'></script>
    <!--  <script type="text/javascript">
         $(document).ready(function(){
             $('body').scrollTop(0);

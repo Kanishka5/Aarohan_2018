@@ -1941,9 +1941,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
   }
 
   #events-title-img:hover{
-    -webkit-transform: scale(1.1,1.1);
-    -ms-transform: scale(1.1,1.1) ;
-    transform: scale(1.1,1.1);
+    -webkit-transform: scale(1.1,1.1) rotate(17deg) ;
+    -ms-transform: scale(1.1,1.1) rotate(17deg);
+    transform: scale(1.1,1.1) rotate(17deg);
   }
 
   #major-phone-1{

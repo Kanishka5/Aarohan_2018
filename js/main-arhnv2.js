@@ -38,7 +38,7 @@ window.addEventListener("load", function(){
   $('#l-one').hover(function(){
       $('#l-one a').css("color","#37a8ee")
   },function(){
-      $('#l-one a').css("color","#9d9d9d")
+      $('#l-one a').css("color","#ffffff")
   });
 
   $('#l-two').hover(function(){
@@ -538,7 +538,7 @@ window.addEventListener("load", function(){
               scrollTop: $("#city-front").offset().top
             }, 200, function(){
                $('#container').animate({
-                    scrollTop: $("#city-front").offset().top - $("#container").offset().top
+                    scrollTop: 0
                   }, 200,function(){
                     $('#vertical-cont').animate({
                               scrollTop: 0
@@ -556,7 +556,7 @@ window.addEventListener("load", function(){
               scrollTop: $("#city-front").offset().top
             }, 200, function(){
                $('#container').animate({
-                    scrollTop: $("#city-front").offset().top - $("#container").offset().top
+                    scrollTop: 0
                   }, 200,function(){
                     $('#vertical-cont').animate({
                               scrollTop: 0
@@ -613,7 +613,7 @@ window.addEventListener("load", function(){
                     scrollTop: 16*windowWidth
                   }, 200,function(){
                       $('#vertical-cont').animate({
-                                scrollTop: windowHeight*1.5
+                                scrollTop: windowHeight*0.5
                        },200,function(){
                           $("#container").css("overflow-y","scroll")
                           $("#container").css("touch-action","pan-x")
@@ -640,7 +640,7 @@ window.addEventListener("load", function(){
                     scrollTop: 9*windowWidth
                   }, 200,function(){
                       $('#vertical-cont').animate({
-                                scrollTop: windowHeight*4.5
+                                scrollTop: windowHeight*3.5
                        },200,function(){
                           $("#container").css("overflow-y","scroll")
                           $("#container").css("touch-action","pan-x")
@@ -656,7 +656,7 @@ window.addEventListener("load", function(){
                     scrollTop: 16*windowWidth
                   }, 200,function(){
                       $('#vertical-cont').animate({
-                                scrollTop: windowHeight*4.5
+                                scrollTop: windowHeight*2
                        },200,function(){
                           $("#container").css("overflow-y","scroll")
                           $("#container").css("touch-action","pan-x")
@@ -722,7 +722,7 @@ window.addEventListener("load", function(){
                     scrollTop: 9*windowWidth
                   }, 200,function(){
                       $('#vertical-cont').animate({
-                                scrollTop: windowHeight*7.5
+                                scrollTop: windowHeight*8.5
                        },200,function(){
                           $("#container").css("overflow-y","scroll")
                           $("#container").css("touch-action","pan-x")
@@ -737,7 +737,7 @@ window.addEventListener("load", function(){
                     scrollTop: 16*windowWidth
                   }, 200,function(){
                       $('#vertical-cont').animate({
-                                scrollTop: windowHeight*7.5
+                                scrollTop: windowHeight*10.5
                        },200,function(){
                           $("#container").css("overflow-y","scroll")
                           $("#container").css("touch-action","pan-x")
@@ -1274,17 +1274,21 @@ var work3_tl  =  new TimelineMax({paused:true})
      robot3_work.reverse();
   });
 
+  var nav_timeline = new TimelineMax({paused:true}).to("#nav-aarohan",1,{opacity:1});
 
 
   $(window).scroll(function(){
     var a = $(window).scrollTop();
-
     console.log(a);
-    if(a > 1.6*windowWidth){
-        $('#nav-aarohan').animate({
-              opacity:1
-              
-            }, 1000);
+
+    if(a < 1.1*windowWidth){
+      nav_timeline.reverse();
+    }
+
+
+    if(a > 1.3*windowWidth){
+       nav_timeline.play();
+       console.log("visible");
     }
   })
 
@@ -1425,6 +1429,10 @@ var work3_tl  =  new TimelineMax({paused:true})
   var k = $('#container').scrollTop();
 
   // console.log(k);
+
+  if(k==0){
+    $('#container').css('overflow-y','hidden');
+  }
 
   if(k>40){
     $('#container').css('touch-action','pan-x')
@@ -1650,6 +1658,7 @@ if(windowWidth > 0){
                     } 
 
                     if("REVERSE" == e.scrollDirection ){
+                       $("#container").css("overflow-y","hidden");
                           // disable_scroll();
                           // $('html, body').animate({
                           //     scrollTop: $('#map').offset().top
@@ -1694,9 +1703,9 @@ $('#events-title-img').click(function() {
   console.log($(window).height());
   
 
-var ratio = 1563/1745;
+var ratio = 1100/1745;
 
-var map_height = 0.8*$(window).width()*ratio + 0.83*$(window).height()
+var map_height = 0.8*$(window).width()*ratio + 0.63*$(window).height()
 
 
 $('#about-stars').css("height", 

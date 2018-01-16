@@ -1,6 +1,5 @@
 window.addEventListener("load", function(){ 
-    $("#l")
-
+   
         $('#loader-cover').animate({
               opacity:0
               
