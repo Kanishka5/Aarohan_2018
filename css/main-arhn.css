@@ -3,6 +3,111 @@ body{
     background-color: #17223f
 }
 
+@font-face {
+  font-family: "proxima";
+  src: url(../fonts/proxima.ttf) format("opentype");
+}
+
+body,html{
+  font-family: proxima !important;
+}
+
+#loader-cover{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    z-index: 99999;
+  }
+  #loader-arhn{
+    /*position: absolute;*/
+    /*z-index: 9;*/
+    width: 100vw;
+    height: auto;
+  }
+
+  /*#loader-over{
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    height: auto;
+  }*/
+
+.nav li:hover{
+  /*border-left: 3px solid white;
+  border-right: 3px solid white;*/
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.navbar-inverse {
+background-color: rgba(0, 0, 0, 0.2);
+border-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+background-color: transparent;
+border-bottom: 1px solid rgb(57, 171, 111);
+}
+
+.navbar-inverse .navbar-nav > li > a {
+font-size: 12px;
+font-weight: 800;
+/*padding: 15px 15px 15px 15px;*/
+letter-spacing: 2px;
+color: #FFF;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-brand:hover {
+color: #fff;
+font-weight: 900;
+font-family: 'Oswald', sans-serif;
+}
+
+.nav-text{
+  font-size: 17px !important;
+  font-family: proxima !important;
+}
+
+
+.navbar-nav {
+    margin-top: 10px !important;
+}
+
+
+
+#l-one:hover,
+#l-two:hover,
+#l-three:hover,
+#l-four:hover,
+#l-five:hover,
+#l-six:hover,
+#l-seven:hover {
+  border: 2px solid #37a8ee;
+  border-radius: 4px;
+  color: #37a8ee;
+  background-color: rgba(0,0,0,0)
+}
+
+
+
+
+
+
+
+.navbar-inverse {
+     background-color: rgba(0,0,0,0) !important;
+     border-color: rgba(0,0,0,0) !important;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+border-color: transparent;
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+background-color: rgb(57, 171, 111);
+}
+.navbar-inverse .navbar-toggle {
+border-color: rgb(57, 171, 111);
+}
+
 /*html,
   body {
     height: 100%;
@@ -43,6 +148,136 @@ body{
     left:20vw !important;
     right: 20vw;
 
+  }
+
+
+  #land-robot1{
+    z-index: 9999999 !important;
+   position: absolute;
+    width: 24vw;
+    /* top: 66vh; */
+    bottom: -4vh;
+    right: -23vw;
+    transform: rotate(-363deg);
+    transform-origin: bottom 
+  }
+  #land-robot2{
+    z-index: 9999999 !important;
+    position: absolute;
+    width: 24vw;
+    /* top: 66vh; */
+    bottom: -4vh;
+    right: -23vw;
+    transform: rotate(-363deg);
+    transform-origin: bottom 
+  }
+
+  #land-robot3{
+    z-index: 9999999 !important;
+   position: absolute;
+    width: 24vw;
+    /* top: 66vh; */
+    bottom: -4vh;
+    right: -23vw;
+    transform: rotate(-363deg);
+    transform-origin: bottom 
+  }
+
+   #register-robot1{
+ position: absolute;
+  z-index: 9999999 !important;
+    width: 44vw;
+    bottom: 12vh;
+    right: 2.1vw;
+    z-index: 20;
+    /* opacity: 0; */
+    transform: rotate(-8deg);
+    transform-origin: bottom left;
+  }
+
+  .navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #7aacfc !important;
+  }
+
+  #register-robot1:hover{
+    opacity: 0;
+  }
+
+  #register-robot-h1{
+    position: absolute;
+    width: 10vw;
+    top: 58vh;
+    opacity: 0;
+    right: 4vw;
+    z-index: 19;
+    transform-origin: bottom left;
+  }
+
+   #register-robot2{
+     z-index: 9999999 !important;
+  position: absolute;
+    width: 44vw;
+    bottom: 12vh;
+    right: 2.1vw;
+    z-index: 20;
+    /* opacity: 0; */
+    transform: rotate(-8deg);
+    transform-origin: bottom left;
+  }
+
+  #register-robot2:hover{
+    opacity: 0;
+  }
+
+  #register-robot-h2{
+    position: absolute;
+    width: 10vw;
+    top: 58vh;
+    opacity: 0;
+    right: 4vw;
+    z-index: 19;
+    transform-origin: bottom left;
+  }
+
+   #register-robot3{
+     z-index: 9999999 !important;
+   position: absolute;
+    width: 44vw;
+    bottom: 12vh;
+    right: 2.1vw;
+    z-index: 20;
+    /* opacity: 0; */
+    transform: rotate(-8deg);
+    transform-origin: bottom left;
+  }
+
+  #register-robot3:hover{
+    opacity: 0;
+  }
+
+  #register-robot-h3{
+    position: absolute;
+    width: 10vw;
+    top: 58vh;
+    opacity: 0;
+    right: 4vw;
+    z-index: 19;
+    transform-origin: bottom left;
+  }
+
+  #nav-aarohan{
+    /*left:-17vw !important;*/
+    width: 17vw;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    display: none;
+  }
+
+  #land-robot, #register-robot, #register-robot-h{
+    display: none;
   }
 
   #main-logo{
@@ -96,11 +331,11 @@ body{
   }
 
   #main-text span{
-      color: white;
-      font-size: 20pt;
-      font-family: 'Montserrat', sans-serif;
-      letter-spacing: 9px;
-      font-weight: 800;
+     color: white;
+    font-size: 15pt;
+    font-family: proxima;
+    letter-spacing: 9px;
+    font-weight: 1000;
   }
 
   .parent {
@@ -135,35 +370,35 @@ body{
   }
 
   #main-date{
-      z-index: 10;
-      text-align: center;
-      position: relative;
-      width: 100vw;
-      top:17vh;
+     z-index: 10;
+    text-align: center;
+    position: relative;
+    width: 100vw;
+    top: 16.4vh;
   }
 
   #main-date span{
-      color: white;
-      font-size: 15pt;
-      font-family: 'Montserrat', sans-serif;
-      letter-spacing: 8px;
-      font-weight: 800;
+    color: white;
+    font-size: 10pt;
+    font-family: proxima;
+    letter-spacing: 7px;
+    font-weight: 800;
   }
 
   #main-month{
       z-index: 10;
-      position: relative;
-      text-align: center;
-      width: 100vw;
-      top:20vh;
+    position: relative;
+    text-align: center;
+    width: 100vw;
+    top: 18vh;
   }
 
   #main-month span{
-      color: white;
-      font-size: 10pt;
-      font-family: 'Montserrat', sans-serif;
-      letter-spacing: 8px;
-      font-weight: 800;
+    color: white;
+    font-size: 8pt;
+    font-family: proxima;
+    letter-spacing: 6px;
+    font-weight: 800;
   }
 
   /*.frame{
@@ -174,12 +409,14 @@ body{
   #about-us-text{
       font-size: 1.5rem;
       color: white;
+      font-family: proxima;
   }
 
   #about-us-text{
     line-height: 1.5;
     letter-spacing: 1px;
     font-weight: 400;
+    font-family: proxima;
   }
 
   #events-join{
@@ -298,11 +535,10 @@ body{
   }
 
   #robot1{
-    /*position: absolute;*/
-    width: 90vw;
+    width: 41vw;
     margin-top: 10px;
     height: auto;
-    left: 5vw;
+    left: 10vw;
     margin-bottom: 5vh;
   }
 
@@ -351,7 +587,28 @@ body{
     top:20%;
     line-height:.7;
     /*font-weight:bold;*/
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "proxima"
+  }
+
+  .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+     border-color: #17223f !important; 
+}
+
+.navbar-toggle {
+     border-color: none; 
+}
+
+  .navbar-inverse .navbar-nav>li>a {
+    color: #17223f !important;
+}
+
+  .navbar-nav {
+    margin: 7.5px -15px;
+    background-color: #ffffffc2 !important;
+  }
+
+  .navbar-fixed-top .navbar-collapse {
+     max-height: none !important; 
   }
 
   #major-logo{
@@ -360,7 +617,7 @@ body{
     top:20vw;
     text-align: center;
     font-size: 6rem;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "proxima"
     color: white;
     position: absolute;
     width: 50vw;
@@ -370,8 +627,10 @@ body{
   }
 
   .section-title{
-    font-size: 5rem !important;
-    font-weight: 400;
+    font-size: 2.4rem !important;
+    letter-spacing: 8px;
+    font-weight: 600;
+    font-family: proxima;
   }
 
   #workshop-logo{
@@ -380,7 +639,7 @@ body{
     top:20vw;
     text-align: center;
     font-size: 6rem;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "proxima"
     color: white;
     position: absolute;
     width: 50vw;
@@ -560,7 +819,7 @@ body{
     background-color: rgba(0,0,0,0.8);
     border-radius: 10px;
     opacity: 0;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "proxima", sans-serif;
   }
 
   .caption{
@@ -575,7 +834,7 @@ body{
     border-radius: 10px;
     opacity: 0;
     top:40vh;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "proxima", sans-serif;
   }
 
 
@@ -949,23 +1208,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#532c74+0,352675+100 */
   }
 
+
+
   .team-member p{
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: proxima;
   }
 
   .team-member h3{
     margin-top: 30px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #17233f;
     font-weight: bold;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: proxima;
   }
 
   .team-member h4{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: bold;
     color: #17233f;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: proxima;
   }
 
   #team .row{
@@ -1020,11 +1281,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
 
     #team_title{
       color: #17233f;
-      font-family: "Source Sans Pro", sans-serif;
-      font-weight: 400;
-      font-size: 6rem;
-      margin-bottom: 10vh;
-      opacity: 0;
+    font-family: proxima;
+    font-weight: 600;
+    font-size: 4rem;
+    margin-bottom: 10vh;
+    letter-spacing: 8px;
     }
 
     /*.col-lg-2 h3, .col-lg-2 h4{
@@ -1200,8 +1461,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
   #hospitality #title{
    opacity: 0;
     color: #17233f;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 400;
+    font-family: proxima;
+    font-weight: 600;
     font-size: 2rem;
     width: 100vw;
     text-overflow: clip;
@@ -1222,16 +1483,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
 
   #hospitality h2{
     color: #17233f;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 400;
-    font-size: 3rem;
+    font-family: proxima;
+    font-weight: 600;
+    font-size: 2.4rem;
+    letter-spacing: 4px;
   }
 
 
   .sub-cont{
     white-space: normal;
     color: #17233f;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: proxima;
     font-weight: 400;
     font-size: 1.7rem;
     overflow-wrap: break-word;
@@ -1773,7 +2035,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     /* transform-origin: bottom left; */
   }
 
-  #work-phone-1 img{
+  #work-phone-1 .phone{
     height: 90vh;
     width: auto;
     position: relative;
@@ -1798,7 +2060,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     /* transform-origin: bottom left; */
   }
 
-  #work-phone-2 img{
+  #work-phone-2 .phone{
     height: 90vh;
     width: auto;
     position: relative;
@@ -1824,7 +2086,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     /* transform-origin: bottom left; */
   }
 
-  #work-phone-3 img{
+  #work-phone-3 .phone{
     height: 90vh;
     width: auto;
     position: relative;
@@ -1994,12 +2256,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
 
   }
 
+  #nav-aarohan{
+    /*left:-17vw !important;*/
+    width: 17vw;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+
   #main-text span{
       color: white;
-      font-size: 25pt;
-      font-family: 'Montserrat', sans-serif;
-      letter-spacing: 9px;
-      font-weight: 800;
+    font-size: 36pt;
+    font-family: proxima;
+    letter-spacing: 12px;
+    font-weight: 1000;
   }
 
   .parent {
@@ -2034,35 +2306,35 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
   }
 
   #main-date{
-      z-index: 10;
-      text-align: center;
-      position: relative;
-      width: 100vw;
-      top:17vh;
+     z-index: 10;
+    text-align: center;
+    position: relative;
+    width: 100vw;
+    top: 16.4vh;
   }
 
   #main-date span{
-      color: white;
-      font-size: 15pt;
-      font-family: 'Montserrat', sans-serif;
-      letter-spacing: 8px;
-      font-weight: 800;
+     color: white;
+    font-size: 24pt;
+    font-family: proxima;
+    letter-spacing: 8px;
+    font-weight: 800;
   }
 
   #main-month{
       z-index: 10;
-      position: relative;
-      text-align: center;
-      width: 100vw;
-      top:20vh;
+    position: relative;
+    text-align: center;
+    width: 100vw;
+    top: 18vh;
   }
 
   #main-month span{
-      color: white;
-      font-size: 10pt;
-      font-family: 'Montserrat', sans-serif;
-      letter-spacing: 8px;
-      font-weight: 800;
+     color: white;
+    font-size: 16pt;
+    font-family: proxima;
+    letter-spacing: 8px;
+    font-weight: 800;
   }
 
   /*.frame{
@@ -2073,12 +2345,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
   #about-us-text{
       font-size: 2rem;
       color: white;
+      font-family: proxima;
   }
 
   #about-us-text{
     line-height: 1.5;
     letter-spacing: 1px;
     font-weight: 400;
+    font-family: proxima;
   }
 
   #events-join{
@@ -2198,10 +2472,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
 
   #robot1{
     /*position: absolute;*/
-    width: 50vw;
+    width: 20vw;
     margin-top: 10px;
     height: auto;
-    left: 25vw;
+    left: 40vw;
     margin-bottom: 10vh;
   }
 
@@ -2209,7 +2483,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
   #major-space{
       height: 40vh;
       margin-top: -3px;
-      margin-bottom: -3px;
+      margin-bottom: -5px;
       background-color:  #17223f;
       /*background-image: linear-gradient(to right, #E4E4E4 0%, #FFFFFF 100%);*/
   }
@@ -2270,7 +2544,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
 
   .section-title{
     font-size: 6rem !important;
-    font-weight: 400;
+    font-weight: 600;
+    font-family: proxima;
   }
 
   #workshop-logo{
@@ -2830,7 +3105,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
   }
 
   .team-member p{
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: proxima;
   }
 
   .team-member h3{
@@ -2838,14 +3113,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     font-size: 1.3rem;
     color: #17233f;
     font-weight: bold;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: proxima;
   }
 
   .team-member h4{
     font-size: 0.9rem;
     font-weight: bold;
     color: #17233f;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: proxima;
   }
 
   #team .row{
@@ -2893,15 +3168,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     #mem1, #mem2, #mem3, #mem4, #mem5, #mem6, #mem7, #mem8, #mem9, #mem10, #mem11, #mem12, #mem13, #mem14, #mem15, #mem16, #mem17, #mem18, #mem19, #mem20, #mem21, #mem22, #mem23, #mem24,#mem25, #mem26, #mem27, #mem28, #mem29, #mem30 {
       /*transform: scale(0, 0);*/
       display: table;
-      font-family: glacial;
+      font-family: proxima;
       opacity: 0;
     }
 
 
     #team_title{
       color: #17233f;
-      font-family: "Source Sans Pro", sans-serif;
-      font-weight: 400;
+      font-family: proxima;
+      font-weight: 600;
       font-size: 6rem;
       margin-bottom: 10vh;
       opacity: 0;
@@ -3081,8 +3356,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
   #hospitality #title{
     opacity: 0;
     color: #17233f;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 400;
+    font-family: proxima;
+    font-weight: 600;
     font-size: 6rem;
     margin-top: -10px;
   }
@@ -3099,8 +3374,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
 
   #hospitality h2{
        color: #17233f;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 400;
+    font-family: proxima;
+    font-weight: 600;
     font-size: 3rem;
   }
 
@@ -3108,7 +3383,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
   .sub-cont{
     white-space: normal;
         color: #17233f;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: proxima;
     font-weight: 400;
     font-size: 1.7rem;
     overflow-wrap: break-word;
@@ -3145,6 +3420,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     height: 170vh;
     width: 100vw;
     background-color: #FFFFFF;
+    margin-top: -2px;
   }
 
 
@@ -3634,7 +3910,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     /* transform-origin: bottom left; */
   }
 
-  #work-phone-1 img{
+  #work-phone-1 .phone{
     height: 90vh;
     width: auto;
     position: relative;
@@ -3659,7 +3935,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     /* transform-origin: bottom left; */
   }
 
-  #work-phone-2 img{
+  #work-phone-2 .phone{
     height: 90vh;
     width: auto;
     position: relative;
@@ -3685,7 +3961,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     /* transform-origin: bottom left; */
   }
 
-  #work-phone-3 img{
+  #work-phone-3 .phone{
     height: 90vh;
     width: auto;
     position: relative;
@@ -3760,6 +4036,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
     top: 58vh;
     right: 4vw;
     z-index: 20;
+    opacity: 0;
     transform-origin: bottom left;
   }
 
@@ -3776,6 +4053,109 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
     z-index: 19;
     transform-origin: bottom left;
   }
+
+
+  #land-robot1{
+    position: absolute;
+    width: 10vw;
+    top: 66vh;
+    right: -11vw;
+    transform: rotate(-363deg);
+    transform-origin: bottom left;
+  }
+  #land-robot2{
+    position: absolute;
+    width: 10vw;
+    top: 66vh;
+    right: -11vw;
+    transform: rotate(-363deg);
+    transform-origin: bottom left;
+  }
+
+  #land-robot3{
+    position: absolute;
+    width: 10vw;
+    top: 66vh;
+    right: -11vw;
+    transform: rotate(-363deg);
+    transform-origin: bottom left;
+  }
+
+   #register-robot1{
+   position: absolute;
+    width: 16vw;
+    top: 49vh;
+    right: 2.1vw;
+    z-index: 20;
+    /* opacity: 0; */
+    transform: rotate(-8deg);
+    transform-origin: bottom left;
+  }
+
+  #register-robot1:hover{
+    opacity: 0;
+  }
+
+  #register-robot-h1{
+    position: absolute;
+    width: 10vw;
+    top: 58vh;
+    opacity: 0;
+    right: 4vw;
+    z-index: 19;
+    transform-origin: bottom left;
+  }
+
+   #register-robot2{
+  position: absolute;
+    width: 16vw;
+    top: 49vh;
+    right: 2.1vw;
+    z-index: 20;
+    /* opacity: 0; */
+    transform: rotate(-8deg);
+    transform-origin: bottom left;
+  }
+
+  #register-robot2:hover{
+    opacity: 0;
+  }
+
+  #register-robot-h2{
+    position: absolute;
+    width: 10vw;
+    top: 58vh;
+    opacity: 0;
+    right: 4vw;
+    z-index: 19;
+    transform-origin: bottom left;
+  }
+
+   #register-robot3{
+   position: absolute;
+    width: 16vw;
+    top: 49vh;
+    right: 2.1vw;
+    z-index: 20;
+    /* opacity: 0; */
+    transform: rotate(-8deg);
+    transform-origin: bottom left;
+  }
+
+  #register-robot3:hover{
+    opacity: 0;
+  }
+
+  #register-robot-h3{
+    position: absolute;
+    width: 10vw;
+    top: 58vh;
+    opacity: 0;
+    right: 4vw;
+    z-index: 19;
+    transform-origin: bottom left;
+  }
+
 
 
 }

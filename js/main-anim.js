@@ -1,4 +1,14 @@
 window.addEventListener("load", function(){ 
+    $("#l")
+
+        $('#loader-cover').animate({
+              opacity:0
+              
+            }, 1500,function(){ 
+
+                    $("#loader-cover").css("display","none");
+            });
+    
 
     var stars = new TimelineMax({repeat:-1}).to("#stars",50,{y:-10000})
                                     .to("#stars2",60,{y:-10000},0)
@@ -247,12 +257,16 @@ window.addEventListener("load", function(){
                     delay: -1,
                     opacity: 0,
                     ease: Power2.easeOut
-                }).to("#land-robot",1,{
-                    rotation:-40, 
-                    transformOrigin:"bottom left"
-                }).from("#register-robot",0.5,{
-                    scale:0
-                }).set("#register-robot-h",{opacity:1})
+                // }).to("#land-robot",1,{
+                //     rotation:-40, 
+                //     transformOrigin:"bottom left"
+                // }).from("#register-robot",0.5,{
+                //     scale:0
+                // }).set("#register-robot-h",{opacity:1})
+                }).from("#main-nav",1,{
+                    opacity:0
+                })
+
                 .from(d, 1, {
                     y: "+=25",
                     opacity: 0,
@@ -371,6 +385,6 @@ window.addEventListener("load", function(){
                 }).addTo(t)
         }
     };
-    r.init()
+    // r.init()
 
 });

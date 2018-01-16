@@ -36,70 +36,7 @@
         padding: 0 !important;
     }
 
-
-    .navi{
-        z-index: 10;
-        right:10px;
-        top: 5px;
-}
-.navlay {
-    height: 0%;
-    width: 100%;
-    position: fixed;
-    z-index: 50;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-y: scroll;
-    transition: 0.5s;
-}
-
-.navlay-content {
-    position: relative;
-    top: 10%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-    text-decoration: none;
-}
-
-.navlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.navlay a:hover, .navlay a:focus {
-    color: #f1f1f1;
-    text-decoration: none;
-}
-
-.navlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-    text-decoration:none;
-}
-
-@media screen and (max-height: 450px) {
-  .navlay {overflow-y: auto;}
-  .navlay a {font-size: 20px}
-  .navlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
-
-
-
-
-    </style>
+</style>
     <link rel='stylesheet' id='theme_style-css' href='css/style.css' type='text/css' media='all' />
     <style id='theme_style-inline-css' type='text/css'>
     @import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i");
@@ -2111,7 +2048,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212f5f', end
 </head>
 
 <body class="home page-template page-template-page-templates page-template-homepage page-template-page-templateshomepage-php page page-id-2">
-    <div id="myNav" class="navlay">
+
+
+
+
+   <!--  <div id="myNav" class="navlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="navlay-content">
     <a id="nav_home" >Home</a>
@@ -2136,10 +2077,47 @@ function openNav() {
 function closeNav() {
     document.getElementById("myNav").style.height = "0%";
 }
-</script>
+</script> -->
 
 
     <div id="site">
+        <img src="img/nav_a.png" usemap="#image-map-nav" id="nav-aarohan">
+        <div id="loader-cover">
+            <img src="img/loader.gif" id="loader-arhn">
+           <!--  <img src="img/loader-over.png" id="loader-over"> -->
+        </div>
+        <map name="image-map-nav">
+            <area target="" alt="twitter" title="twitter" href="https://twitter.com/arhn_nitd" coords="110,170,23" shape="circle">
+            <area target="" alt="facebook" title="facebook" href="https://www.facebook.com/arhn.nitd" coords="190,172,25" shape="circle">
+            <area target="" alt="youtube" title="youtube" href="https://www.youtube.com/user/arhnNITD" coords="273,169,24" shape="circle">
+        </map>
+        <header id="main-nav" class="navbar navbar-inverse navbar-fixed-top" id="menu-section">
+          <div class="container">
+
+            <nav>
+              <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              </button>
+              <!--<a><img src="images/title-menubar.png" style="width:160px; height:30px;"></img></a>-->
+              </div>
+              <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li id="l-one"><a id="nav_home" class="nav-text">HOME</a></li>    
+                    <li id="l-two"><a id="nav_about" class="nav-text">ABOUT US</a></li>
+                    <li id="l-three"><a id="nav_events" class="nav-text">EVENTS</a></li>
+                    <li id="l-four"><a id="nav_major" class="nav-text">MAJOR ATTRACTION & WORK</a></li>
+                    <li id="l-five"><a id="nav_sponsors" class="nav-text">SPONSORS</a></li>
+                    <li id="l-six"><a id="nav_team" class="nav-text">TEAM</a><li>
+                    <li id="l-seven"><a id="nav_contact" class="nav-text">CONTACT US</a><li>
+                  </ul>
+              </div>
+            </nav>
+
+          </div>
+        </header>
         <main id="main-content">
 
             <section class="section-home-banner" id="top">
@@ -2206,7 +2184,7 @@ function closeNav() {
                                 </svg>
                             </div><p id="about-us"></p>
                             <h2 class="title section-title dash" data-anim="in">ABOUT US</h2>
-                            <img id="robot1" data-anim="in" src="img/robot.gif" />
+                            <img id="robot1" data-anim="in" src="img/robot.png" />
                             <div id="about-us-text" class="description" data-anim="in">
                                 <p>National Institute of Technology, Durgapur has been a pioneering educational institute for above 50 years. It boasts of students who have achieved par excellence in the field of academics and organization.
 
@@ -2344,7 +2322,10 @@ function closeNav() {
 
                         <div id="work-phone-1" class="mob-touch">
                                 <div class="back-touch"> </div>
-                               <img src="img/work1-phone.png" usemap="#image-map1">
+                                <img id="land-robot1" src="img/land-robot.png" />
+                                <img id="register-robot1" src="img/update.png" />
+                                <!-- <img id="register-robot-h1" src="img/register-h.png" /> -->
+                               <img class="phone" src="img/work1-phone.png" usemap="#image-map1">
                                 <map name="image-map1">
                                     <area target="" id="register1" alt="register" title="register" coords="357,1004,326,1015,314,1035,316,1058,326,1076,342,1087,428,1089,523,1087,598,1089,661,1090,681,1075,690,1051,686,1027,661,1006,606,1004,433,1004" shape="poly">
                                     <area target="" id="back1" alt="back" title="back" coords="210,147,174,167,173,215,210,237,249,213,244,156" shape="poly">
@@ -2354,7 +2335,10 @@ function closeNav() {
                         <div id="work-phone-2" class="mob-touch">
                                 <div class="back-touch"> </div>
                                <!-- Image Map Generated by http://www.image-map.net/ -->
-                                <img src="img/work2-phone.png" usemap="#image-map2">
+                                <img class="phone" src="img/work2-phone.png" usemap="#image-map2">
+                                 <img id="land-robot2" src="img/land-robot.png" />
+                                <img id="register-robot2" src="img/update.png" />
+                                <!-- <img id="register-robot-h2" src="img/register-h.png" /> -->
                                 <map name="image-map2">
                                     <area target="" id="back2" alt="back" title="back"  coords="206,137,174,170,172,223,204,244,241,215,239,171" shape="poly">
                                     <area target="" id="register2" alt="register" title="register"  coords="400,1013,329,1016,313,1039,315,1075,332,1092,394,1093,651,1093,683,1082,689,1051,682,1030,668,1014" shape="poly">
@@ -2364,7 +2348,10 @@ function closeNav() {
                         <div id="work-phone-3" class="mob-touch">
                                 <div class="back-touch"> </div>
                                <!-- Image Map Generated by http://www.image-map.net/ -->
-                                <img src="img/work3-phone.png" usemap="#image-map3">
+                                <img class="phone" src="img/work3-phone.png" usemap="#image-map3">
+                                 <img id="land-robot3" src="img/land-robot.png" />
+                                <img id="register-robot3" src="img/update.png" />
+                                <!-- <img id="register-robot-h3" src="img/register-h.png" /> -->
                                 <map name="image-map3">
                                     <area target=""  id="register3" alt="back" title="back" coords="338,1024,323,1037,313,1060,318,1084,323,1099,350,1107,416,1108,567,1109,621,1109,668,1103,688,1079,689,1057,669,1028,623,1024,529,1024,416,1024" shape="poly">
                                     <area target="" id="back3" alt="register" title="register"  coords="198,165,179,187,171,225,183,254,212,270,239,249,248,212,246,185,238,167,218,158" shape="poly">
@@ -2446,7 +2433,7 @@ function closeNav() {
                                             <img src="img/sponsor3.png" id="sponsors_img3" />
                                         </div>
 
-                                        <div id="team_full">
+                                       <div id="team_full">
                                           <div id="trigger">
                                           <div id="team">
                                                 <br />
@@ -2521,7 +2508,7 @@ function closeNav() {
                                                         <img class="img-responsive" src="img/members/Jayesh.jpg" >
                                                           <div class="overlay">
                                                               <p style="">
-                                                                 <br/>
+                                                                 7063699187<br/>
                                                                 jayesh@ccanitd.in
                                                               </p>
 
@@ -2540,7 +2527,7 @@ function closeNav() {
                                                         <img class="img-responsive" src="img/members/AyushAg.jpg" >
                                                           <div class="overlay">
                                                               <p style="">
-                                                                 <br/>
+                                                                 7063699173<br/>
                                                                 ayush@ccanitd.in
                                                               </p>
 
@@ -2559,7 +2546,7 @@ function closeNav() {
                                                       <img class="img-responsive" src="img/members/Surya.jpg" >
                                                         <div class="overlay">
                                                             <p style="">  <br/>
-                                                               <br/>
+                                                               7063698732<br/>
                                                               surya@ccanitd.in
                                                             </p>
 
@@ -2585,7 +2572,7 @@ function closeNav() {
                                                         <img class="img-responsive" src="img/members/Ajay.jpg" >
                                                           <div class="overlay">
                                                               <p style="">
-                                                                 <br/>
+                                                                9547336224<br/>
                                                                 ajay@ccanitd.in
                                                               </p>
 
@@ -2603,7 +2590,7 @@ function closeNav() {
                                                         <img class="img-responsive" src="img/members/Sachin.jpg" >
                                                           <div class="overlay">
                                                               <p style="">
-                                                                 <br/>
+                                                                 9830778790<br/>
                                                                 sachin@ccanitd.in
                                                               </p>
 
@@ -2629,7 +2616,7 @@ function closeNav() {
 
                                                         </div>
                                                           <h3>SINDHU CHAVA</h3>
-                                                          <h4>HEAD, E-Cell</h4>
+                                                          <h4>HEAD, Publicity</h4>
                                                   </div>
                                                 </div>
 
@@ -2658,7 +2645,7 @@ function closeNav() {
                                                         <img class="img-responsive" src="img/members/Ritwick.jpg" >
                                                           <div class="overlay">
                                                               <p style="">
-                                                                 <br/>
+                                                                7585886110<br/>
                                                                 ritwick@ccanitd.in
                                                               </p>
 
@@ -2676,7 +2663,7 @@ function closeNav() {
                                                         <img class="img-responsive" src="img/members/Siddharth.jpg" >
                                                           <div class="overlay">
                                                               <p style="">
-                                                                 <br/>
+                                                                 9883591346<br/>
                                                                 siddharth@ccanitd.in
                                                               </p>
 
@@ -2740,7 +2727,7 @@ function closeNav() {
                                                         <img class="img-responsive" src="img/members/Satyasri2.jpg" >
                                                           <div class="overlay">
                                                               <p style="">
-                                                                 <br/>
+                                                                 7076315069<br/>
                                                                 satyasri@ccanitd.in
                                                               </p>
 
@@ -2758,7 +2745,7 @@ function closeNav() {
                                                     <img class="img-responsive" src="img/members/Deepak.jpg" >
                                                       <div class="overlay">
                                                           <p style="">
-                                                             <br/>
+                                                            9748920107<br/>
                                                             deepak@ccanitd.in
                                                           </p>
 
@@ -2775,7 +2762,7 @@ function closeNav() {
                                                     <img class="img-responsive" src="img/members/Arunn2.jpg" >
                                                       <div class="overlay">
                                                           <p style="">
-                                                             <br/>
+                                                            <br/>
                                                             arunn@ccanitd.in
                                                           </p>
 
@@ -2793,7 +2780,7 @@ function closeNav() {
                                                     <img class="img-responsive" src="img/members/Archit.jpg" >
                                                       <div class="overlay">
                                                           <p style="">
-                                                             <br/>
+                                                            9874473399<br/>
                                                             archit@ccanitd.in
                                                           </p>
 
@@ -2821,13 +2808,13 @@ function closeNav() {
 
 
 
-                                            <div class="col-md-2 col-lg-offset-4 col-sm-4 col-xs-6  team-member">
+                                            <div class="col-md-2 col-sm-4 col-xs-6  team-member">
                                                 <div id="mem19">
                                                   <div class="hovereffect">
                                                     <img class="img-responsive" src="img/members/Ravikant.jpg" >
                                                       <div class="overlay">
                                                           <p style="">
-                                                             <br/>
+                                                            9163061632<br/>
                                                             ravi@ccanitd.in
                                                           </p>
 
@@ -2858,9 +2845,231 @@ function closeNav() {
                                             </div>
 
 
+                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                <div id="mem21">
+                                                  <div class="hovereffect">
+                                                    <img class="img-responsive" src="img/members/Prerna.jpg" >
+                                                      <div class="overlay">
+                                                          <p style="">
+                                                             <br/>
+                                                            prerna@ccanitd.in
+                                                          </p>
+
+                                                      </div>
+
+                                                    </div>
+                                                      <h3>PRERNA AGARWAL</h3>
+                                                      <h4>EXECUTIVE MEMBER</h4>
+                                              </div>
+                                            </div>
+
+
+                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                <div id="mem22">
+                                                  <div class="hovereffect">
+                                                    <img class="img-responsive" src="img/members/Vinay.jpg" >
+                                                      <div class="overlay">
+                                                          <p style="">
+                                                             <br/>
+                                                            vinay@ccanitd.in
+                                                          </p>
+
+                                                      </div>
+
+                                                    </div>
+                                                      <h3>VINAY KUDARI</h3>
+                                                      <h4>EXECUTIVE MEMBER</h4>
+                                              </div>
+                                            </div>
+
+
+                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                <div id="mem23">
+                                                  <div class="hovereffect">
+                                                    <img class="img-responsive" src="img/members/Akshay.jpg" >
+                                                      <div class="overlay">
+                                                          <p style="">
+                                                             <br/>
+                                                            akshay@ccanitd.in
+                                                          </p>
+
+                                                      </div>
+
+                                                    </div>
+                                                      <h3>AKSHAY BAJPAI</h3>
+                                                      <h4>EXECUTIVE MEMBER</h4>
+                                              </div>
+                                            </div>
+
+
+                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                <div id="mem24">
+                                                  <div class="hovereffect">
+                                                    <img class="img-responsive" src="img/members/Sagar.jpg" >
+                                                      <div class="overlay">
+                                                          <p style="">
+                                                             <br/>
+                                                            sagar@ccanitd.in
+                                                          </p>
+
+                                                      </div>
+
+                                                    </div>
+                                                      <h3>SAGAR BAWASKAR</h3>
+                                                      <h4>EXECUTIVE MEMBER</h4>
+                                              </div>
+                                            </div>
+
+
 
 
                                             </div>
+
+
+                                            <div class="row">
+
+                                                <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                <div id="mem25">
+                                                  <div class="hovereffect">
+                                                    <img class="img-responsive" src="img/members/Ashish.jpg" >
+                                                      <div class="overlay">
+                                                          <p style="">
+                                                             <br/>
+                                                            ashish@ccanitd.in
+                                                          </p>
+
+                                                      </div>
+
+                                                    </div>
+                                                      <h3>ASHISH ARORA</h3>
+                                                      <h4>EXECUTIVE MEMBER</h4>
+                                              </div>
+                                            </div>
+
+                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                <div id="mem26">
+                                                  <div class="hovereffect">
+                                                    <img class="img-responsive" src="img/members/Poushali.jpg" >
+                                                      <div class="overlay">
+                                                          <p style="">
+                                                             <br/>
+                                                            poushali@ccanitd.in
+                                                          </p>
+
+                                                      </div>
+
+                                                    </div>
+                                                      <h3>POUSHALI SHAMDAR</h3>
+                                                      <h4>EXECUTIVE MEMBER</h4>
+                                              </div>
+                                            </div>
+
+                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                <div id="mem27">
+                                                  <div class="hovereffect">
+                                                    <img class="img-responsive" src="img/members/Shashwato.jpg" >
+                                                      <div class="overlay">
+                                                          <p style="">
+                                                             <br/>
+                                                            shashwato@ccanitd.in
+                                                          </p>
+
+                                                      </div>
+
+                                                    </div>
+                                                      <h3>SHASHWATO GHANTI</h3>
+                                                      <h4>EXECUTIVE MEMBER</h4>
+                                              </div>
+                                            </div>
+
+                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                <div id="mem28">
+                                                  <div class="hovereffect">
+                                                    <img class="img-responsive" src="img/members/Deepika.jpg" >
+                                                      <div class="overlay">
+                                                          <p style="">
+                                                             <br/>
+                                                            deepika@ccanitd.in
+                                                          </p>
+
+                                                      </div>
+
+                                                    </div>
+                                                      <h3>DEEPIKA SARIN</h3>
+                                                      <h4>EXECUTIVE MEMBER</h4>
+                                              </div>
+                                            </div>
+
+                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                <div id="mem29">
+                                                  <div class="hovereffect">
+                                                    <img class="img-responsive" src="img/members/Lavanya.jpg" >
+                                                      <div class="overlay">
+                                                          <p style="">
+                                                             <br/>
+                                                            lavanya@ccanitd.in
+                                                          </p>
+
+                                                      </div>
+
+                                                    </div>
+                                                      <h3>LAVANYA SINHA</h3>
+                                                      <h4>EXECUTIVE MEMBER</h4>
+                                              </div>
+                                            </div>
+
+                                            <div class="col-md-2 col-sm-4 col-xs-6 team-member">
+                                                <div id="mem30">
+                                                  <div class="hovereffect">
+                                                    <img class="img-responsive" src="img/members/Anuj.jpg" >
+                                                      <div class="overlay">
+                                                          <p style="">
+                                                             <br/>
+                                                            anuj@ccanitd.in
+                                                          </p>
+
+                                                      </div>
+
+                                                    </div>
+                                                      <h3>ANUJ AGRAWAL</h3>
+                                                      <h4>EXECUTIVE MEMBER</h4>
+                                              </div>
+                                            </div>
+
+                                            </div>
+
+
+                                            <div class="row">
+
+
+                                                <div class="col-md-2 col-lg-offset-5 col-sm-4 col-xs-6 team-member">
+                                                <div id="mem31">
+                                                  <div class="hovereffect">
+                                                    <img class="img-responsive" src="img/members/Paramita.jpg" >
+                                                      <div class="overlay">
+                                                          <p style="">
+                                                             <br/>
+                                                            paramita@ccanitd.in
+                                                          </p>
+
+                                                      </div>
+
+                                                    </div>
+                                                      <h3>PARAMITA DAS</h3>
+                                                      <h4>EXECUTIVE MEMBER</h4>
+                                              </div>
+                                            </div>
+
+
+
+                                            </div>
+
+
+
+
+
+
+
 
                                             </div>
                                           </div>
@@ -2871,7 +3080,7 @@ function closeNav() {
 
                                         <div id="hospitality">
                                             <div id="title">Accomodation, Travel & Hospitality</div>
-                                            <img id="space_ship" src="img/robot_space.png" />
+                                            <img id="space_ship" src="img/robot_space_acc.png" />
                                             <div class="accom">
                                                 <img src="img/icon1.png" alt="" style="width: 40px">
                                                 <h2>ACCOMODATION</h2>
