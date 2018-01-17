@@ -1698,15 +1698,17 @@ $('#events-title-img').click(function() {
 
   // console.log($("#map").outerHeight());
   // console.log($("#events_map").outerHeight());
-  console.log($(window).innerHeight());
-  console.log($(window).outerHeight());
-  console.log($(window).height());
   
 
-var ratio = 1100/1745;
+var ratio = 1075/1745;
 
-var map_height = 0.8*$(window).width()*ratio + 0.63*$(window).height()
+var map_height = 0.8*$(window).width()*ratio + 0.39*$(window).height()
 
+
+console.log( $('#major-about').outerHeight() );
+console.log( $('#about').outerHeight() );
+console.log(map_height);
+console.log($("#major-space").outerHeight())
 
 $('#about-stars').css("height", 
 
