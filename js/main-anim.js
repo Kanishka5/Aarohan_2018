@@ -251,6 +251,7 @@ window.addEventListener("load", function(){
                     backgroundColor: "#22305f",
                     ease: Power2.easeOut
                 })
+                .to("#register_button",0.5,{opacity:1})
                 .from(s, 2, {
                     y: "+=25",
                     delay: -1,
@@ -262,8 +263,6 @@ window.addEventListener("load", function(){
                 // }).from("#register-robot",0.5,{
                 //     scale:0
                 // }).set("#register-robot-h",{opacity:1})
-                }).from("#main-nav",1,{
-                    opacity:0
                 })
 
                 .from(d, 1, {
@@ -276,6 +275,8 @@ window.addEventListener("load", function(){
                     opacity: 0,
                     delay: 0,
                     ease: Power2.easeOut
+                }).from("#main-nav",1,{
+                    opacity:0
                 });
             media_size("min-width:769px") && b.fromTo(y, 1, {
                 x: "+=200",

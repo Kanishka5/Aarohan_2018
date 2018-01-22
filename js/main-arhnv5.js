@@ -454,20 +454,71 @@ window.addEventListener("load", function(){
 
   $("#register1").on("click touch", function(e){
       e.preventDefault();
-      robot1_work.play();
+      // robot1_work.play();
+      popup('aarohan-2018-421133')
+      $('html, body').animate({
+              scrollTop: $(".section-home-banner").offset().top
+            }, 1000,function(){
+                $('#container').animate({
+                    scrollTop: 0
+                  }, 200,function(){
+                      $('#vertical-cont').animate({
+                                scrollTop: 0
+                       },200,function(){
+                          $("container").css("overflow-y","hidden");
+                          $("vert-container").css("overflow-y","hidden");
+                       });
+            });
+      });
+      work1_tl.reverse()
+      enable_scroll();
       console.log("register1");
   });
 
   $("#register2").on("click touch", function(e){
       e.preventDefault();
-      robot2_work.play();
+      // robot2_work.pay();
+      popup('aarohan-2018-421133')
+      $('html, body').animate({
+              scrollTop: $(".section-home-banner").offset().top
+            }, 1000,function(){
+                $('#container').animate({
+                    scrollTop: 0
+                  }, 200,function(){
+                      $('#vertical-cont').animate({
+                                scrollTop: 0
+                       },200,function(){
+                          $("container").css("overflow-y","hidden");
+                          $("vert-container").css("overflow-y","hidden");
+                       });
+            });
+      });
+      work2_tl.reverse()
+      enable_scroll();
       console.log("register2");
   });
 
   $("#register3").on("click touch", function(e){
       e.preventDefault();
-      robot3_work.play();
+      // robot3_work.play();
+      popup('aarohan-2018-421133')
+      $('html, body').animate({
+              scrollTop: $(".section-home-banner").offset().top
+            }, 1000,function(){
+                $('#container').animate({
+                    scrollTop: 0
+                  }, 200,function(){
+                      $('#vertical-cont').animate({
+                                scrollTop: 0
+                       },200,function(){
+                          $("container").css("overflow-y","hidden");
+                          $("vert-container").css("overflow-y","hidden");
+                       });
+            });
+      });
       console.log("register3");
+      enable_scroll();
+      work3_tl.reverse()
   });
 
 
@@ -486,7 +537,7 @@ window.addEventListener("load", function(){
                           $("vert-container").css("overflow-y","hidden");
                        });
             });
-  });
+        });
 
     });
 
@@ -1099,34 +1150,34 @@ window.addEventListener("load", function(){
   //           .from("#major-ballon3",5,{x:-windowWidth});
 
 
- var aarohan_nights_tl  =  new TimelineMax({paused:true})
+ var aarohan_nights_tl  =  new TimelineMax({paused:true,onReverseComplete:enable_scroll})
                                     .to('#major-phone-1',1,{y:-windowHeight})
                                     .to('#major-phone-1',0.5,{backgroundColor: 'rgba(23, 34, 83, 0.5)'});
 
-  var major1_nights_tl  =  new TimelineMax({paused:true})
+  var major1_nights_tl  =  new TimelineMax({paused:true,onReverseComplete:enable_scroll})
                                     .to('#major-phone-2',1,{y:-windowHeight})
                                      .to('#major-phone-2',1,{backgroundColor: 'rgba(23, 34, 83, 0.5)'});
 
-  var major2_nights_tl  =  new TimelineMax({paused:true})
+  var major2_nights_tl  =  new TimelineMax({paused:true,onReverseComplete:enable_scroll})
                                     .to('#major-phone-3',1,{y:-windowHeight})
                                      .to('#major-phone-3',1,{backgroundColor: 'rgba(23, 34, 83, 0.5)'});
 
-  var major3_nights_tl  =  new TimelineMax({paused:true})
+  var major3_nights_tl  =  new TimelineMax({paused:true,onReverseComplete:enable_scroll})
                                     .to('#major-phone-4',1,{y:-windowHeight})
                                      .to('#major-phone-4',1,{backgroundColor: 'rgba(23, 34, 83, 0.5)'});
 
 
-var work1_tl  =  new TimelineMax({paused:true})
+var work1_tl  =  new TimelineMax({paused:true,onReverseComplete:enable_scroll})
                                     .to('#work-phone-1',1,{y:-windowHeight})
                                      .to('#work-phone-1',1,{backgroundColor: 'rgba(23, 34, 83, 0.5)'});
 
 
-var work2_tl  =  new TimelineMax({paused:true})
+var work2_tl  =  new TimelineMax({paused:true,onReverseComplete:enable_scroll})
                                     .to('#work-phone-2',1,{y:-windowHeight})
                                      .to('#work-phone-2',1,{backgroundColor: 'rgba(23, 34, 83, 0.5)'});
 
 
-var work3_tl  =  new TimelineMax({paused:true})
+var work3_tl  =  new TimelineMax({paused:true,onReverseComplete:enable_scroll})
                                     .to('#work-phone-3',1,{y:-windowHeight})
                                      .to('#work-phone-3',1,{backgroundColor: 'rgba(23, 34, 83, 0.5)'});
 
@@ -1141,13 +1192,11 @@ var work3_tl  =  new TimelineMax({paused:true})
 
    $('#major-phone-1 .back-touch').on('click touch',function(){
       // console.log("removed-phone")
-     enable_scroll();
       aarohan_nights_tl.reverse()
   });
 
     $('#major-phone-1 #back1').on('click touch',function(){
       // console.log("removed-phone")
-     enable_scroll();
       aarohan_nights_tl.reverse()
   });
 
@@ -1162,13 +1211,13 @@ var work3_tl  =  new TimelineMax({paused:true})
 
   $('#major-phone-2 .back-touch').on('click touch',function(){
       // console.log("removed-phone")
-     enable_scroll();
+   
      major1_nights_tl.reverse()
   });
 
     $('#major-phone-2 #back2').on('click touch',function(){
       // console.log("removed-phone")
-     enable_scroll();
+   
      major1_nights_tl.reverse()
   });
 
@@ -1180,13 +1229,13 @@ var work3_tl  =  new TimelineMax({paused:true})
 
   $('#major-phone-3 .back-touch').on('click touch',function(){
       // console.log("removed-phone")
-     enable_scroll();
+     
      major2_nights_tl.reverse()
   });
 
    $('#major-phone-3 #back3').on('click touch',function(){
       // console.log("removed-phone")
-     enable_scroll();
+    
      major2_nights_tl.reverse()
   });
 
@@ -1198,13 +1247,13 @@ var work3_tl  =  new TimelineMax({paused:true})
 
   $('#major-phone-4 .back-touch').on('click touch',function(){
       // console.log("removed-phone")
-     enable_scroll();
+  
      major3_nights_tl.reverse()
   });
 
   $('#major-phone-4 #back4').on('click touch',function(){
       // console.log("removed-phone")
-     enable_scroll();
+     
      major3_nights_tl.reverse()
   });
 
@@ -1222,14 +1271,14 @@ var work3_tl  =  new TimelineMax({paused:true})
 
   $('#work-phone-1 .back-touch').on('click touch',function(){
       // console.log("removed-phone")
-     enable_scroll();
+     
      work1_tl.reverse()
      robot1_work.reverse();
   });
 
    $('#work-phone-1 #back1').on('click touch',function(){
       // console.log("removed-phone")
-     enable_scroll();
+
      work1_tl.reverse()
      robot1_work.reverse();
   });
@@ -1242,14 +1291,14 @@ var work3_tl  =  new TimelineMax({paused:true})
 
   $('#work-phone-2 .back-touch').on('click touch',function(){
       // console.log("removed-phone")
-     enable_scroll();
+     
      work2_tl.reverse()
      robot2_work.reverse();
   });
 
    $('#work-phone-2 #back2').on('click touch',function(){
       // console.log("removed-phone")
-     enable_scroll();
+    
      work2_tl.reverse()
      robot2_work.reverse();
   });
@@ -1262,19 +1311,21 @@ var work3_tl  =  new TimelineMax({paused:true})
 
   $('#work-phone-3 .back-touch').on('click touch',function(){
       // console.log("removed-phone")
-     enable_scroll();
+   
      work3_tl.reverse()
      robot3_work.reverse();
   });
 
   $('#work-phone-3 #back3').on('click touch',function(){
       // console.log("removed-phone")
-     enable_scroll();
+   
      work3_tl.reverse()
      robot3_work.reverse();
   });
 
   var nav_timeline = new TimelineMax({paused:true}).to("#nav-aarohan",1,{opacity:1});
+
+  var sponsor_timeline = new TimelineMax({paused:true}).to("#main_sponsors",1,{x:0.15*windowWidth});
 
 
   $(window).scroll(function(){
@@ -1283,6 +1334,20 @@ var work3_tl  =  new TimelineMax({paused:true})
 
     if(a < 1.1*windowWidth){
       nav_timeline.reverse();
+    }
+
+    if(a < 0.4*windowWidth && windowWidth > 500){
+      sponsor_timeline.reverse();
+    }
+
+    if(a > 0.4*windowWidth && a < 1.0*windowWidth  && windowWidth >500){
+      sponsor_timeline.play();
+
+      console.log("yes")
+    }
+
+    if(a > 1.0*windowWidth && windowWidth > 500){
+      sponsor_timeline.reverse();
     }
 
 
