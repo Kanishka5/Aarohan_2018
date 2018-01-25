@@ -2225,7 +2225,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
 
  #bioscope{
     text-align: center;
-    width: 15vw;
+    /*width: 15vw;*/
     display: block;
     /* position: absolute; */
     position: relative;
@@ -2235,7 +2235,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
 
   #lemongrass{
     text-align: center; */
-    width: 15vw;
+    /*width: 15vw;*/
     margin-top: 40px;
     display: block;
     /* position: absolute; */
@@ -2245,7 +2245,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
 
   #viet{
     text-align: center;
-    width: 15vw;
+    /*width: 15vw;*/
     margin-top: 40px;
     display: block;
     /* position: absolute; */
@@ -2267,21 +2267,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
   }
 
   #bioscope #title{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     margin-bottom: 4vh;
     color: #ffffff;
     font-family: proxima;
   }
 
   #lemongrass #title{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 4vh;
     color: #ffffff;
     font-family: proxima;
   }
 
   #viet #title{
-   font-size: 1.4rem;
+   font-size: 1.2rem;
     margin-bottom: 4vh;
     color: #ffffff;
     font-family: proxima;
@@ -2383,7 +2383,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
 
   #bioscope{
     text-align: center;
-    width: 15vw;
+    /*width: 15vw;*/
     display: block;
     /* position: absolute; */
     position: relative;
@@ -2392,8 +2392,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
   }
 
   #lemongrass{
-    text-align: center; */
-    width: 15vw;
+    text-align: center;
+    /*width: 15vw;*/
     margin-top: 40px;
     display: block;
     /* position: absolute; */
@@ -2403,7 +2403,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
 
   #viet{
     text-align: center;
-    width: 15vw;
+    /*width: 15vw;*/
     margin-top: 40px;
     display: block;
     /* position: absolute; */
@@ -2417,21 +2417,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
   }
 
   #bioscope #title{
-        font-size: 1.4rem;
+        font-size: 1rem;
     margin-bottom: 4vh;
     color: #ffffff;
     font-family: proxima;
   }
 
   #lemongrass #title{
-    font-size: 1.4rem;
+    font-size: 1rem;
     margin-bottom: 4vh;
     color: #ffffff;
     font-family: proxima;
   }
 
   #viet #title{
-   font-size: 1.4rem;
+   font-size: 1rem;
     margin-bottom: 4vh;
     color: #ffffff;
     font-family: proxima;

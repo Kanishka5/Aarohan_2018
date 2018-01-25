@@ -1750,14 +1750,11 @@ if(windowWidth > 0){
 
 
 
-
-
-
   }
 
 
 $('#events-title-img').click(function() {
-   window.open("/events", "_self");
+   window.open("/events", "_blank");
 });
 
 
