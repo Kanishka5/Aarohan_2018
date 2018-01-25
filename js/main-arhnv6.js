@@ -1752,6 +1752,10 @@ if(windowWidth > 0){
 
   }
 
+$("#register-robot").click(function() {
+  window.open("/register","_blank");
+})
+
 
 $('#events-title-img').click(function() {
    window.open("/events", "_blank");
