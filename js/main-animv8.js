@@ -257,12 +257,13 @@ window.addEventListener("load", function(){
                     delay: -1,
                     opacity: 0,
                     ease: Power2.easeOut
-                }).to("#land-robot",1,{
-                    rotation:-40, 
-                    transformOrigin:"bottom left"
-                }).from("#register-robot",0.5,{
-                    scale:0
-                }).set("#register-robot-h",{opacity:1})
+                })
+                // }).to("#land-robot",1,{
+                //     rotation:-40, 
+                //     transformOrigin:"bottom left"
+                // }).from("#register-robot",0.5,{
+                //     scale:0
+                // }).set("#register-robot-h",{opacity:1})
             
 
                 .from(d, 1, {
