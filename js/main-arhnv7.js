@@ -470,7 +470,6 @@ window.addEventListener("load", function(){
                        });
             });
       });
-      work1_tl.reverse()
       enable_scroll();
       console.log("register1");
   });
@@ -796,6 +795,32 @@ window.addEventListener("load", function(){
                   });
               });
           }
+            
+          
+          
+   });
+
+
+
+  $("#nav_register").on("click touchstart", function(e){
+          e.preventDefault();
+            popup('aarohan-2018-421133')
+      $('html, body').animate({
+              scrollTop: $(".section-home-banner").offset().top
+            }, 1000,function(){
+                $('#container').animate({
+                    scrollTop: 0
+                  }, 200,function(){
+                      $('#vertical-cont').animate({
+                                scrollTop: 0
+                       },200,function(){
+                          $("container").css("overflow-y","hidden");
+                          $("vert-container").css("overflow-y","hidden");
+                       });
+            });
+      });
+      enable_scroll();
+     
             
           
           
