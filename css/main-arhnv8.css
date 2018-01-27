@@ -4326,7 +4326,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     top: 58vh;
     right: 4vw;
     z-index: 20;
-    opacity: 0;
+    opacity: 1;
     transform-origin: bottom left;
     cursor: pointer;
   }

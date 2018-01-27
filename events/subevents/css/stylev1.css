@@ -626,6 +626,45 @@ a:link{
 text-decoration: none;
 }
 
+#STOCK {
+    height: 0%;
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    background-color: rgba(255,255,255,1);
+    overflow: hidden;
+    transition: 1.0s;
+}
+
+#event-cover {
+    height: 0%;
+    width: 100vw;
+    position: fixed;
+    z-index: 9;
+    bottom: 0;
+    background-color: rgba(0,0,0,0);
+    overflow: hidden;
+    transition: 1.0s;
+}
+
+.overlay .close {
+    z-index: 12;
+    position: absolute;
+    right: 45px;
+    font-size: 40px;
+}
+.overlay .eventsbtn{
+    z-index:12;
+    position: absolute;
+    left:45px;
+    font-size: 40px;
+}
+
+a:link{
+text-decoration: none;
+}
+
 
 
 #TCDC {
