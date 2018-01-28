@@ -1781,6 +1781,10 @@ $("#register-robot").click(function() {
   window.open("/register","_blank");
 })
 
+$("#register_button_arhn").click(function() {
+  window.open("/register","_blank");
+})
+
 
 $('#events-title-img').click(function() {
    window.open("/events", "_blank");
