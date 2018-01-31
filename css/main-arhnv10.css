@@ -737,7 +737,7 @@ border-color: rgb(57, 171, 111);
 
 
   .section-home-banner #banner-bottom {
-    height: 270vh !important;
+    height: 300vh !important;
 }
 
   .major-img1{
@@ -1250,6 +1250,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dc8e9', end
     vertical-align: middle;
     margin-right: auto;
     max-width: 100%;
+  }
+
+ 
+
+  #main_sponsors{
+    width: 60vw;
+    position: absolute;
+    left: 20vw;
+    top: 130vh;
   }
 
   #team_full2{
@@ -2231,7 +2240,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
   }
 
  #bioscope{
-    text-align: center;
+    /*text-align: center;*/
     /*width: 15vw;*/
     display: block;
     /* position: absolute; */
@@ -2241,7 +2250,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
   }
 
   #lemongrass{
-    text-align: center; */
+    text-align: center;
     /*width: 15vw;*/
     margin-top: 40px;
     display: block;
@@ -2260,11 +2269,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
     top: 0;
   }
 
-  #main_sponsors{
-    left:-15vw;
-    display: none;
-    z-index: 9999999;
-  }
+
 
   #register_button{
     z-index: 9999;
@@ -2433,6 +2438,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
   #main_sponsors{
     left:-15vw;
     z-index: 9999999;
+    width: 13vw;
+    position:  fixed;
+    top: 10vh;
   }
 
   #bioscope #title{
@@ -2455,6 +2463,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
     color: #ffffff;
     font-family: proxima;
   }
+
+
+
 
  .bounce-5 {
       animation-name: bounce-5;
