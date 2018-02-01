@@ -737,7 +737,7 @@ border-color: rgb(57, 171, 111);
 
 
   .section-home-banner #banner-bottom {
-    height: 300vh !important;
+    height: 350vh !important;
 }
 
   .major-img1{
@@ -2440,7 +2440,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
     z-index: 9999999;
     width: 13vw;
     position:  fixed;
-    top: 10vh;
+    top: 5vh;
+  }
+
+  #main_sponsors2{
+    right:-15vw;
+    z-index: 9999999;
+    width: 13vw;
+    position:  fixed;
+    top: 5vh;
   }
 
   #bioscope #title{
