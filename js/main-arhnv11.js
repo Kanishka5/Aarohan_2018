@@ -1350,8 +1350,8 @@ var work3_tl  =  new TimelineMax({paused:true,onReverseComplete:enable_scroll})
 
   var nav_timeline = new TimelineMax({paused:true}).to("#nav-aarohan",1,{opacity:1});
 
-  var sponsor_timeline = new TimelineMax({paused:true}).to("#main_sponsors",1,{x:0.15*windowWidth})
-                                            .to("#main_sponsors2",1,{x:-0.15*windowWidth},0);
+  var sponsor_timeline = new TimelineMax({paused:true}).to("#main_sponsors",1,{x:0.25*windowWidth})
+                                            .to("#main_sponsors2",1,{x:-0.25*windowWidth},0);
 
 
   $(window).scroll(function(){
