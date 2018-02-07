@@ -737,7 +737,7 @@ border-color: rgb(57, 171, 111);
 
 
   .section-home-banner #banner-bottom {
-    height: 350vh !important;
+    height: 410vh !important;
 }
 
   .major-img1{
@@ -2287,21 +2287,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
 
   #bioscope #title{
         font-size: 1.2rem;
-    margin-bottom: 4vh;
+    margin-bottom: 1vh;
     color: #ffffff;
     font-family: proxima;
   }
 
   #lemongrass #title{
     font-size: 1.2rem;
-    margin-bottom: 4vh;
+    margin-bottom: 1vh;
     color: #ffffff;
     font-family: proxima;
   }
 
   #viet #title{
    font-size: 1.2rem;
-    margin-bottom: 4vh;
+    margin-bottom: 1vh;
     color: #ffffff;
     font-family: proxima;
   }
@@ -2440,17 +2440,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
   }
 
   #main_sponsors{
-    left:-25vw;
+    left:-37vw;
     z-index: 9999999;
-    width: 25vw;
+    width: 37vw;
     position:  fixed;
     top: 5vh;
   }
 
   #main_sponsors2{
-    right:-25vw;
+    right:-37vw;
     z-index: 9999999;
-    width: 25vw;
+    width: 37vw;
     position:  fixed;
     top: 5vh;
   }
@@ -2471,14 +2471,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3fd', end
 
   #bioscope #title{
         font-size: 1rem;
-    margin-bottom: 4vh;
+    margin-bottom: 2vh;
     color: #ffffff;
     font-family: proxima;
   }
 
   #lemongrass #title{
     font-size: 1rem;
-    margin-bottom: 4vh;
+    margin-bottom: 2vh;
     color: #ffffff;
     font-family: proxima;
   }
